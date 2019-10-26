@@ -1,0 +1,91 @@
+$page-color : #F2F2F2;
+$text-color : rgb(22, 21, 21);
+$nav-color : #FFF;
+$background : #FFF;
+$background-color :  #F2B6BB;
+$background-hover :  #D97E85;
+$box-background : #FFF;
+$head : #444;
+$color : #222;
+$hover : #000;
+$border : #3047BC;
+$transition : all 0.5s ease-in-out;
+// pretty button with nice hover effect
+%nice_buttons{
+    color : #333;
+    display : inline-block;
+    padding : 7.5px;
+    margin : 0px 5px;
+    text-decoration : none;
+    border-radius : 10px;
+    position : relative;
+    overflow : hidden;
+    transition : $transition;
+    &:hover{
+        color : #333;
+        text-decoration : none;
+        transform : skewY(5deg);
+    }
+    &:before{
+        content : "";
+        width : 10px;
+        height : 40px;
+        transition : $transition;
+        position : absolute;
+        background-color : rgb(255, 255, 255);
+        transform : rotate(-10deg);
+        filter: contrast(200%) brightness(2) blur(8px);
+        left: -15%;
+    }
+    &:hover:before{
+        position : absolute;
+        left : 115% !important;
+        top : 30%;
+    }
+}
+// read more buttons
+%read_more{
+    color : $color;
+    font-weight : bold;
+    font-family : 'pretty-head' , sans-serif;
+    font-size : 14px;
+    display : inline-block;
+    background : $background-color;
+    padding : 5px 10px;
+    border-radius : 10px;
+    color : #FFF;
+    margin : 0px 0px 0px 5px;
+    &:hover{
+        background : $background-hover;
+    }
+}
+// headers
+%nice_header{
+    margin-bottom : 30px;
+    background : $background-color;
+    padding : 10px;
+    margin: 15px;
+    border-radius : 10px;
+    //text-shadow:0px 5px 9px #62633c;
+    &:hover{
+        background : $background-hover;
+    }
+}
+// fonts
+@font-face{
+    font-family: 'ptf-55f';
+    src:url('../fonts/article_font/PTF55F.ttf');
+}
+@font-face{
+    font-family: 'pretty-head';
+    src:url('../fonts/Lato-Regular.ttf');
+}
+*{
+    font-family: 'ptf-55f', sans-serif;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color : $text-color;
+}

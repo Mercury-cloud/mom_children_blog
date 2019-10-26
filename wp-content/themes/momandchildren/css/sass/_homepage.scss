@@ -1,0 +1,157 @@
+/*
+** @Author : Bishoy Romany
+** @Page   : index.php
+** @version: 1.0.0
+** This Style For Header page only
+*/
+// latest posts for homepage 
+.random-posts-container{
+    margin-bottom : 20px;
+    .rand-head{
+        width : 100%;
+        margin : 20px 0px 0px 0px;
+        border-radius : 10px 10px 0px 0px;
+        @extend %nice_header;
+    }
+    .random-post{
+        background:$box-background;
+        padding : 1%;
+        .post-rand-li{
+            display : inline-block;
+            position: relative;
+            width : 49%;
+            margin-left : 5px;
+            margin-right : 5px;
+            padding : 10px;
+            background-color : $box-background;
+            border : 1px solid $border;
+            height : 330px;
+            overflow : hidden;
+            transition: $transition;
+            &:hover{
+                transform: scale(1.05);
+            }
+            h3{
+                margin-top : 0px;
+                a{
+                    color : $head;
+                    text-decoration: none;
+                }
+            }
+            img{
+                width : 100%;
+                max-height : 250px;
+                margin-top : 5px;
+            }
+            // the post info
+            .post-author , .post-date , .post-comments{
+                margin: 0px 0px 10px 5px;
+                display : inline-block;
+                a{
+                    color : $head;
+                }
+            }
+            .excerpt{
+                position : absolute;
+                background: rgba(0, 0, 0, 0.658);
+                padding : 10px 30px;
+                color : $box-background;
+                width : 100%;
+                bottom : 0px;
+                font-size : 15px;
+                line-height : 23px;
+                a{
+                    @extend %read_more;
+                    padding : 5px;
+                    display : inline-block;
+                }
+            }
+        }
+    }
+}
+// categories posts for homepage
+.cat-container{
+    border-radius: 15px 15px 0px 0px;
+    margin : 5px 0px auto;
+    // category title
+    .cat-title{
+        border-radius: 15px 15px 0px 0px;
+        margin : 5px 0px auto;
+        @extend %nice_header;
+        a{
+            color : #333;
+        }
+    }
+    // container
+    .post-container{
+        padding : 0px;
+        // post container
+        li{
+            list-style: none;
+            margin-bottom : 10px;
+            padding : 5px;
+            background-color : $box-background;
+            border : 1px solid $border;
+            border-radius : 20px;
+            position: relative;
+            height: 305px;
+            overflow: hidden;
+            // post title
+            .post-title{
+                margin : 5px;
+                padding : 5px 10px;
+                font-size : 20px;
+                a{
+                    color : $color;
+                }
+            }
+            // the post info
+            .post-author , .post-date , .post-comments{
+                margin: 0px 0px 10px 5px;
+                display : inline-block;
+                a{
+                    color : $head;
+                }
+            }
+            // the image container
+            .img-container{
+                height : 200px;
+                overflow : hidden;
+                border-radius : 10px;
+                a img{
+                    border-radius : 10px;
+                    width : 100%;
+                    height : 100%;
+                }
+            }
+            // the post excerpt
+            .excerpt{
+                position : absolute;
+                background: rgba(0, 0, 0, 0.555);
+                padding : 10px;
+                color : $box-background;
+                width : 96%;
+                margin-bottom : 10px;
+                margin-left : 3px;
+                bottom : 0px;
+                font-size : 15px;
+                p{
+                    margin-bottom : 0px;
+                    font-size : 14px;
+                    line-height: 2em;
+                }
+                a{
+                    @extend %nice_header;
+                    margin : 0px;
+                    color : #FFF !important;
+                    padding : 5px;
+                    display : inline-block;
+                }
+            }
+        }
+        // first li
+        li:nth-of-type(1){
+            border-radius: 0px 0px 15px 15px;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+// footer style
+.footer{
+    background: $background-color;
+    color : $color;
+    width : 100%;
+    padding : 10px;
+    z-index: 100000;
+    .menu-footer-menu-container{
+        ul{
+            .menu-item-object-custom{
+                display : inline-block;
+                list-style: none;
+                padding : 10px;
+                float: left;
+                min-width : 25%;
+                text-align : left;
+                >a{
+                    background : $background-color;
+                    color : #000;
+                    text-decoration : none;
+                    font-size : 23px;
+                    padding : 10px 30px;
+                    font-family : 'pretty-head' , sans-serif;
+                    border-radius : 10px;
+                    display : inline-block;
+                    margin-bottom : 10px;
+                }
+                ul{
+                    li{
+                        display : inline-block;
+                        list-style: none;
+                        a{
+                            color : #000;
+                            @extend %nice_buttons;
+                            background : $background-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copy{
+        span{
+            font-weight: bold;
+            font-family: 'pretty-head';
+            font-size : 17px;
+        }
+    }
+    .bishoy{
+        margin-top : 10px;
+        a{
+            font-size : 17px;
+        }
+        .name{
+            color : #000;
+            font-weight : bold;
+            font-family : 'pretty-head';
+            margin: 0px 10px; 
+        }
+    }
+}

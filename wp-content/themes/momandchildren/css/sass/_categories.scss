@@ -1,0 +1,328 @@
+/*
+** @Author : Bishoy Romany
+** @Page : category.php
+** @version: 1.0.0
+** This style only for author page
+*/
+
+// start cateogry head and options
+.cat-options{
+    .head-options{
+        background : $background-color;
+        margin : 10px 0px 0px 0px;
+        border-radius : 20px;
+        color : #333;
+        width : 100%;
+        h1{
+            display : inline-block;
+        }
+        .sorting , .shape{
+            color : #333;
+            display : inline-block;
+            padding : 20px;
+            font-size : 20px;
+            a{
+                color : #333;
+                svg{
+                    font-size : 25px;
+                    color : #333;
+                }
+            }
+            .active{
+                color : #000;
+                text-decoration : underline;
+                svg{
+                    color : #000;
+                    transform : scale(1.2);
+                }
+            }
+        }
+    }
+    // category describtion
+    .cat-desc{
+        display : inline-block;
+        background : $background-color;
+        padding : 10px 30px;
+        border-radius : 0px 0px 10px 10px;
+    }
+}
+@media only screen and (max-width : 768px){
+    .head-options{
+        h1{
+            display : inline-block;
+            font-size : 24px;
+            margin : 10px;
+        }
+        .sorting{
+            padding :  10px 0px 5px !important;
+            font-size : 17px;
+            float : none !important;
+        }
+    } 
+}
+// start posts style of category
+// this is the main style
+.cat-design-post-box{
+    background-color : $box-background;
+    padding: 20px 20px 0px;
+    border : 1px solid $border;
+    margin-bottom : 30px;
+    border : $border;
+    border-radius : 10px;
+    overflow : hidden;
+    .post-title{
+        margin : 0 0 10px;
+        font-size : 20px;
+        font-weight : bold;
+        color : $head;
+        letter-spacing: -1;
+        a{
+            color : $head;
+            &:hover{
+                color : $head;
+                text-decoration : none;
+            }
+        }
+    }
+    .post-author,.post-date , .post-comments{
+        font-size : 12px;
+        margin : 5px;
+        a{
+            color : #333;
+            text-decoration : none;
+            &:hover{
+                color : #333;
+                text-decoration : none;
+            }
+        }
+    }
+    .comment-url{
+        color : red;
+    }
+    .img-container{
+        max-height : 450px;
+        margin : 15px 0px;
+        margin-left : 10%;
+        overflow : hidden;
+        width : 80%;
+        clear: both;
+        a{
+            img{
+                width : 100%;
+                max-height : 450px;
+                transition : $transition;
+                border-radius : 10px;
+                &:hover{
+                    transform : scale(1.1);
+                }
+            }
+        }
+
+    }
+    .post-summery{
+        color : $head;
+        height: auto;
+        overflow : hidden;
+        p{
+            a{
+                color : $head;
+                @extend %read_more;
+            }
+        }
+    }
+    svg , i{
+        color : $head;
+    }
+    .post-coategories{
+        position: relative;
+        padding-left : 35px;
+        svg{
+            position : absolute;
+            top : 10px;
+            left : 5px;
+        }
+        a{
+            background-color : skyblue;
+            @extend %nice_buttons;
+            &:hover{
+                background-color : rgb(199, 238, 253);
+            }
+        }
+    }
+    // tags
+    .post-tags{
+        margin : -5px 0px 5px;
+        padding-bottom : 10px;
+        position : relative;
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            content: 'Tags :';
+            position: absolute;
+            top: -6px;
+            left: -12px;
+            background-color: #FFF;
+            padding: 13px;
+            display: inline-block;
+        }
+        a{
+            background : $background-color;
+            @extend %nice_buttons;
+        }
+        .post-no-tags{
+            display :block;
+            margin-left: 55px;
+            padding : 10px 30px 10px 10px;
+            background-color : rgba(255, 0, 0, 0.452);
+            color : #FFF;
+            border-left : 7px solid black;
+        }
+    }
+}
+
+// this is the second style
+.cat-design-post-line{
+    background-color : $box-background;
+    padding: 20px 20px 0px;
+    border : 1px solid $border;
+    margin-bottom : 30px;
+    border : $border;
+    border-radius : 10px;
+    overflow : hidden;
+    .post-title{
+        margin : 0 0 10px;
+        font-size : 20px;
+        font-weight : bold;
+        color : $head;
+        letter-spacing: -1;
+        a{
+            color : $head;
+            &:hover{
+                color : $head;
+                text-decoration : none;
+            }
+        }
+    }
+    .post-author,.post-date , .post-comments{
+        font-size : 12px;
+        margin : 5px;
+        a{
+            color : #333;
+            text-decoration : none;
+            &:hover{
+                color : #333;
+                text-decoration : none;
+            }
+        }
+    }
+    .comment-url{
+        color : red;
+    }
+    .img-container{
+        margin : 15px 0px;
+        overflow : hidden;
+        a{
+            img{
+                width : 100%;
+                transition : $transition;
+                border-radius : 10px;
+                &:hover{
+                    transform : scale(1.1);
+                }
+            }
+        }
+
+    }
+    .post-summery{
+        color : $head;
+        height: auto;
+        margin: 20px 0 10px;
+        p{
+            a{
+                color : $head;
+                @extend %read_more;
+            }
+        }
+    }
+    svg , i{
+        color : $head;
+    }
+    .post-coategories{
+        position: relative;
+        padding-left : 35px;
+        svg{
+            position : absolute;
+            top : 10px;
+            left : 5px;
+        }
+        a{
+            background-color : skyblue;
+            @extend %nice_buttons;
+            &:hover{
+                background-color : rgb(199, 238, 253);
+            }
+        }
+    }
+    // tags
+    .post-tags{
+        margin : -5px 0px 5px;
+        padding-bottom : 10px;
+        position : relative;
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            content: 'Tags :';
+            position: absolute;
+            top: -6px;
+            left: -12px;
+            background-color: #FFF;
+            padding: 13px;
+            display: inline-block;
+        }
+        a{
+            background : $background-color;
+            @extend %nice_buttons;
+        }
+        .post-no-tags{
+            display :block;
+            margin-left: 55px;
+            padding : 10px 30px 10px 10px;
+            background-color : rgba(255, 0, 0, 0.452);
+            color : #FFF;
+            border-left : 7px solid black;
+        }
+    }
+}
+
+// category pagination style
+// numbred posts pagination
+.pagination{
+    padding : 10px;
+    text-align : center;
+    display: block;
+    margin : 0px 10px 10px;
+    span , a {
+        display: inline-block;
+        padding : 10px 15px;
+        border-radius : 5px;
+        background-color : #777;
+        color : #FFF;
+        text-decoration : none;
+        transition : $transition;
+        &:hover{
+            background-color : rgb(16, 109, 214);
+        }
+    }
+    .current{
+        background-color : rgb(16, 109, 214);
+    }
+    .dots{
+        background-color : #999;
+        margin : 0px 5px;
+    }
+    .prev{
+        background-color : #000;
+    }
+    .next{
+        background-color : green;
+    }
+
+}

@@ -1,0 +1,40 @@
+/*
+** @Author : Bishoy Romany
+** @Page : author.php
+** @version: 1.0.0
+** This style only for author page
+*/
+
+.search-container{
+    .search{
+        padding : 0px;  
+        margin : 0px 0px 15px 0px;
+        form{
+            div{
+                div{
+                    text-align : center;
+                    input{
+                        border : none;
+                        background : $background-color;
+                        padding : 10px 10px 10px 40px;
+                        font-size : 18px;
+                        border-radius : 10px;
+                        &:hover, &:focus{
+                            background : $background-hover;
+                        }
+                    }
+                }
+                .button-search{
+                    background : $background-color;
+                    color : #000;
+                    border : none;
+                    padding : 8px;
+                    border-radius : 10px;
+                    &:hover{
+                        background : $background-color;
+                    }
+                }
+            }
+        }
+    }
+}

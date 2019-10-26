@@ -1,0 +1,133 @@
+.slick-next, .slick-prev {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: 0;
+    background: 0 0; 
+}
+  
+.slick-next:focus, .slick-next:hover, .slick-prev:focus, .slick-prev:hover {
+    color: transparent;
+    outline: 0;
+    background: 0 0; 
+    &:before{
+        opacity: 1;
+    }
+}
+  
+.slick-next.slick-disabled:before, .slick-prev.slick-disabled:before {
+opacity: 0.5; }
+  
+.slick-next:before, .slick-prev:before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: rgb(0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+.slick-prev {
+    left: -25px; 
+    &:before{
+        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0a8";
+    }
+}
+  
+[dir=rtl] .slick-prev {
+    right: -25px;
+    left: auto; 
+    &:before{
+        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0a8";
+    }
+}
+
+.slick-next {
+    right: -25px; 
+    &:before{
+        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0a9";
+    }
+}
+  
+[dir=rtl] .slick-next {
+    right: auto;
+    left: -25px; 
+    &:before{
+        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0a9";
+    }
+}
+  
+.slick-dotted.slick-slider {
+    margin-bottom: 30px; }
+  
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    li{
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer; 
+        button{
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            cursor: pointer;
+            color: transparent;
+            border: 0;
+            outline: 0;
+            background: 0 0;
+            &:hover , &:focus{
+                outline: 0;
+            }
+            &:focus:before , &:hover:before{
+                opacity: 1;
+            }
+            &:before{
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900; 
+                content: "\f0c8";
+                font-size: 12px;
+                line-height: 20px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                opacity: .5;
+                color: rgb(255, 255, 255);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+    } 
+}
+  
+.slick-dots li.slick-active button:before {
+opacity: .75;
+color: #000; }
+  
