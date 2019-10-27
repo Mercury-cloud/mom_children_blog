@@ -2,10 +2,23 @@
     $(document).ready(function(){
 
         $(document).click(function(e){
-            if(!$(e.target).hasClass('active_dropdown_nav_a')){
-                $(".active_dropwdown_nav").slideUp(0);
+            let target = e.target;
+            /**
+             * navabr cats close when click out
+             */
+            if(!$(target).hasClass('active_dropdown_nav_a')){
+                $(".active_dropwdown_nav").slideUp();
                 $(".active_dropwdown_nav").removeClass('active_dropwdown_nav');
                 $(".active_dropdown_nav_a").removeClass('active_dropdown_nav_a');
+            }
+
+            /**
+             * search autoclose
+             */
+            console.log(target);
+            if(!$(target).hasClass('searchValue') && !$(target).hasClass('search_form') && !$(target).hasClass('search_icon') && !$(target).parent().hasClass('search_icon') && $(".search_form").hasClass('active_search_nav_bar')){
+                $(".search_form").fadeOut();
+                $(".search_form").removeClass('active_search_nav_bar');
             }
         });
         
@@ -27,10 +40,14 @@
 
         });
 
-        $(".toggle_navs , .title_toggle_navs").click(function(){
-            $(".nav_links").slideToggle();
+        $(".toggle_navs").click(function(){
+            $(".nav_links").fadeToggle(0);
+            $(".toggle_navs").toggleClass("active_toggled_navs_button");
         });
 
+        /**
+         * navbar scroll animation
+         */
         var lastScroll = 0;
         $(document).scroll(function(){
             let scrolled = $(window).scrollTop();
@@ -57,7 +74,15 @@
 
         });
 
-
+        /**
+         * toggle search icon
+         */
+        $(".search_icon").click(function(){
+            setTimeout(function(){
+                $(".search_form").fadeToggle();
+                $(".search_form").toggleClass('active_search_nav_bar');
+            } , 100);
+        });
 
     });
 })(jQuery);

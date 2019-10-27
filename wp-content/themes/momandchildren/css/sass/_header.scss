@@ -12,6 +12,7 @@
     .upper{
         background-color : $background-color;
         .logo_social{
+            position: relative;
             .logo , .logo_phone{
                 height : 100px;
                 img{
@@ -20,6 +21,76 @@
             }
             .logo_phone{
                 display : none;
+            }
+            
+            .seach_social{
+                float : right;
+                .social_links{
+                    display : inline-block;
+                    vertical-align: top;
+                    margin-top: 40px;
+                    margin-right : 40px;
+                    a{
+                        width : 25px;
+                        margin : 0px 5px;
+                    }
+                }
+                .search_icon{
+                    display : inline-block;
+                    cursor : pointer;
+                    vertical-align: top;
+                    margin-top : 40px;
+                    color : $text-color;
+                    margin-right : 5px;
+                    span{
+                        vertical-align: middle;
+                        font-weight: bold;
+                        svg{
+                            width : 25px;
+                            // fill : $page-color;
+                        }
+                    }
+                }
+            }
+
+            .search_form{
+                border-radius : 10px;
+                background-color : $nav-color;
+                padding : 20px 10px;
+                position: absolute;
+                bottom : -60px;
+                z-index : 10;
+                width : 450px;
+                right : 0px;
+                -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+                box-shadow: 0 6px 12px rgba(0,0,0,.175);
+                display : none;
+                &:before{
+                    content : '';
+                    border-style : solid;
+                    border-width : 10px;
+                    border-color : transparent transparent $nav-color transparent;
+                    position : absolute;
+                    right : 20px;
+                    top : -20px;
+                }
+                form{
+                    position : relative;
+                    input{
+                        padding: 20px 45px 20px 10px;
+                    }
+                    button{
+                        position: absolute;
+                        top : 0px;
+                        right : 0px;
+                        background-color : $background-color;
+                        padding : 10px;
+                        border : none;
+                        svg{
+                            width : 17px;   
+                        }
+                    }
+                }
             }
         }
     }
@@ -62,8 +133,8 @@
         width : 100%;
         &>li{
             display : inline-block;
-            position : relative;
             overflow : visible;
+            position : relative;
             & > a{
                 padding : 15px;
                 font-size : 1.1em;
@@ -86,19 +157,18 @@
             &>ul{
                 z-index : 10;
                 position : absolute;
-                left : 0px;
+                // left : 0px;
                 top : 40px;
                 border-bottom-right-radius:10px;
                 border-bottom-left-radius:10px;
                 -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
                 box-shadow: 0 6px 12px rgba(0,0,0,.175);
-                margin: 10px 0px;
+                margin: 10px 0vw 0px 0px;
                 background-color: $nav-color;
                 padding : 5px;
                 display : none;
-                white-space: nowrap;
-                max-width : 90vw;
                 overflow : auto;
+                white-space: nowrap;
                 &>li{
                     vertical-align: top;
                     display:  inline-block;
@@ -137,10 +207,56 @@
             }
 
             .logo_phone{
-                display : block !important;
+                display : inline-block !important;
                 margin-left: 15px;
                 height : 70px !important;
+                width : 60px;
             }
+
+            .seach_social{
+                .social_links{
+                    margin-top: 25px !important;
+                    margin-right : 30px !important;
+                }
+                .search_icon{
+                    margin-top : 25px !important;
+                    margin-right : 15px !important;
+                }
+            }
+
+            .search_form{
+                width: CALC(100% - 30px) !important;
+                margin: 0px 15px !important;
+                &:before{
+                    content : '';
+                    border-style : solid;
+                    border-width : 10px;
+                    border-color : transparent transparent $nav-color transparent;
+                    position : absolute;
+                    right : 20px;
+                    top : -20px;
+                }
+                form{
+                    position : relative;
+                    input{
+                        padding: 20px 45px 20px 10px;
+                    }
+                    button{
+                        position: absolute;
+                        top : 0px;
+                        right : 0px;
+                        background-color : $background-color;
+                        padding : 10px;
+                        border : none;
+                        svg{
+                            width : 17px;   
+                        }
+                    }
+                }
+            }
+
+
+
         }
 
         .container {
@@ -239,6 +355,20 @@
                     background-color : $nav-color;
                     vertical-align: middle;
                     margin-bottom: 9px;
+                    transition : $transition;
+                }
+                &.active_toggled_navs_button{
+                    span{
+                        &:nth-of-type(2){
+                            opacity: 0;
+                        }
+                        &:nth-of-type(1){
+                            transform: rotate(45deg) translate(12px, 15px);
+                        }
+                        &:nth-of-type(3){
+                            transform: rotate(129deg) translate(-15px, 14px);
+                        }
+                    }
                 }
             }
             .title_toggle_navs{

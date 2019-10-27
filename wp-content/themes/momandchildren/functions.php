@@ -9,7 +9,7 @@
         // get bootstrap v4
         wp_enqueue_style("bootstrap4-css" , get_template_directory_uri() . "/assists/bootstrap.min.css" , array() , false);
         // get fontawesome
-        wp_enqueue_style("fonte-css" , get_template_directory_uri() . "/fonts/css/all.min.css" , array() , false);
+        // wp_enqueue_style("fonte-css" , get_template_directory_uri() . "/fonts/css/all.min.css" , array() , false);
         // get slick css
         wp_enqueue_style("slick-css" , get_template_directory_uri() . "/assists/slick.css" , array() , false);
         // get main css
@@ -31,7 +31,7 @@
         // get bootstrap v4
         wp_enqueue_script("bootstrap4-js" , get_template_directory_uri() . "/assists/bootstrap.min.js" , array('jquery') , false , true);
         // get fontawesome
-        wp_enqueue_script("fonte-js" , get_template_directory_uri() . "/fonts/js/all.min.js" , array() , false , true);
+        // wp_enqueue_script("fonte-js" , get_template_directory_uri() . "/fonts/js/all.min.js" , array() , false , true);
         // get slick 
         wp_enqueue_script("slick-js" , get_template_directory_uri() . "/assists/slick.min.js" , array() , false , true);
         // get main js
