@@ -49,13 +49,14 @@
          * navbar scroll animation
          */
         var lastScroll = 0;
-        $(document).scroll(function(){
+
+        function headerScroller(){
             let scrolled = $(window).scrollTop();
             let screenWidth = $(document).innerWidth();
 
             if(screenWidth > 991){
                 if(scrolled > 0){
-                    $(".upper").slideUp(500);
+                    // $(".upper").slideUp(500);
                     if(lastScroll > scrolled){
                         $(".nav_links").addClass("show_it");
                         $(".nav_links").removeClass("hide_it");
@@ -66,12 +67,15 @@
                 }else{
                     $(".nav_links").removeClass("show_it");
                     $(".nav_links").removeClass("hide_it");
-                    $(".upper").slideDown(500);
+                    // $(".upper").slideDown(500);
                 }
             }
 
             lastScroll = scrolled;
+        }headerScroller();
 
+        $(document).scroll(function(){
+            headerScroller();
         });
 
         /**

@@ -12,9 +12,9 @@
         <div class="col-md-12">
             <?php 
                 /**
-                 * get the random posts for main page
+                 * get the Recommended posts for main page
                  */
-                // require_once (get_template_directory() . "/parts/home/random_posts.php");
+                require_once (get_template_directory() . "/parts/home/recommend_posts.php");
             ?>
         </div>
         <div class="col-md-9">

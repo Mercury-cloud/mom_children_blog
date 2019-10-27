@@ -47,7 +47,7 @@ $transition : all 0.5s ease-in-out;
 %read_more{
     color : $color;
     font-weight : bold;
-    font-family : 'pretty-head' , sans-serif;
+    font-family : 'lato-regular' , sans-serif;
     font-size : 14px;
     display : inline-block;
     background : $background-color;
@@ -61,15 +61,26 @@ $transition : all 0.5s ease-in-out;
 }
 // headers
 %nice_header{
-    margin-bottom : 30px;
-    background : $background-color;
-    padding : 10px;
-    margin: 15px;
-    border-radius : 10px;
-    //text-shadow:0px 5px 9px #62633c;
-    &:hover{
-        background : $background-hover;
+    padding : 10px 10px 10px 0px;
+    margin : 20px 0px 20px 0px;
+    border-bottom : 1px solid $border;
+    display : inline-block;
+    color : $text-color;
+    font-family : 'lato-bold' , 'sans-serif';
+    img , svg{
+        width : 25px;
+        display : inline-block;
+        margin-right : 5px;
     }
+    // margin-bottom : 30px;
+    // background : $background-color;
+    // padding : 10px;
+    // margin: 15px;
+    // border-radius : 10px;
+    // //text-shadow:0px 5px 9px #62633c;
+    // &:hover{
+    //     background : $background-hover;
+    // }
 }
 // fonts
 @font-face{
@@ -77,11 +88,15 @@ $transition : all 0.5s ease-in-out;
     src:url('../fonts/article_font/PTF55F.ttf');
 }
 @font-face{
-    font-family: 'pretty-head';
-    src:url('../fonts/Lato-Regular.ttf');
+    font-family: 'lato-regular';
+    src:url('../fonts/Lato/Lato-Regular.ttf');
+}
+@font-face{
+    font-family: 'lato-bold';
+    src:url('../fonts/Lato/Lato-Bold.ttf');
 }
 *{
-    font-family: 'ptf-55f', sans-serif;
+    font-family: 'lato-regular', sans-serif;
     font-weight: normal;
     margin: 0px;
     padding: 0px;
