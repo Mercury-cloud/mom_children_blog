@@ -504,6 +504,9 @@
 ** @version: 1.0.0
 ** This Style For Header page only
 */
+.cat-container {
+  margin-top: 0px !important; }
+
 .recommended-posts-container, .cat-container {
   margin-bottom: 20px;
   margin-top: 40px; }

@@ -10,6 +10,7 @@
         // category id
         $cat_id = $cat_info->term_id; ?>
         <div class="cat-container">
+
             <!-- category title -->
             <h2 class="cat-title">
                 <a href="<?php echo get_category_link($cat_id); ?>">
@@ -19,6 +20,7 @@
             </h2>
 
             <div class="post-container">
+                
                 <?php 
                     // get this category posts
                     $cat_posts_args = array(
@@ -84,6 +86,7 @@
                                             ?>
                                             <a class="category" href="<?php echo $link ?>"><?php echo $name ?></a>
                                         <?php } ?>
+
                                         <!-- post title -->
                                         <h3 class="post-title">
                                             <a href="<?php the_permalink();// link of the post ?>">
@@ -101,15 +104,21 @@
                                 </div>
                             <?php echo $x == 3 ? '</div"></div>' : null ?>
                         <?php endwhile; 
+
                         echo "</div>";
                         wp_reset_postdata(); // rest all values 
                     endif;
                 ?>
+
                 <div class="fix"></div>
+
                 <div class="text-center got_to_container">
                     <a href="/tag/recommended" class="got_to_recommended">View All <?php echo $cat_info->name ?> Articles</a>
                 </div>
+
             </div>
+
+        </div>
         </div>
     <?php endforeach; 
     wp_reset_postdata(); // rest the post data

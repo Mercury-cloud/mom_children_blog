@@ -1,7 +1,7 @@
 <div class="cutom-sidebar cutom">
 
     <!-- custom search box -->
-    <div class="search box">
+    <!-- <div class="search box">
         <h3><span>Search <i class="fa fa-search fa-fw"></i></span></h3>
         <form role="search" method="get" id="searchform" class="searchform form-horizental" action="<?php echo get_site_url(); ?>">
             <div>
@@ -9,16 +9,18 @@
                 <button><i class="fa fa-search fa-fw"></i></button>
             </div>
         </form>
-    </div>
+    </div> -->
 
     <!-- be in touch -->
-    <div class="fb-box box">
+    <!-- <div class="fb-box box">
         <h3><span>Be In Touch</span></h3>
         <div class="fb-page" data-href="https://www.facebook.com/TechDev-Websites-324417348213498" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/TechDev-Websites-324417348213498" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TechDev-Websites-324417348213498">TechDev Websites</a></blockquote></div>
-    </div>
+    </div> -->
     <!-- custom latest posts -->
     <div class="recent-posts box">
-        <h3><span>Latest News <i class="fa fa-clock fa-fw"></i></span></h3>
+        <h3>
+            <span>Latest News <img src="" alt="Latest News" /> </span>
+        </h3>
         <div class="post-container">
             <?php
                 $recent_posts_args = array(

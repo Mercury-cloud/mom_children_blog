@@ -17,6 +17,7 @@
                 require_once (get_template_directory() . "/parts/home/recommend_posts.php");
             ?>
         </div>
+        
         <div class="col-md-9">
             <?php 
                 /**
@@ -25,9 +26,11 @@
                 require_once (get_template_directory() . "/parts/home/cat_posts.php");
             ?>
         </div>
+        
         <div class="col-md-3">
-            <?php //get_sidebar(); ?>
+            <?php get_sidebar(); ?>
         </div>
+
     </div>
 </div>
 <!-- end all posts container -->
