@@ -22,7 +22,7 @@
                 /**
                  * get the main cats posts max 5
                  */
-                // require_once (get_template_directory() . "/parts/home/cat_posts.php");
+                require_once (get_template_directory() . "/parts/home/cat_posts.php");
             ?>
         </div>
         <div class="col-md-3">

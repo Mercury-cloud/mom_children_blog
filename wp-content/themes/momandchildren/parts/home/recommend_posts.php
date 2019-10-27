@@ -1,14 +1,15 @@
 <?php 
-    $random_posts_args = array(
+    $recommended_posts_args = array(
         'post_type'         => 'post',
         'orderby'           => 'ID',
         'order'             => 'DESC',
         'tag'               => 'recommended',
         'posts_per_page'    => 3
     );
-    $random_posts = new WP_Query($random_posts_args); ?>
+    $recommended_posts = new WP_Query($recommended_posts_args); ?>
     <!-- the posts container div -->
     <div class="recommended-posts-container" id="homeRecommended">
+        
         <h2 class="recommend-head text-left">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.481 19.481" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 19.481 19.481">
             <g>
@@ -17,13 +18,14 @@
             </svg>
             Recommended Articles 
         </h2>
-        <div class="list-unstyled recommend-post">
-        <?php if($random_posts->have_posts()): // check if there are posts 
+
+        <div class="recommend-post">
+        <?php if($recommended_posts->have_posts()): // check if there are posts 
                 // posts counter
                 $x = 0; 
                 // echo the posts
                 echo "<div class='row'>";
-                while($random_posts->have_posts()): $random_posts->the_post(); $x += 1; 
+                while($recommended_posts->have_posts()): $recommended_posts->the_post(); $x += 1; 
                     ?>
                     <?php echo $x == 2 ? '<div class="col-md-4"><div class="row">' : null ?>
                         <div class="post-rand-li 

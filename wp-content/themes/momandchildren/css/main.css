@@ -27,7 +27,7 @@
     left: 115% !important;
     top: 30%; }
 
-.author-page .author-posts .main-post .post-summery p a, .recommended-posts-container .recommend-post .post-rand-li .excerpt a, .cat-design-post-box .post-summery p a, .cat-design-post-line .post-summery p a, .random-posts-single .random-post .post-rand-li .excerpt a {
+.author-page .author-posts .main-post .post-summery p a, .recommended-posts-container .recommend-post .post-rand-li .excerpt a, .recommended-posts-container .post-container .post-rand-li .excerpt a, .cat-container .recommend-post .post-rand-li .excerpt a, .cat-container .post-container .post-rand-li .excerpt a, .cat-design-post-box .post-summery p a, .cat-design-post-line .post-summery p a, .random-posts-single .random-post .post-rand-li .excerpt a {
   color: #222;
   font-weight: bold;
   font-family: 'lato-regular' , sans-serif;
@@ -38,17 +38,17 @@
   border-radius: 10px;
   color: #FFF;
   margin: 0px 0px 0px 5px; }
-  .author-page .author-posts .main-post .post-summery p a:hover, .recommended-posts-container .recommend-post .post-rand-li .excerpt a:hover, .cat-design-post-box .post-summery p a:hover, .cat-design-post-line .post-summery p a:hover, .random-posts-single .random-post .post-rand-li .excerpt a:hover {
+  .author-page .author-posts .main-post .post-summery p a:hover, .recommended-posts-container .recommend-post .post-rand-li .excerpt a:hover, .recommended-posts-container .post-container .post-rand-li .excerpt a:hover, .cat-container .recommend-post .post-rand-li .excerpt a:hover, .cat-container .post-container .post-rand-li .excerpt a:hover, .cat-design-post-box .post-summery p a:hover, .cat-design-post-line .post-summery p a:hover, .random-posts-single .random-post .post-rand-li .excerpt a:hover {
     background: #D97E85; }
 
-.author-page .author-posts .posts-head, .author-page .author-comments-section h2, .recommended-posts-container .recommend-head, .cat-container .cat-title, .cat-container .post-container li .excerpt a, .random-posts-single .rand-head, .author-meta .author-posts-count, .comments-section .comemnts-title {
+.author-page .author-posts .posts-head, .author-page .author-comments-section h2, .recommended-posts-container .recommend-head, .recommended-posts-container .cat-title, .cat-container .recommend-head, .cat-container .cat-title, .random-posts-single .rand-head, .author-meta .author-posts-count, .comments-section .comemnts-title {
   padding: 10px 10px 10px 0px;
   margin: 20px 0px 20px 0px;
   border-bottom: 1px solid #3047BC;
   display: inline-block;
   color: #161515;
   font-family: 'lato-bold' , 'sans-serif'; }
-  .author-page .author-posts .posts-head img, .author-page .author-comments-section h2 img, .recommended-posts-container .recommend-head img, .cat-container .cat-title img, .cat-container .post-container li .excerpt a img, .random-posts-single .rand-head img, .author-meta .author-posts-count img, .comments-section .comemnts-title img, .author-page .author-posts .posts-head svg, .author-page .author-comments-section h2 svg, .recommended-posts-container .recommend-head svg, .cat-container .cat-title svg, .cat-container .post-container li .excerpt a svg, .random-posts-single .rand-head svg, .author-meta .author-posts-count svg, .comments-section .comemnts-title svg {
+  .author-page .author-posts .posts-head img, .author-page .author-comments-section h2 img, .recommended-posts-container .recommend-head img, .recommended-posts-container .cat-title img, .cat-container .recommend-head img, .cat-container .cat-title img, .random-posts-single .rand-head img, .author-meta .author-posts-count img, .comments-section .comemnts-title img, .author-page .author-posts .posts-head svg, .author-page .author-comments-section h2 svg, .recommended-posts-container .recommend-head svg, .recommended-posts-container .cat-title svg, .cat-container .recommend-head svg, .cat-container .cat-title svg, .random-posts-single .rand-head svg, .author-meta .author-posts-count svg, .comments-section .comemnts-title svg {
     width: 25px;
     display: inline-block;
     margin-right: 5px; }
@@ -504,39 +504,41 @@
 ** @version: 1.0.0
 ** This Style For Header page only
 */
-.recommended-posts-container {
+.recommended-posts-container, .cat-container {
   margin-bottom: 20px;
   margin-top: 40px; }
-  .recommended-posts-container .recommend-head svg {
+  .recommended-posts-container .recommend-head svg, .recommended-posts-container .cat-title svg, .cat-container .recommend-head svg, .cat-container .cat-title svg {
     fill: #D97E85; }
-  .recommended-posts-container .recommend-post {
+  .recommended-posts-container .recommend-head a, .recommended-posts-container .cat-title a, .cat-container .recommend-head a, .cat-container .cat-title a {
+    color: #161515;
+    text-decoration: none; }
+  .recommended-posts-container .recommend-post, .recommended-posts-container .post-container, .cat-container .recommend-post, .cat-container .post-container {
     padding: 1%; }
-    .recommended-posts-container .recommend-post .post-rand-li.seconds_posts:nth-of-type(1) {
+    .recommended-posts-container .recommend-post .post-rand-li.seconds_posts:nth-of-type(1), .recommended-posts-container .post-container .post-rand-li.seconds_posts:nth-of-type(1), .cat-container .recommend-post .post-rand-li.seconds_posts:nth-of-type(1), .cat-container .post-container .post-rand-li.seconds_posts:nth-of-type(1) {
       margin-bottom: 38px; }
-    .recommended-posts-container .recommend-post .post-rand-li > div {
+    .recommended-posts-container .recommend-post .post-rand-li > div, .recommended-posts-container .post-container .post-rand-li > div, .cat-container .recommend-post .post-rand-li > div, .cat-container .post-container .post-rand-li > div {
       position: relative;
       overflow: hidden;
       height: 100%;
       max-height: 270px;
       width: 100%;
       border-radius: 5px; }
-    .recommended-posts-container .recommend-post .post-rand-li .category {
+    .recommended-posts-container .recommend-post .post-rand-li .category, .recommended-posts-container .post-container .post-rand-li .category, .cat-container .recommend-post .post-rand-li .category, .cat-container .post-container .post-rand-li .category {
       font-size: 1em;
       color: #161515;
       background-color: #F2B6BB;
       position: absolute;
       top: 0px;
       left: 0px;
-      border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
       padding: 10px;
       opacity: 0.8;
       transition: all 0.5s ease-in-out; }
-      .recommended-posts-container .recommend-post .post-rand-li .category:hover {
+      .recommended-posts-container .recommend-post .post-rand-li .category:hover, .recommended-posts-container .post-container .post-rand-li .category:hover, .cat-container .recommend-post .post-rand-li .category:hover, .cat-container .post-container .post-rand-li .category:hover {
         opacity: 1;
         color: #FFF;
         background-color: #D97E85; }
-    .recommended-posts-container .recommend-post .post-rand-li h3 {
+    .recommended-posts-container .recommend-post .post-rand-li h3, .recommended-posts-container .post-container .post-rand-li h3, .cat-container .recommend-post .post-rand-li h3, .cat-container .post-container .post-rand-li h3 {
       background: #FFF;
       padding: 10px;
       margin: 0px;
@@ -546,23 +548,23 @@
       font-family: 'lato-bold' , 'sans-serif';
       font-weight: bold;
       z-index: 1; }
-      .recommended-posts-container .recommend-post .post-rand-li h3 a {
+      .recommended-posts-container .recommend-post .post-rand-li h3 a, .recommended-posts-container .post-container .post-rand-li h3 a, .cat-container .recommend-post .post-rand-li h3 a, .cat-container .post-container .post-rand-li h3 a {
         color: #161515;
         text-decoration: none; }
-    .recommended-posts-container .recommend-post .post-rand-li img {
+    .recommended-posts-container .recommend-post .post-rand-li img, .recommended-posts-container .post-container .post-rand-li img, .cat-container .recommend-post .post-rand-li img, .cat-container .post-container .post-rand-li img {
       transition: all 0.5s ease-in-out;
       width: 100%;
       height: 197px;
       z-index: 0; }
-      .recommended-posts-container .recommend-post .post-rand-li img:hover {
+      .recommended-posts-container .recommend-post .post-rand-li img:hover, .recommended-posts-container .post-container .post-rand-li img:hover, .cat-container .recommend-post .post-rand-li img:hover, .cat-container .post-container .post-rand-li img:hover {
         transform: scale(1.05); }
-    .recommended-posts-container .recommend-post .post-rand-li .post-author, .recommended-posts-container .recommend-post .post-rand-li .post-date, .recommended-posts-container .recommend-post .post-rand-li .post-comments {
+    .recommended-posts-container .recommend-post .post-rand-li .post-author, .recommended-posts-container .recommend-post .post-rand-li .post-date, .recommended-posts-container .recommend-post .post-rand-li .post-comments, .recommended-posts-container .post-container .post-rand-li .post-author, .recommended-posts-container .post-container .post-rand-li .post-date, .recommended-posts-container .post-container .post-rand-li .post-comments, .cat-container .recommend-post .post-rand-li .post-author, .cat-container .recommend-post .post-rand-li .post-date, .cat-container .recommend-post .post-rand-li .post-comments, .cat-container .post-container .post-rand-li .post-author, .cat-container .post-container .post-rand-li .post-date, .cat-container .post-container .post-rand-li .post-comments {
       margin: 0px 0px 10px 5px;
       display: inline-block;
       z-index: 1; }
-      .recommended-posts-container .recommend-post .post-rand-li .post-author a, .recommended-posts-container .recommend-post .post-rand-li .post-date a, .recommended-posts-container .recommend-post .post-rand-li .post-comments a {
+      .recommended-posts-container .recommend-post .post-rand-li .post-author a, .recommended-posts-container .recommend-post .post-rand-li .post-date a, .recommended-posts-container .recommend-post .post-rand-li .post-comments a, .recommended-posts-container .post-container .post-rand-li .post-author a, .recommended-posts-container .post-container .post-rand-li .post-date a, .recommended-posts-container .post-container .post-rand-li .post-comments a, .cat-container .recommend-post .post-rand-li .post-author a, .cat-container .recommend-post .post-rand-li .post-date a, .cat-container .recommend-post .post-rand-li .post-comments a, .cat-container .post-container .post-rand-li .post-author a, .cat-container .post-container .post-rand-li .post-date a, .cat-container .post-container .post-rand-li .post-comments a {
         color: #444; }
-    .recommended-posts-container .recommend-post .post-rand-li .excerpt {
+    .recommended-posts-container .recommend-post .post-rand-li .excerpt, .recommended-posts-container .post-container .post-rand-li .excerpt, .cat-container .recommend-post .post-rand-li .excerpt, .cat-container .post-container .post-rand-li .excerpt {
       padding: 10px 30px;
       color: #FFF;
       width: 100%;
@@ -570,24 +572,23 @@
       font-size: 15px;
       line-height: 23px;
       z-index: 1; }
-      .recommended-posts-container .recommend-post .post-rand-li .excerpt a {
+      .recommended-posts-container .recommend-post .post-rand-li .excerpt a, .recommended-posts-container .post-container .post-rand-li .excerpt a, .cat-container .recommend-post .post-rand-li .excerpt a, .cat-container .post-container .post-rand-li .excerpt a {
         padding: 5px;
         display: inline-block; }
-    .recommended-posts-container .recommend-post .post-rand-li.first_post {
+    .recommended-posts-container .recommend-post .post-rand-li.first_post, .recommended-posts-container .post-container .post-rand-li.first_post, .cat-container .recommend-post .post-rand-li.first_post, .cat-container .post-container .post-rand-li.first_post {
       max-height: 580px;
-      height: 580px;
-      padding-left: 0px; }
-      .recommended-posts-container .recommend-post .post-rand-li.first_post > div {
+      height: 580px; }
+      .recommended-posts-container .recommend-post .post-rand-li.first_post > div, .recommended-posts-container .post-container .post-rand-li.first_post > div, .cat-container .recommend-post .post-rand-li.first_post > div, .cat-container .post-container .post-rand-li.first_post > div {
         max-height: 580px;
         height: 580px; }
-      .recommended-posts-container .recommend-post .post-rand-li.first_post img {
+      .recommended-posts-container .recommend-post .post-rand-li.first_post img, .recommended-posts-container .post-container .post-rand-li.first_post img, .cat-container .recommend-post .post-rand-li.first_post img, .cat-container .post-container .post-rand-li.first_post img {
         height: auto; }
-      .recommended-posts-container .recommend-post .post-rand-li.first_post h3 {
+      .recommended-posts-container .recommend-post .post-rand-li.first_post h3, .recommended-posts-container .post-container .post-rand-li.first_post h3, .cat-container .recommend-post .post-rand-li.first_post h3, .cat-container .post-container .post-rand-li.first_post h3 {
         font-size: 2em;
         height: auto;
         padding: 10px 20px;
         line-height: 1.2em; }
-      .recommended-posts-container .recommend-post .post-rand-li.first_post .excerpt {
+      .recommended-posts-container .recommend-post .post-rand-li.first_post .excerpt, .recommended-posts-container .post-container .post-rand-li.first_post .excerpt, .cat-container .recommend-post .post-rand-li.first_post .excerpt, .cat-container .post-container .post-rand-li.first_post .excerpt {
         background-color: #FFF;
         height: 100%;
         font-size: 1.5em;
@@ -595,7 +596,16 @@
         margin: 0px;
         font-weight: lighter;
         line-height: 1.2em; }
-  .recommended-posts-container .got_to_container .got_to_recommended {
+  .recommended-posts-container .post-container .post-rand-li.first_post, .cat-container .post-container .post-rand-li.first_post {
+    margin-bottom: 20px;
+    max-height: 620px;
+    height: 620px; }
+    .recommended-posts-container .post-container .post-rand-li.first_post > div, .cat-container .post-container .post-rand-li.first_post > div {
+      max-height: 620px;
+      height: 620px; }
+  .recommended-posts-container .post-container .post-rand-li.seconds_posts:nth-of-type(1), .cat-container .post-container .post-rand-li.seconds_posts:nth-of-type(1) {
+    margin-bottom: 0px; }
+  .recommended-posts-container .got_to_container .got_to_recommended, .cat-container .got_to_container .got_to_recommended {
     display: inline-block;
     background-color: #F2B6BB;
     margin: 20px auto;
@@ -605,7 +615,7 @@
     text-decoration: none;
     color: #161515;
     font-size: 1.3em; }
-    .recommended-posts-container .got_to_container .got_to_recommended:hover {
+    .recommended-posts-container .got_to_container .got_to_recommended:hover, .cat-container .got_to_container .got_to_recommended:hover {
       background-color: #D97E85;
       color: #FFF;
       text-decoration: underline; }
@@ -614,81 +624,76 @@
 ** Mobile Design
 */
 @media (max-width: 991px) {
-  .recommend-head {
+  .recommended-posts-container .recommend-head, .cat-container .recommend-head {
     font-size: 1.8em !important; }
-
-  .recommend-post {
-    padding: 1%; }
-    .recommend-post .post-rand-li {
-      position: relative; }
-      .recommend-post .post-rand-li.first_post {
+  .recommended-posts-container .recommend-post .post-rand-li, .recommended-posts-container .post-container .post-rand-li, .cat-container .recommend-post .post-rand-li, .cat-container .post-container .post-rand-li {
+    position: relative; }
+    .recommended-posts-container .recommend-post .post-rand-li.first_post, .recommended-posts-container .post-container .post-rand-li.first_post, .cat-container .recommend-post .post-rand-li.first_post, .cat-container .post-container .post-rand-li.first_post {
+      max-height: 390px !important;
+      height: 390px !important;
+      margin-bottom: 20px !important; }
+      .recommended-posts-container .recommend-post .post-rand-li.first_post > div, .recommended-posts-container .post-container .post-rand-li.first_post > div, .cat-container .recommend-post .post-rand-li.first_post > div, .cat-container .post-container .post-rand-li.first_post > div {
         max-height: 390px !important;
-        height: 390px !important;
-        padding-left: 15px !important;
-        margin-bottom: 20px !important; }
-        .recommend-post .post-rand-li.first_post > div {
-          max-height: 390px !important;
-          height: 390px !important; }
-        .recommend-post .post-rand-li.first_post img {
-          height: auto; }
-        .recommend-post .post-rand-li.first_post h3 {
-          font-size: 1.7em !important;
-          height: auto;
-          padding: 10px 20px;
-          line-height: 1.2em; }
-        .recommend-post .post-rand-li.first_post .excerpt {
-          background-color: #FFF;
-          height: 100%;
-          font-size: 1.2em !important;
-          padding: 10px 20px;
-          margin: 0px;
-          font-weight: lighter;
-          line-height: 1.2em; }
-      .recommend-post .post-rand-li.seconds_posts:nth-of-type(1) {
-        margin-bottom: 20px !important; }
-      .recommend-post .post-rand-li > div {
-        position: relative;
-        overflow: hidden;
+        height: 390px !important; }
+      .recommended-posts-container .recommend-post .post-rand-li.first_post img, .recommended-posts-container .post-container .post-rand-li.first_post img, .cat-container .recommend-post .post-rand-li.first_post img, .cat-container .post-container .post-rand-li.first_post img {
+        height: auto; }
+      .recommended-posts-container .recommend-post .post-rand-li.first_post h3, .recommended-posts-container .post-container .post-rand-li.first_post h3, .cat-container .recommend-post .post-rand-li.first_post h3, .cat-container .post-container .post-rand-li.first_post h3 {
+        font-size: 1.7em !important;
+        height: auto;
+        padding: 10px 20px;
+        line-height: 1.2em; }
+      .recommended-posts-container .recommend-post .post-rand-li.first_post .excerpt, .recommended-posts-container .post-container .post-rand-li.first_post .excerpt, .cat-container .recommend-post .post-rand-li.first_post .excerpt, .cat-container .post-container .post-rand-li.first_post .excerpt {
+        background-color: #FFF;
         height: 100%;
-        max-height: 270px;
-        width: 100%;
-        border-radius: 5px; }
-      .recommend-post .post-rand-li h3 {
-        background: #FFF;
-        padding: 10px;
+        font-size: 1.2em !important;
+        padding: 10px 20px;
         margin: 0px;
-        font-size: 1.4em;
-        line-height: 1.4em;
-        height: 102px;
-        font-family: 'lato-bold' , 'sans-serif';
-        font-weight: bold;
-        z-index: 1; }
-        .recommend-post .post-rand-li h3 a {
-          color: #161515;
-          text-decoration: none; }
-      .recommend-post .post-rand-li img {
-        transition: all 0.5s ease-in-out;
-        width: 100%;
-        height: 197px;
-        z-index: 0; }
-        .recommend-post .post-rand-li img:hover {
-          transform: scale(1.05); }
-      .recommend-post .post-rand-li .post-author, .recommend-post .post-rand-li .post-date, .recommend-post .post-rand-li .post-comments {
-        margin: 0px 0px 10px 5px;
-        display: inline-block;
-        z-index: 1; }
-        .recommend-post .post-rand-li .post-author a, .recommend-post .post-rand-li .post-date a, .recommend-post .post-rand-li .post-comments a {
-          color: #444; }
-      .recommend-post .post-rand-li .excerpt {
-        padding: 10px 30px;
-        color: #FFF;
-        width: 100%;
-        bottom: 0px;
-        font-size: 15px;
-        line-height: 23px;
-        z-index: 1; }
-
-  .got_to_container .got_to_recommended {
+        font-weight: lighter;
+        line-height: 1.2em; }
+    .recommended-posts-container .recommend-post .post-rand-li.seconds_posts:nth-of-type(1), .recommended-posts-container .post-container .post-rand-li.seconds_posts:nth-of-type(1), .cat-container .recommend-post .post-rand-li.seconds_posts:nth-of-type(1), .cat-container .post-container .post-rand-li.seconds_posts:nth-of-type(1) {
+      margin-bottom: 20px !important; }
+    .recommended-posts-container .recommend-post .post-rand-li > div, .recommended-posts-container .post-container .post-rand-li > div, .cat-container .recommend-post .post-rand-li > div, .cat-container .post-container .post-rand-li > div {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      max-height: 270px;
+      width: 100%;
+      border-radius: 5px; }
+    .recommended-posts-container .recommend-post .post-rand-li h3, .recommended-posts-container .post-container .post-rand-li h3, .cat-container .recommend-post .post-rand-li h3, .cat-container .post-container .post-rand-li h3 {
+      background: #FFF;
+      padding: 10px;
+      margin: 0px;
+      font-size: 1.4em;
+      line-height: 1.4em;
+      height: 102px;
+      font-family: 'lato-bold' , 'sans-serif';
+      font-weight: bold;
+      z-index: 1; }
+      .recommended-posts-container .recommend-post .post-rand-li h3 a, .recommended-posts-container .post-container .post-rand-li h3 a, .cat-container .recommend-post .post-rand-li h3 a, .cat-container .post-container .post-rand-li h3 a {
+        color: #161515;
+        text-decoration: none; }
+    .recommended-posts-container .recommend-post .post-rand-li img, .recommended-posts-container .post-container .post-rand-li img, .cat-container .recommend-post .post-rand-li img, .cat-container .post-container .post-rand-li img {
+      transition: all 0.5s ease-in-out;
+      width: 100%;
+      height: 197px;
+      z-index: 0; }
+      .recommended-posts-container .recommend-post .post-rand-li img:hover, .recommended-posts-container .post-container .post-rand-li img:hover, .cat-container .recommend-post .post-rand-li img:hover, .cat-container .post-container .post-rand-li img:hover {
+        transform: scale(1.05); }
+    .recommended-posts-container .recommend-post .post-rand-li .post-author, .recommended-posts-container .recommend-post .post-rand-li .post-date, .recommended-posts-container .recommend-post .post-rand-li .post-comments, .recommended-posts-container .post-container .post-rand-li .post-author, .recommended-posts-container .post-container .post-rand-li .post-date, .recommended-posts-container .post-container .post-rand-li .post-comments, .cat-container .recommend-post .post-rand-li .post-author, .cat-container .recommend-post .post-rand-li .post-date, .cat-container .recommend-post .post-rand-li .post-comments, .cat-container .post-container .post-rand-li .post-author, .cat-container .post-container .post-rand-li .post-date, .cat-container .post-container .post-rand-li .post-comments {
+      margin: 0px 0px 10px 5px;
+      display: inline-block;
+      z-index: 1; }
+      .recommended-posts-container .recommend-post .post-rand-li .post-author a, .recommended-posts-container .recommend-post .post-rand-li .post-date a, .recommended-posts-container .recommend-post .post-rand-li .post-comments a, .recommended-posts-container .post-container .post-rand-li .post-author a, .recommended-posts-container .post-container .post-rand-li .post-date a, .recommended-posts-container .post-container .post-rand-li .post-comments a, .cat-container .recommend-post .post-rand-li .post-author a, .cat-container .recommend-post .post-rand-li .post-date a, .cat-container .recommend-post .post-rand-li .post-comments a, .cat-container .post-container .post-rand-li .post-author a, .cat-container .post-container .post-rand-li .post-date a, .cat-container .post-container .post-rand-li .post-comments a {
+        color: #444; }
+    .recommended-posts-container .recommend-post .post-rand-li .excerpt, .recommended-posts-container .post-container .post-rand-li .excerpt, .cat-container .recommend-post .post-rand-li .excerpt, .cat-container .post-container .post-rand-li .excerpt {
+      padding: 10px 30px;
+      color: #FFF;
+      width: 100%;
+      bottom: 0px;
+      font-size: 15px;
+      line-height: 23px;
+      z-index: 1; }
+  .recommended-posts-container .got_to_container .got_to_recommended, .cat-container .got_to_container .got_to_recommended {
     display: inline-block;
     background-color: #F2B6BB;
     margin: 20px auto;
@@ -698,71 +703,10 @@
     text-decoration: none;
     color: #161515;
     font-size: 1.3em; }
-    .got_to_container .got_to_recommended:hover {
+    .recommended-posts-container .got_to_container .got_to_recommended:hover, .cat-container .got_to_container .got_to_recommended:hover {
       background-color: #D97E85;
       color: #FFF;
       text-decoration: underline; } }
-.cat-container {
-  border-radius: 15px 15px 0px 0px;
-  margin: 5px 0px auto; }
-  .cat-container .cat-title {
-    border-radius: 15px 15px 0px 0px;
-    margin: 5px 0px auto; }
-    .cat-container .cat-title a {
-      color: #333; }
-  .cat-container .post-container {
-    padding: 0px; }
-    .cat-container .post-container li {
-      list-style: none;
-      margin-bottom: 10px;
-      padding: 5px;
-      background-color: #FFF;
-      border: 1px solid #3047BC;
-      border-radius: 20px;
-      position: relative;
-      height: 305px;
-      overflow: hidden; }
-      .cat-container .post-container li .post-title {
-        margin: 5px;
-        padding: 5px 10px;
-        font-size: 20px; }
-        .cat-container .post-container li .post-title a {
-          color: #222; }
-      .cat-container .post-container li .post-author, .cat-container .post-container li .post-date, .cat-container .post-container li .post-comments {
-        margin: 0px 0px 10px 5px;
-        display: inline-block; }
-        .cat-container .post-container li .post-author a, .cat-container .post-container li .post-date a, .cat-container .post-container li .post-comments a {
-          color: #444; }
-      .cat-container .post-container li .img-container {
-        height: 200px;
-        overflow: hidden;
-        border-radius: 10px; }
-        .cat-container .post-container li .img-container a img {
-          border-radius: 10px;
-          width: 100%;
-          height: 100%; }
-      .cat-container .post-container li .excerpt {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.555);
-        padding: 10px;
-        color: #FFF;
-        width: 96%;
-        margin-bottom: 10px;
-        margin-left: 3px;
-        bottom: 0px;
-        font-size: 15px; }
-        .cat-container .post-container li .excerpt p {
-          margin-bottom: 0px;
-          font-size: 14px;
-          line-height: 2em; }
-        .cat-container .post-container li .excerpt a {
-          margin: 0px;
-          color: #FFF !important;
-          padding: 5px;
-          display: inline-block; }
-    .cat-container .post-container li:nth-of-type(1) {
-      border-radius: 0px 0px 15px 15px; }
-
 /*
 ** @Author : Bishoy Romany
 ** @Page : category.php
