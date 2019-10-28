@@ -19,13 +19,13 @@
     <!-- custom latest posts -->
     <div class="recent-posts box">
         <h3>
-            <span>Latest News <img src="" alt="Latest News" /> </span>
+            <span>Latest Articles <img src="<?php echo get_template_directory_uri(); ?>/imgs/new.svg" alt="Latest News" /> </span>
         </h3>
         <div class="post-container">
             <?php
                 $recent_posts_args = array(
                     'post_type'             => 'post',
-                    'posts_per_page'        => 6     ,
+                    'posts_per_page'        => 3     ,
                     'post_status'           => 'publish',
                     'orderby'               => 'ID',
                     'order'                 => 'DESC'
@@ -33,7 +33,6 @@
                 $recent_posts = new WP_Query($recent_posts_args);
                 while($recent_posts->have_posts()):
                     $recent_posts->the_post(); ?>
-                    <div class="col-md-6 col-xs-6">
                     <div class="post">
                         <div class="img-container">
                             <?php 
@@ -45,54 +44,27 @@
                                 endif;
                             ?>
                             <a href="<?php echo get_permalink(); ?>">
-                            <img src="<?php echo $img_link; ?>" alt="post image" class="img-responsive img-thumbnail"></a>
+                            <img src="<?php echo $img_link; ?>" alt="post image" class="img-responsive"></a>
                         </div>
+                        <h4 class="post-head"><a href="<?php echo get_permalink(); ?>" target="_blank">
+                        <?php the_title(); ?></a></h4>
                         <div class="post-info">
                             <h4><a href="<?php echo get_permalink(); ?>" target="_blank">
                             <?php the_title(); ?></a></h4>
-                        </div>
-                    </div>
-                    </div>
-                <?php endwhile;
-                wp_reset_postdata();
-            ?>
-            <div class="fix"></div>
-        </div>
-    </div>
+                            <div class="ex-con">
+                                <?php echo the_excerpt() ?>
+                            </div>
 
-    <!-- custom random posts -->
-    <div class="rand-posts box">
-        <h3><span>You May Like <i class="fa fa-heart fa-fw"></i></span></h3>
-        <div class="post-container">
-            <?php
-                $recent_posts_args = array(
-                    'post_type'             => 'post',
-                    'posts_per_page'        => 6     ,
-                    'post_status'           => 'publish',
-                    'orderby'               => 'rand',
-                ); 
-                $recent_posts = new WP_Query($recent_posts_args);
-                while($recent_posts->have_posts()):
-                    $recent_posts->the_post(); ?>
-                    <div class="col-md-6 col-xs-6">
-                    <div class="post">
-                        <div class="img-container">
                             <?php 
-                                // check if image exist or know
-                                if(get_the_post_thumbnail_url()):
-                                    $img_link = get_the_post_thumbnail_url();
-                                else:
-                                    $img_link =  get_template_directory_uri()."/imgs/404.png";
-                                endif;
+                                /*
+                                <a class="author" target="_blank" href="<?php echo get_site_url().'/author'.'/'.get_the_author_meta('user_nicename').'/'; ?>">
+                                <i class="fa fa-user fa-fw"></i><?php  echo get_the_author_meta('nickname') ?></a>
+                                <span class="comments">
+                                    <?php echo comments_number('No Comments <i class="fa fa-comment fa-fw"></i>' , '1 Comment <i class="fa fa-comment fa-fw"></i>' , 
+                                    '% Comments <i class="fa fa-comments fa-fw"></i>' , '<span style="color : red;">Comments <i class="fa fa-comment fa-fw"></i> Disabled </span>'); ?>
+                                </span> */ 
                             ?>
-                            <a href="<?php echo get_permalink(); ?>">
-                            <img src="<?php echo $img_link; ?>" alt="post image" class="img-responsive img-thumbnail"></a>
                         </div>
-                        <div class="post-info">
-                            <h4><a href="<?php echo get_permalink(); ?>" target="_blank">
-                            <?php the_title(); ?></a></h4>
-                        </div>
-                    </div>
                     </div>
                 <?php endwhile;
                 wp_reset_postdata();
@@ -100,25 +72,10 @@
             <div class="fix"></div>
         </div>
     </div>
-
-    <!-- custom ad area -->
-    <div class="a-d box">
-        <h3><span>Ads<i class="fa fa-ad fa-fw"></i></span></h3>
-        <div class="ad">
-            300 X 236
-        </div>
-    </div>
-
-    <!-- custom ad area -->
-    <div class="a-d-s hidden box">
-        <div class="ad">
-            300 X 236
-        </div>
-    </div>   
 
     <!-- custom hottest post -->
     <div class="hottest-post box">
-        <h3><span>Hottest Post <i class="fa fa-fire fa-fw"></i></span></h3>
+        <h3><span>Hottest Article <img src="<?php echo get_template_directory_uri(); ?>/imgs/burn.svg" alt="Hottest Post" /> </span></h3>
         <div class="post-container">
             <?php 
                 $hottest_post_args = array(
@@ -131,8 +88,6 @@
                 while($hottest_post->have_posts()):
                     $hottest_post->the_post(); ?>
                     <div class="post">
-                        <h4 class="post-head"><a href="<?php echo get_permalink(); ?>" target="_blank">
-                        <?php the_title(); ?></a></h4>
                         <div class="img-container">
                             <?php 
                                 // check if image exist or know
@@ -143,20 +98,26 @@
                                 endif;
                             ?>
                             <a href="<?php echo get_permalink(); ?>">
-                            <img src="<?php echo $img_link; ?>" alt="post image" class="img-responsive img-thumbnail"></a>
+                            <img src="<?php echo $img_link; ?>" alt="post image" class="img-responsive"></a>
                         </div>
+                        <h4 class="post-head"><a href="<?php echo get_permalink(); ?>" target="_blank">
+                        <?php the_title(); ?></a></h4>
                         <div class="post-info">
                             <h4><a href="<?php echo get_permalink(); ?>" target="_blank">
                             <?php the_title(); ?></a></h4>
                             <div class="ex-con">
                                 <?php echo the_excerpt() ?>
                             </div>
-                            <a class="author" target="_blank" href="<?php echo get_site_url().'/author'.'/'.get_the_author_meta('user_nicename').'/'; ?>">
-                            <i class="fa fa-user fa-fw"></i><?php  echo get_the_author_meta('nickname') ?></a>
-                            <span class="comments">
-                                <?php echo comments_number('No Comments <i class="fa fa-comment fa-fw"></i>' , '1 Comment <i class="fa fa-comment fa-fw"></i>' , 
-                                '% Comments <i class="fa fa-comments fa-fw"></i>' , '<span style="color : red;">Comments <i class="fa fa-comment fa-fw"></i> Disabled </span>'); ?>
-                            </span>
+
+                            <?php 
+                                /*
+                                <a class="author" target="_blank" href="<?php echo get_site_url().'/author'.'/'.get_the_author_meta('user_nicename').'/'; ?>">
+                                <i class="fa fa-user fa-fw"></i><?php  echo get_the_author_meta('nickname') ?></a>
+                                <span class="comments">
+                                    <?php echo comments_number('No Comments <i class="fa fa-comment fa-fw"></i>' , '1 Comment <i class="fa fa-comment fa-fw"></i>' , 
+                                    '% Comments <i class="fa fa-comments fa-fw"></i>' , '<span style="color : red;">Comments <i class="fa fa-comment fa-fw"></i> Disabled </span>'); ?>
+                                </span> */ 
+                            ?>
                         </div>
                     </div>
                 <?php endwhile;
@@ -164,6 +125,75 @@
             ?>
         </div>                      
     </div>
+
+    <!-- custom random posts -->
+    <div class="rand-posts box">
+        <h3><span>You May Like <img src="<?php echo get_template_directory_uri(); ?>/imgs/like.svg" alt="Hottest Post" /> </span></h3>
+        <div class="post-container">
+            <?php
+                $recent_posts_args = array(
+                    'post_type'             => 'post',
+                    'posts_per_page'        => 6     ,
+                    'post_status'           => 'publish',
+                    'orderby'               => 'rand',
+                ); 
+                $recent_posts = new WP_Query($recent_posts_args);
+                while($recent_posts->have_posts()):
+                    $recent_posts->the_post(); ?>
+                    <div class="post">
+                        <div class="img-container">
+                            <?php 
+                                // check if image exist or know
+                                if(get_the_post_thumbnail_url()):
+                                    $img_link = get_the_post_thumbnail_url();
+                                else:
+                                    $img_link =  get_template_directory_uri()."/imgs/404.png";
+                                endif;
+                            ?>
+                            <a href="<?php echo get_permalink(); ?>">
+                            <img src="<?php echo $img_link; ?>" alt="post image" class="img-responsive"></a>
+                        </div>
+                        <h4 class="post-head"><a href="<?php echo get_permalink(); ?>" target="_blank">
+                        <?php the_title(); ?></a></h4>
+                        <div class="post-info">
+                            <h4><a href="<?php echo get_permalink(); ?>" target="_blank">
+                            <?php the_title(); ?></a></h4>
+                            <div class="ex-con">
+                                <?php echo the_excerpt() ?>
+                            </div>
+
+                            <?php 
+                                /*
+                                <a class="author" target="_blank" href="<?php echo get_site_url().'/author'.'/'.get_the_author_meta('user_nicename').'/'; ?>">
+                                <i class="fa fa-user fa-fw"></i><?php  echo get_the_author_meta('nickname') ?></a>
+                                <span class="comments">
+                                    <?php echo comments_number('No Comments <i class="fa fa-comment fa-fw"></i>' , '1 Comment <i class="fa fa-comment fa-fw"></i>' , 
+                                    '% Comments <i class="fa fa-comments fa-fw"></i>' , '<span style="color : red;">Comments <i class="fa fa-comment fa-fw"></i> Disabled </span>'); ?>
+                                </span> */ 
+                            ?>
+                        </div>
+                    </div>
+                <?php endwhile;
+                wp_reset_postdata();
+            ?>
+            <div class="fix"></div>
+        </div>
+    </div>
+
+    <!-- custom ad area -->
+    <!-- <div class="a-d box">
+        <h3><span>Ads<i class="fa fa-ad fa-fw"></i></span></h3>
+        <div class="ad">
+            300 X 236
+        </div>
+    </div> -->
+
+    <!-- custom ad area -->
+    <div class="a-d-s hidden box">
+        <div class="ad">
+            300 X 236
+        </div>
+    </div>   
 
     <!-- custom categories list -->
     <div class="custom-cats box">

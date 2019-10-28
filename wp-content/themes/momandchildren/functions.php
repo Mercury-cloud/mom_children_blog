@@ -99,7 +99,7 @@
         elseif(is_category()):
             return 50 ;
         elseif(is_home()):
-            return 20;
+            return 18;
         elseif(is_single()):
             return 20;
         else: 

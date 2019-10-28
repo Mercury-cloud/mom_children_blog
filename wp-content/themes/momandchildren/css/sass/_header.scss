@@ -109,7 +109,7 @@
 
     .nav_links{
         position: fixed;
-        top: 136px;
+        top: 100px;
         left: 0px;
         width: 100%;
         background-color: $background-hover;
@@ -120,7 +120,7 @@
         -o-transition:all 0.5s ease-in-out;
         z-index : 9;
         &.show_it{
-            top : 33px;
+            top : 0px;
         }
         &.hide_it{
             top : -100px;
