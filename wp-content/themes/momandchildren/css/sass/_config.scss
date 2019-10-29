@@ -9,6 +9,8 @@ $head : #444;
 $color : #222;
 $hover : #000;
 $border : #3047BC;
+$border_bottom : linear-gradient(90deg , $background-hover 50% , $background-color 50%);
+$green_color : #9bbf95;
 $transition : all 0.5s ease-in-out;
 // pretty button with nice hover effect
 %nice_buttons{
@@ -82,6 +84,7 @@ $transition : all 0.5s ease-in-out;
     //     background : $background-hover;
     // }
 }
+
 // fonts
 @font-face{
     font-family: 'ptf-55f';
@@ -103,4 +106,11 @@ $transition : all 0.5s ease-in-out;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color : $text-color;
+}
+
+.border_bottom_gradint{
+    background : $border_bottom;
+    width : 100%;
+    height : 5px;
+    margin-top : 15px;
 }

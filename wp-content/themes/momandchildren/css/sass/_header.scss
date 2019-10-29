@@ -8,12 +8,13 @@
 #navbar{
     /* upper section */
     .upper{
-        background-color : $background-color;
-        margin-bottom : 50px;
+        background-color : $border;
+        // margin-bottom : 50px;
+        padding : 20px 0px 0px;
         .logo_social{
             position: relative;
             .logo , .logo_phone{
-                height : 100px;
+                height : 105px;
                 img{
                     max-height:  100%;
                 }
@@ -24,29 +25,31 @@
             
             .seach_social{
                 float : right;
-                .social_links{
+                margin-top: 33px;
+                .user_actions{
                     display : inline-block;
                     vertical-align: top;
-                    margin-top: 40px;
                     margin-right : 40px;
                     a{
-                        width : 25px;
+                        width : 35px;
                         margin : 0px 5px;
                     }
                 }
                 .search_icon{
-                    display : inline-block;
+                    display : none;
                     cursor : pointer;
-                    vertical-align: top;
-                    margin-top : 40px;
-                    color : $text-color;
-                    margin-right : 5px;
+                    color : $nav-color;
+                    margin-top : 5px;
+                    margin-right : 20px;
                     span{
                         vertical-align: middle;
                         font-weight: bold;
                         svg{
-                            width : 25px;
-                            // fill : $page-color;
+                            margin-left : 10px;
+                            width : 30px;
+                            path{
+                                color : $nav-color;
+                            }
                         }
                     }
                 }
@@ -57,7 +60,7 @@
                 background-color : $nav-color;
                 padding : 20px 10px;
                 position: absolute;
-                bottom : -60px;
+                bottom : -80px;
                 z-index : 10;
                 width : 450px;
                 right : 0px;
@@ -70,7 +73,7 @@
                     border-width : 10px;
                     border-color : transparent transparent $nav-color transparent;
                     position : absolute;
-                    right : 20px;
+                    right: 158px;
                     top : -20px;
                 }
                 form{
@@ -87,6 +90,38 @@
                         border : none;
                         svg{
                             width : 17px;   
+                        }
+                    }
+                }
+            }
+
+            .search_form_pc{
+                width: 450px;
+                display: inline-block;
+                margin-right: 16px;
+                form{
+                    position : relative;
+                    input{
+                        padding: 20px 45px 20px 20px;
+                        border-radius : 20px;
+                        outline : 0;
+                    }
+                    button{
+                        position: absolute;
+                        top : 0px;
+                        right : 0px;
+                        background-color : $page-color;
+                        padding : 10px 12.5px;
+                        border : none;
+                        border-top-right-radius : 20px;
+                        border-bottom-right-radius : 20px;
+                        outline : 0;
+                        svg{
+                            width : 17px;
+                            fill : $border;
+                            path {
+                                color : $border;
+                            }   
                         }
                     }
                 }
@@ -109,10 +144,10 @@
 
     .nav_links{
         position: fixed;
-        top: 100px;
+        top: 150px;
         left: 0px;
         width: 100%;
-        background-color: $background-hover;
+        background-color: $green_color;
         transition:all 0.5s ease-in-out;
         -webkit-transition:all 0.5s ease-in-out;
         -moz-transition:all 0.5s ease-in-out;
@@ -125,12 +160,28 @@
         &.hide_it{
             top : -100px;
         }
+        .menu-navbar-menu-container{
+            display : inline-block;
+        }
+    }
+
+    .social_links_pc , .social_links_phone{
+        float : right;
+        display : inline-block;
+        padding: 12px 0px 0px 0px;
+        a{
+            margin-left : 10px;
+            img{
+                width : 25px;
+            }
+        }
     }
 
     .navbar_cats{
         list-style : none;
         margin : 0px;
         width : 100%;
+        display : inline-block;
         &>li{
             display : inline-block;
             overflow : visible;
@@ -139,10 +190,10 @@
                 padding : 15px;
                 font-size : 1.1em;
                 &:hover{
-                    background-color : $background-color;
+                    background-color : $border;
                 }
                 &.active_dropdown_nav_a{
-                    background-color : $background-color;
+                    background-color : $border;
                     &:before{
                         content : '';
                         border-style : solid;
@@ -215,13 +266,10 @@
             }
 
             .seach_social{
-                .social_links{
-                    margin-top: 25px !important;
-                    margin-right : 30px !important;
-                }
+                margin-top: 21px !important;
                 .search_icon{
-                    margin-top : 25px !important;
-                    margin-right : 15px !important;
+                    display : inline-block !important;
+                    margin-top: 0px !important;
                 }
             }
 
@@ -255,6 +303,10 @@
                     }
                 }
             }
+
+            .search_form_pc{
+                display : none !important;
+            }
         }
 
         .container {
@@ -269,8 +321,15 @@
             .container{
                 padding : 0px;
             }
+            .social_links_pc{
+                display : none !important;
+            }
         }
-        
+
+        .menu-navbar-menu-container{
+            display : block !important;
+        }
+
         .navbar_cats{
             &>li{
                 display : block;

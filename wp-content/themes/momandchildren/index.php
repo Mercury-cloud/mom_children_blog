@@ -17,8 +17,12 @@
                 require_once (get_template_directory() . "/parts/home/recommend_posts.php");
             ?>
         </div>
-        
-        <div class="col-md-9">
+
+        <div class="col-md-3">
+            <?php get_sidebar(); ?>
+        </div>
+
+        <div class="col-md-6">
             <?php 
                 /**
                  * get the main cats posts max 5

@@ -71,6 +71,12 @@
   box-sizing: border-box;
   color: #161515; }
 
+.border_bottom_gradint {
+  background: linear-gradient(90deg, #D97E85 50%, #F2B6BB 50%);
+  width: 100%;
+  height: 5px;
+  margin-top: 15px; }
+
 /*
 ** @Author : Bishoy Romany
 ** @Page   : header.php
@@ -80,44 +86,46 @@
 #navbar {
   /* upper section */ }
   #navbar .upper {
-    background-color: #F2B6BB;
-    margin-bottom: 50px; }
+    background-color: #3047BC;
+    padding: 20px 0px 0px; }
     #navbar .upper .logo_social {
       position: relative; }
       #navbar .upper .logo_social .logo, #navbar .upper .logo_social .logo_phone {
-        height: 100px; }
+        height: 105px; }
         #navbar .upper .logo_social .logo img, #navbar .upper .logo_social .logo_phone img {
           max-height: 100%; }
       #navbar .upper .logo_social .logo_phone {
         display: none; }
       #navbar .upper .logo_social .seach_social {
-        float: right; }
-        #navbar .upper .logo_social .seach_social .social_links {
+        float: right;
+        margin-top: 33px; }
+        #navbar .upper .logo_social .seach_social .user_actions {
           display: inline-block;
           vertical-align: top;
-          margin-top: 40px;
           margin-right: 40px; }
-          #navbar .upper .logo_social .seach_social .social_links a {
-            width: 25px;
+          #navbar .upper .logo_social .seach_social .user_actions a {
+            width: 35px;
             margin: 0px 5px; }
         #navbar .upper .logo_social .seach_social .search_icon {
-          display: inline-block;
+          display: none;
           cursor: pointer;
-          vertical-align: top;
-          margin-top: 40px;
-          color: #161515;
-          margin-right: 5px; }
+          color: #FFF;
+          margin-top: 5px;
+          margin-right: 20px; }
           #navbar .upper .logo_social .seach_social .search_icon span {
             vertical-align: middle;
             font-weight: bold; }
             #navbar .upper .logo_social .seach_social .search_icon span svg {
-              width: 25px; }
+              margin-left: 10px;
+              width: 30px; }
+              #navbar .upper .logo_social .seach_social .search_icon span svg path {
+                color: #FFF; }
       #navbar .upper .logo_social .search_form {
         border-radius: 10px;
         background-color: #FFF;
         padding: 20px 10px;
         position: absolute;
-        bottom: -60px;
+        bottom: -80px;
         z-index: 10;
         width: 450px;
         right: 0px;
@@ -130,7 +138,7 @@
           border-width: 10px;
           border-color: transparent transparent #FFF transparent;
           position: absolute;
-          right: 20px;
+          right: 158px;
           top: -20px; }
         #navbar .upper .logo_social .search_form form {
           position: relative; }
@@ -145,6 +153,31 @@
             border: none; }
             #navbar .upper .logo_social .search_form form button svg {
               width: 17px; }
+      #navbar .upper .logo_social .search_form_pc {
+        width: 450px;
+        display: inline-block;
+        margin-right: 16px; }
+        #navbar .upper .logo_social .search_form_pc form {
+          position: relative; }
+          #navbar .upper .logo_social .search_form_pc form input {
+            padding: 20px 45px 20px 20px;
+            border-radius: 20px;
+            outline: 0; }
+          #navbar .upper .logo_social .search_form_pc form button {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: #F2F2F2;
+            padding: 10px 12.5px;
+            border: none;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            outline: 0; }
+            #navbar .upper .logo_social .search_form_pc form button svg {
+              width: 17px;
+              fill: #3047BC; }
+              #navbar .upper .logo_social .search_form_pc form button svg path {
+                color: #3047BC; }
   #navbar .toggle_nav_links {
     display: none; }
   #navbar a {
@@ -155,10 +188,10 @@
       text-decoration: underline; }
   #navbar .nav_links {
     position: fixed;
-    top: 100px;
+    top: 150px;
     left: 0px;
     width: 100%;
-    background-color: #D97E85;
+    background-color: #9bbf95;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -169,10 +202,21 @@
       top: 0px; }
     #navbar .nav_links.hide_it {
       top: -100px; }
+    #navbar .nav_links .menu-navbar-menu-container {
+      display: inline-block; }
+  #navbar .social_links_pc, #navbar .social_links_phone {
+    float: right;
+    display: inline-block;
+    padding: 12px 0px 0px 0px; }
+    #navbar .social_links_pc a, #navbar .social_links_phone a {
+      margin-left: 10px; }
+      #navbar .social_links_pc a img, #navbar .social_links_phone a img {
+        width: 25px; }
   #navbar .navbar_cats {
     list-style: none;
     margin: 0px;
-    width: 100%; }
+    width: 100%;
+    display: inline-block; }
     #navbar .navbar_cats > li {
       display: inline-block;
       overflow: visible;
@@ -181,9 +225,9 @@
         padding: 15px;
         font-size: 1.1em; }
         #navbar .navbar_cats > li > a:hover {
-          background-color: #F2B6BB; }
+          background-color: #3047BC; }
         #navbar .navbar_cats > li > a.active_dropdown_nav_a {
-          background-color: #F2B6BB; }
+          background-color: #3047BC; }
           #navbar .navbar_cats > li > a.active_dropdown_nav_a:before {
             content: '';
             border-style: solid;
@@ -238,12 +282,11 @@
         margin-left: 15px;
         height: 70px !important;
         width: 60px; }
-      #navbar .upper .seach_social .social_links {
-        margin-top: 25px !important;
-        margin-right: 30px !important; }
-      #navbar .upper .seach_social .search_icon {
-        margin-top: 25px !important;
-        margin-right: 15px !important; }
+      #navbar .upper .seach_social {
+        margin-top: 21px !important; }
+        #navbar .upper .seach_social .search_icon {
+          display: inline-block !important;
+          margin-top: 0px !important; }
       #navbar .upper .search_form {
         width: CALC(100% - 30px) !important;
         margin: 0px 15px !important; }
@@ -268,6 +311,8 @@
             border: none; }
             #navbar .upper .search_form form button svg {
               width: 17px; }
+      #navbar .upper .search_form_pc {
+        display: none !important; }
     #navbar .container {
       padding: 0px; }
     #navbar .nav_links {
@@ -277,6 +322,10 @@
       position: static; }
       #navbar .nav_links .container {
         padding: 0px; }
+      #navbar .nav_links .social_links_pc {
+        display: none !important; }
+    #navbar .menu-navbar-menu-container {
+      display: block !important; }
     #navbar .navbar_cats > li {
       display: block;
       width: 100%; }
