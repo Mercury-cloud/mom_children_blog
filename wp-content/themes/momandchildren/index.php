@@ -30,20 +30,19 @@
                  */
                 require_once (get_template_directory() . "/parts/home/recommend_posts.php");
             ?>
-
-
-            <?php 
-                /**
-                 * get the main cats posts max 5
-                 */
-                require_once (get_template_directory() . "/parts/home/cat_posts.php");
-            ?>
-
+            <br>
             <?php 
                 /**
                  * pergenant section *week by week*
                  */
                 require_once (get_template_directory() . "/parts/home/week_by_week.php");
+            ?>          
+            <br>
+            <?php 
+                /**
+                 * get the main cats posts max 5
+                 */
+                require_once (get_template_directory() . "/parts/home/cat_posts.php");
             ?>
 
         </div>
