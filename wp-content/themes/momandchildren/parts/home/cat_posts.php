@@ -27,7 +27,7 @@
             <!-- category title -->
             <h2 class="cat-title">
                 <a href="<?php echo get_category_link($cat_id); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/imgs/family.svg" alt="Family" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/imgs/family_icon.png" alt="<?php echo $cat_info->name ?>" />
                     <?php echo strtoupper($cat_info->name); ?>
                 </a>
             </h2>

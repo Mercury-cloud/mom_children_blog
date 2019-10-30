@@ -15,12 +15,14 @@
 
     <div class="row">
         <div class="col-md-3">
-            <div class="icon"></div>
+            <div class="icon">
+                <img src="<?php echo get_template_directory_uri() . '/imgs/pergenancy_icon.png'; ?>" alt="Pergenancy Icon">
+            </div>
         </div>
 
         <div class="col-md-9">
             <!-- form -->
-            <form action="/page/subscribe-news-letters-pergenancy" method="post">
+            <form action="/subscribe-news-letters-pergenancy" method="post">
                 <div class="row">
                     <div class="col-md-5">
                         <div class="date">
