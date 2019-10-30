@@ -6,16 +6,29 @@
     );
     $all_cats = get_categories($all_cats_args);
     if(!empty($all_cats)):
+    $y = -1; 
     foreach($all_cats as $cat_info):
+        /**
+         * check category class 
+         */
+        $isFirst = false;
+
+        $y = $y + 1;
+        if($y % 2 == 0){
+            $isFirst = true;
+        }else{
+            $isFirst = false;
+        }
+
         // category id
         $cat_id = $cat_info->term_id; ?>
-        <div class="cat-container">
+        <div class="cat-container <?php echo $isFirst ? 'first_cat' : 'second_cat' ?>">
 
             <!-- category title -->
             <h2 class="cat-title">
                 <a href="<?php echo get_category_link($cat_id); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/imgs/family.svg" alt="Family" />
-                    <?php echo $cat_info->name; ?>
+                    <?php echo strtoupper($cat_info->name); ?>
                 </a>
             </h2>
 
@@ -26,7 +39,7 @@
                     $cat_posts_args = array(
                         'post_type'     => 'post' , 
                         'cat'           => $cat_id , 
-                        'posts_per_page'=> 3    ,
+                        'posts_per_page'=> 6    ,
                         'orderby'       => 'ID' , 
                         'order'         => 'DESC'
                     );
@@ -37,88 +50,100 @@
                         $x = 0; 
                         // echo the posts
                         echo "<div class='row'>";
-                        while($cat_posts->have_posts()): $cat_posts->the_post(); $x += 1; 
-                            ?>
-                            <?php echo $x == 2 ? '<div class="col-md-12"><div class="row">' : null ?>
-                                <div class="post-rand-li 
-                                    <?php if($x == 1): ?>
-                                        col-md-12 col-sm-12 first_post
-                                    <?php else: ?>
-                                        col-md-6 col-sm-6 seconds_posts
-                                    <?php endif; ?>
+                            while($cat_posts->have_posts()): $cat_posts->the_post(); $x += 1; 
+                                if($isFirst):
+                                 //echo $x == 2 ? '<div class="col-md-4"><div class="row">' : null ?>
+                                    <div class="post-rand-li col-md-6
                                     ">
-                                    <?php /*
-                                        <!-- post author -->
-                                        <span class="post-author">
-                                            <i class="fa fa-user fa-fw"></i> 
-                                            <?php the_author_posts_link(); ?>
-                                        </span>
-                                        <!-- post date -->
-                                        <span class="post-date">
-                                            <i class="fa fa-calendar fa-fw"></i> 
-                                            <?php echo get_the_date(); // get the author ?>
-                                        </span>
-
-                                        <!-- comments number -->
-                                        <span class="post-comments">
-                                            <i class="fa fa-comments fa-fw"></i> 
-                                            <?php comments_popup_link('No Comments' , 'One Comment' , '( % ) Comments' , 'comment-url' , 'Comments Disabled'); ?>
-                                        </span>
-                                    */ ?>
-                                    <div>
-                                        <!-- image container -->
-                                        <div class="img-container">
-                                            <a href="<?php the_permalink(); ?>">
-                                                <?php the_post_thumbnail('' , array(
-                                                    'class' => 'img-responsive' , 
-                                                    'title' => 'Post Image'
-                                                )); ?>
-                                            </a>
-                                        </div>
-                                            
-                                        <!-- category -->
-                                        <?php 
-                                            $cat = get_the_category();
-                                            if(count($cat) > 0){
-                                                $name = $cat[0]->name;
-                                                $id = $cat[0]->term_id;
-                                                $link = get_category_link($id);
-                                            ?>
-                                            <a class="category" href="<?php echo $link ?>"><?php echo $name ?></a>
-                                        <?php } ?>
-
-                                        <!-- post title -->
-                                        <h3 class="post-title">
-                                            <a href="<?php the_permalink();// link of the post ?>">
-                                                <?php the_title(); // title of the post?>
-                                            </a>
-                                        </h3>
-                                        
-                                        <?php if($x == 1): ?>
-                                            <div class="excerpt">
-                                                <?php the_excerpt(); ?>
+                                        <div>
+                                            <!-- image container -->
+                                            <div class="img-container">
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <?php the_post_thumbnail('' , array(
+                                                        'class' => 'img-responsive' , 
+                                                        'title' => 'Post Image'
+                                                    )); ?>
+                                                </a>
                                             </div>
-                                        <?php endif; ?>
+                                                
+                                            <!-- category -->
+                                            <?php 
+                                                $cat = get_the_category();
+                                                if(count($cat) > 0){
+                                                    $name = $cat[0]->name;
+                                                    $id = $cat[0]->term_id;
+                                                    $link = get_category_link($id);
+                                                ?>
+                                                <a class="category" href="<?php echo $link ?>"><?php echo $name ?></a>
+                                            <?php } ?>
+
+                                            <div class="header_ex">
+                                                <!-- post title -->
+                                                <h3 class="post-title">
+                                                    <a href="<?php the_permalink();// link of the post ?>">
+                                                        <?php the_title(); // title of the post?>
+                                                    </a>
+                                                </h3>
+                                                
+                                                <div class="excerpt">
+                                                    <?php the_excerpt(); ?>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
                                     </div>
+                                
+                                <?php else: //echo $x == 3 ? '</div"></div></div>' : null ?>
+                                    <div class="post-rand-li col-md-12
+                                    ">
+                                        <div>
+                                            <!-- image container -->
+                                            <div class="img-container">
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <?php the_post_thumbnail('' , array(
+                                                        'class' => 'img-responsive' , 
+                                                        'title' => 'Post Image'
+                                                    )); ?>
+                                                </a>
+                                            </div>
 
-                                </div>
-                            <?php echo $x == 3 ? '</div"></div>' : null ?>
-                        <?php endwhile; 
+                                            <div class="header_ex">
+                                                <!-- post title -->
+                                                <h3 class="post-title">
+                                                    <a href="<?php the_permalink();// link of the post ?>">
+                                                        <?php the_title(); // title of the post?>
+                                                    </a>
+                                                </h3>
+                                                
+                                                <div class="excerpt">
+                                                    <?php the_excerpt(); ?>
+                                                </div>
+                                            </div>
 
+                                            <!-- category -->
+                                            <?php 
+                                                $cat = get_the_category();
+                                                if(count($cat) > 0){
+                                                    $name = $cat[0]->name;
+                                                    $id = $cat[0]->term_id;
+                                                    $link = get_category_link($id);
+                                                ?>
+                                                <a class="category" href="<?php echo $link ?>"><?php echo $name ?></a>
+                                            <?php } ?>
+
+                                        </div>
+
+                                    </div>
+                                <?php endif; ?>
+                            <?php endwhile; 
                         echo "</div>";
                         wp_reset_postdata(); // rest all values 
                     endif;
                 ?>
 
-                <div class="fix"></div>
-
-                <div class="text-center got_to_container">
-                    <a href="/tag/recommended" class="got_to_recommended">View All <?php echo $cat_info->name ?> Articles</a>
-                </div>
-
             </div>
 
-        </div>
         </div>
     <?php endforeach; 
     wp_reset_postdata(); // rest the post data

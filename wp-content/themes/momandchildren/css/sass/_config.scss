@@ -4,7 +4,10 @@ $nav-color : #FFF;
 $background : #FFF;
 $background-color :  #F2B6BB;
 $background-hover :  #D97E85;
+$background-opacity : #df8983de;
 $box-background : #FFF;
+$slide_opacity_color : #d97e8582;
+$cat_color : #30478C;
 $head : #444;
 $color : #222;
 $hover : #000;
@@ -12,6 +15,8 @@ $border : #3047BC;
 $border_bottom : linear-gradient(90deg , $background-hover 50% , $background-color 50%);
 $green_color : #9bbf95;
 $transition : all 0.5s ease-in-out;
+// height config of second cat view
+$height_image : 200px;
 // pretty button with nice hover effect
 %nice_buttons{
     color : #333;
@@ -52,25 +57,25 @@ $transition : all 0.5s ease-in-out;
     font-family : 'lato-regular' , sans-serif;
     font-size : 14px;
     display : inline-block;
-    background : $background-color;
+    // background : $background-color;
     padding : 5px 10px;
     border-radius : 10px;
     color : #FFF;
     margin : 0px 0px 0px 5px;
     &:hover{
-        background : $background-hover;
+        // background : $background-hover;
     }
 }
 // headers
 %nice_header{
     padding : 10px 10px 10px 0px;
-    margin : 20px 0px 20px 0px;
-    border-bottom : 1px solid $border;
+    margin : 20px 0px 10px 0px;
     display : inline-block;
-    color : $text-color;
+    color : $border;
     font-family : 'lato-bold' , 'sans-serif';
+    font-weight : bold;
     img , svg{
-        width : 25px;
+        width : 35px;
         display : inline-block;
         margin-right : 5px;
     }

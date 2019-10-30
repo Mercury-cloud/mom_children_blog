@@ -38,6 +38,8 @@
         wp_enqueue_script("main-js" , get_template_directory_uri() . "/js/main.js" , array() , false , true);
         // get header js
         wp_enqueue_script("header-js" , get_template_directory_uri() . "/js/header.js" , array() , false , true);
+        // homepage js
+        wp_enqueue_script("homepage-js" , get_template_directory_uri() . "/js/homepage.js" , array() , false , true);
     }
 
     /* 

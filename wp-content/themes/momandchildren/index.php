@@ -8,31 +8,49 @@
 <!-- all posts container -->
 <div class="container">
     <div class="row">
-        <!-- main category -->
+        <!-- Unique Images Slider -->
         <div class="col-md-12">
+            <?php 
+                /**
+                 * get the images slider
+                 */
+                require_once (get_template_directory() . "/parts/home/images_slider.php");
+            ?>
+        </div>
+
+        <!-- left sidebar -->
+        <div class="col-md-3">
+            <?php get_sidebar(); ?>
+        </div>
+
+        <div class="col-md-6 content_center">
             <?php 
                 /**
                  * get the Recommended posts for main page
                  */
                 require_once (get_template_directory() . "/parts/home/recommend_posts.php");
             ?>
-        </div>
 
-        <div class="col-md-3">
-            <?php get_sidebar(); ?>
-        </div>
 
-        <div class="col-md-6">
             <?php 
                 /**
                  * get the main cats posts max 5
                  */
                 require_once (get_template_directory() . "/parts/home/cat_posts.php");
             ?>
+
+            <?php 
+                /**
+                 * pergenant section *week by week*
+                 */
+                require_once (get_template_directory() . "/parts/home/week_by_week.php");
+            ?>
+
         </div>
         
+        <!-- right sidebar -->
         <div class="col-md-3">
-            <?php get_sidebar(); ?>
+            <?php require_once (get_template_directory() . "/left_sidebar.php"); ?>
         </div>
 
     </div>
