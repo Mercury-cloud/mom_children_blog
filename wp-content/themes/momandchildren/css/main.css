@@ -1775,19 +1775,34 @@
 .cutom-sidebar {
   margin-top: 80px; }
   .cutom-sidebar .box {
-    background-color: #FFF;
-    border: 1px solid #3047BC;
-    color: #333;
-    border-radius: 10px;
+    color: #3047BC;
     padding: 0px 10px 10px;
     margin-bottom: 10px; }
     .cutom-sidebar .box h3 {
-      border-bottom: 1px solid #F2B6BB;
-      font-size: 20px; }
+      color: #3047BC;
+      position: relative;
+      font-size: 20px;
+      padding-bottom: 5px; }
+      .cutom-sidebar .box h3:before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background-color: #D97E85;
+        height: 5px;
+        width: 80px; }
+      .cutom-sidebar .box h3:after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background-color: #F2B6BB;
+        height: 1px;
+        width: 130px; }
       .cutom-sidebar .box h3 span {
         display: inline-block;
         padding: 5px;
-        border-bottom: 5px solid #F2B6BB; }
+        color: #3047BC; }
       .cutom-sidebar .box h3 img {
         width: 25px;
         display: inline-block;
@@ -1824,19 +1839,24 @@
     padding: 0px;
     position: relative;
     overflow: hidden;
-    border-radius: 5px; }
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px; }
     .cutom-sidebar .hottest-post .post-container .post:hover .post-info, .cutom-sidebar .recent-posts .post-container .post:hover .post-info, .cutom-sidebar .rand-posts .post-container .post:hover .post-info {
       transform: rotate3d(1, 1, 0, 0deg);
       opacity: 1; }
     .cutom-sidebar .hottest-post .post-container .post .post-head, .cutom-sidebar .recent-posts .post-container .post .post-head, .cutom-sidebar .rand-posts .post-container .post .post-head {
-      font-size: 14px;
+      font-size: 16px;
       overflow: hidden;
-      line-height: 15px;
-      background-color: #F2F2F2;
+      line-height: 18px;
+      background-color: rgba(48, 71, 140, 0.836);
       margin: 0px;
-      padding: 10px; }
+      padding: 10px;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%; }
       .cutom-sidebar .hottest-post .post-container .post .post-head a, .cutom-sidebar .recent-posts .post-container .post .post-head a, .cutom-sidebar .rand-posts .post-container .post .post-head a {
-        color: #161515;
+        color: #FFF;
         text-decoration: none; }
     .cutom-sidebar .hottest-post .post-container .post .img-container a img, .cutom-sidebar .recent-posts .post-container .post .img-container a img, .cutom-sidebar .rand-posts .post-container .post .img-container a img {
       display: inline-block;
@@ -1852,13 +1872,16 @@
       opacity: 0;
       overflow: hidden;
       background-color: white;
-      text-align: center; }
+      text-align: center;
+      text-decoration: none;
+      color: #161515; }
       .cutom-sidebar .hottest-post .post-container .post .post-info h4, .cutom-sidebar .recent-posts .post-container .post .post-info h4, .cutom-sidebar .rand-posts .post-container .post .post-info h4 {
         height: 50px;
         line-height: 24px;
         margin: 5px 5px 0px;
         overflow: hidden;
-        font-size: 16px; }
+        font-size: 16px;
+        display: none; }
       .cutom-sidebar .hottest-post .post-container .post .post-info .author, .cutom-sidebar .recent-posts .post-container .post .post-info .author, .cutom-sidebar .rand-posts .post-container .post .post-info .author {
         display: inline-block;
         text-decoration: none;
@@ -1867,11 +1890,53 @@
         margin: 5px 5px 0px;
         font-weight: bold; }
       .cutom-sidebar .hottest-post .post-container .post .post-info .ex-con, .cutom-sidebar .recent-posts .post-container .post .post-info .ex-con, .cutom-sidebar .rand-posts .post-container .post .post-info .ex-con {
-        padding: 5px;
-        height: 60%;
+        padding: 10px;
+        height: 94%;
+        color: #161515;
         overflow: hidden; }
       .cutom-sidebar .hottest-post .post-container .post .post-info .comments, .cutom-sidebar .recent-posts .post-container .post .post-info .comments, .cutom-sidebar .rand-posts .post-container .post .post-info .comments {
         display: inline-block; }
+  .cutom-sidebar .custom-cats {
+    background-color: #30478C;
+    padding: 10px;
+    border-bottom-left-radius: 15px; }
+    .cutom-sidebar .custom-cats h3 {
+      margin-top: 0px;
+      color: #FFF !important; }
+      .cutom-sidebar .custom-cats h3 span {
+        color: #FFF !important; }
+    .cutom-sidebar .custom-cats .cats-container {
+      background-color: #FFF;
+      color: #3047BC;
+      padding: 0px 0px 10px 10px;
+      margin-top: 5px;
+      border-bottom-left-radius: 20px; }
+      .cutom-sidebar .custom-cats .cats-container > li {
+        list-style: none;
+        display: block;
+        padding: 5px 5px 0px 10px; }
+        .cutom-sidebar .custom-cats .cats-container > li > a {
+          color: #3047BC;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 17px;
+          font-weight: bold; }
+        .cutom-sidebar .custom-cats .cats-container > li .children {
+          margin: 0px;
+          padding: 0px; }
+          .cutom-sidebar .custom-cats .cats-container > li .children li {
+            display: block;
+            list-style: none;
+            padding: 5px 0px;
+            transition: all 0.5s ease-in-out; }
+            .cutom-sidebar .custom-cats .cats-container > li .children li a {
+              color: #30478C;
+              text-decoration: none; }
+          .cutom-sidebar .custom-cats .cats-container > li .children .current-cat {
+            background-color: green;
+            color: #FFF; }
+            .cutom-sidebar .custom-cats .cats-container > li .children .current-cat a {
+              color: #FFF; }
   .cutom-sidebar .a-d .ad, .cutom-sidebar .a-d-s .ad {
     height: 300px;
     width: 236px;
@@ -1883,42 +1948,6 @@
     transition: all 0.5s ease-in-out; }
   .cutom-sidebar .a-d-s {
     padding: 10px; }
-  .cutom-sidebar .custom-cats .cats-container {
-    padding: 0px;
-    margin: 0px; }
-    .cutom-sidebar .custom-cats .cats-container > li {
-      list-style: none;
-      display: block;
-      padding: 10px;
-      border: 2px solid #e5e5f1;
-      margin-bottom: 5px; }
-      .cutom-sidebar .custom-cats .cats-container > li > a {
-        color: #333;
-        text-decoration: none;
-        border-bottom: 3px solid #D97E85;
-        padding-bottom: 3px;
-        display: inline-block;
-        margin-bottom: 5px;
-        font-size: 17px;
-        font-weight: bold; }
-      .cutom-sidebar .custom-cats .cats-container > li .children {
-        margin: 0px;
-        padding: 0px; }
-        .cutom-sidebar .custom-cats .cats-container > li .children li {
-          display: block;
-          list-style: none;
-          padding: 5px;
-          background-color: #EEE;
-          margin: 5px;
-          transition: all 0.5s ease-in-out; }
-          .cutom-sidebar .custom-cats .cats-container > li .children li a {
-            color: #333;
-            text-decoration: none; }
-        .cutom-sidebar .custom-cats .cats-container > li .children .current-cat {
-          background-color: green;
-          color: #FFF; }
-          .cutom-sidebar .custom-cats .cats-container > li .children .current-cat a {
-            color: #FFF; }
   .cutom-sidebar .current-cat-info {
     font-size: 18px; }
     .cutom-sidebar .current-cat-info .comments-count, .cutom-sidebar .current-cat-info .posts-count {

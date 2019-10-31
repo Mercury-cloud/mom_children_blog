@@ -48,23 +48,11 @@
                         </div>
                         <h4 class="post-head"><a href="<?php echo get_permalink(); ?>" target="_blank">
                         <?php the_title(); ?></a></h4>
-                        <div class="post-info">
-                            <h4><a href="<?php echo get_permalink(); ?>" target="_blank">
-                            <?php the_title(); ?></a></h4>
+                        <a class="post-info" href="<?php echo get_permalink(); ?>" target="_blank">
                             <div class="ex-con">
                                 <?php echo the_excerpt() ?>
                             </div>
-
-                            <?php 
-                                /*
-                                <a class="author" target="_blank" href="<?php echo get_site_url().'/author'.'/'.get_the_author_meta('user_nicename').'/'; ?>">
-                                <i class="fa fa-user fa-fw"></i><?php  echo get_the_author_meta('nickname') ?></a>
-                                <span class="comments">
-                                    <?php echo comments_number('No Comments <i class="fa fa-comment fa-fw"></i>' , '1 Comment <i class="fa fa-comment fa-fw"></i>' , 
-                                    '% Comments <i class="fa fa-comments fa-fw"></i>' , '<span style="color : red;">Comments <i class="fa fa-comment fa-fw"></i> Disabled </span>'); ?>
-                                </span> */ 
-                            ?>
-                        </div>
+                        </a>
                     </div>
                 <?php endwhile;
                 wp_reset_postdata();
@@ -102,23 +90,11 @@
                         </div>
                         <h4 class="post-head"><a href="<?php echo get_permalink(); ?>" target="_blank">
                         <?php the_title(); ?></a></h4>
-                        <div class="post-info">
-                            <h4><a href="<?php echo get_permalink(); ?>" target="_blank">
-                            <?php the_title(); ?></a></h4>
+                        <a class="post-info" href="<?php echo get_permalink(); ?>" target="_blank">
                             <div class="ex-con">
                                 <?php echo the_excerpt() ?>
                             </div>
-
-                            <?php 
-                                /*
-                                <a class="author" target="_blank" href="<?php echo get_site_url().'/author'.'/'.get_the_author_meta('user_nicename').'/'; ?>">
-                                <i class="fa fa-user fa-fw"></i><?php  echo get_the_author_meta('nickname') ?></a>
-                                <span class="comments">
-                                    <?php echo comments_number('No Comments <i class="fa fa-comment fa-fw"></i>' , '1 Comment <i class="fa fa-comment fa-fw"></i>' , 
-                                    '% Comments <i class="fa fa-comments fa-fw"></i>' , '<span style="color : red;">Comments <i class="fa fa-comment fa-fw"></i> Disabled </span>'); ?>
-                                </span> */ 
-                            ?>
-                        </div>
+                        </a>
                     </div>
                 <?php endwhile;
                 wp_reset_postdata();
@@ -155,23 +131,11 @@
                         </div>
                         <h4 class="post-head"><a href="<?php echo get_permalink(); ?>" target="_blank">
                         <?php the_title(); ?></a></h4>
-                        <div class="post-info">
-                            <h4><a href="<?php echo get_permalink(); ?>" target="_blank">
-                            <?php the_title(); ?></a></h4>
+                        <a class="post-info" href="<?php echo get_permalink(); ?>" target="_blank">
                             <div class="ex-con">
                                 <?php echo the_excerpt() ?>
                             </div>
-
-                            <?php 
-                                /*
-                                <a class="author" target="_blank" href="<?php echo get_site_url().'/author'.'/'.get_the_author_meta('user_nicename').'/'; ?>">
-                                <i class="fa fa-user fa-fw"></i><?php  echo get_the_author_meta('nickname') ?></a>
-                                <span class="comments">
-                                    <?php echo comments_number('No Comments <i class="fa fa-comment fa-fw"></i>' , '1 Comment <i class="fa fa-comment fa-fw"></i>' , 
-                                    '% Comments <i class="fa fa-comments fa-fw"></i>' , '<span style="color : red;">Comments <i class="fa fa-comment fa-fw"></i> Disabled </span>'); ?>
-                                </span> */ 
-                            ?>
-                        </div>
+                        </a>
                     </div>
                 <?php endwhile;
                 wp_reset_postdata();
@@ -189,24 +153,25 @@
     </div> -->
 
     <!-- custom ad area -->
-    <div class="a-d-s hidden box">
+    <!-- <div class="a-d-s hidden box">
         <div class="ad">
             300 X 236
         </div>
-    </div>   
+    </div>    -->
 
     <!-- custom categories list -->
     <div class="custom-cats box">
-        <h3><span>Categories <i class="fa fa-tags fa-fw"></i></span></h3>
+        <h3><span>Categories </span></h3>
         <?php 
             // get categories list
             $list_cats_args = array(
                 'hide_title_if_empty' => true,
                 'hierarchical'        => true,
-                'show_count'          => true,
+                'show_count'          => false,
                 'show_option_none'    => __( 'No categories' ),
                 'title_li'            => null,
                 'use_desc_for_title'  => 1,
+                'parent'              => 0,
             );
         ?>
         <ul class="cats-container">
