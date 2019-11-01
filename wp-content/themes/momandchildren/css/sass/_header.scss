@@ -6,15 +6,17 @@
 */
 
 #navbar{
+    position: relative;
+    z-index : 2;
     /* upper section */
     .upper{
         background-color : $border;
         // margin-bottom : 50px;
-        padding : 20px 0px 0px;
+        padding : 15px 0px 0px;
         .logo_social{
             position: relative;
             .logo , .logo_phone{
-                height : 105px;
+                height : 96px;
                 img{
                     max-height:  100%;
                 }
@@ -25,22 +27,25 @@
             
             .seach_social{
                 float : right;
-                margin-top: 33px;
+                margin-top: 25px;
                 .user_actions{
                     display : inline-block;
                     vertical-align: top;
-                    margin-right : 40px;
                     a{
-                        width : 35px;
+                        width : 48px;
                         margin : 0px 5px;
                     }
                 }
                 .search_icon{
-                    display : none;
                     cursor : pointer;
                     color : $nav-color;
                     margin-top : 5px;
                     margin-right : 20px;
+                    display : inline-block;
+                    img{
+                        width : 41px;
+                        vertical-align: middle;
+                    }
                     span{
                         vertical-align: middle;
                         font-weight: bold;
@@ -73,7 +78,7 @@
                     border-width : 10px;
                     border-color : transparent transparent $nav-color transparent;
                     position : absolute;
-                    right: 158px;
+                    right: 87px;
                     top : -20px;
                 }
                 form{
@@ -143,10 +148,10 @@
 
     .nav_links{
         position: fixed;
-        top: 150px;
+        top: 136px;
         left: 0px;
         width: 100%;
-        background-color: $green_color;
+        background-color: $background-color;
         transition:all 0.5s ease-in-out;
         -webkit-transition:all 0.5s ease-in-out;
         -moz-transition:all 0.5s ease-in-out;
@@ -188,11 +193,12 @@
             & > a{
                 padding : 15px;
                 font-size : 1.1em;
+                text-decoration : none;
                 &:hover{
-                    background-color : $border;
+                    color : $border !important;
                 }
                 &.active_dropdown_nav_a{
-                    background-color : $border;
+                    color : $border !important;
                     &:before{
                         content : '';
                         border-style : solid;

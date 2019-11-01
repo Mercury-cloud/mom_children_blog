@@ -15,6 +15,7 @@
     border: none;
     outline: 0;
     background: 0 0; 
+    z-index : 1;
 }
   
 .slick-next:focus, .slick-next:hover, .slick-prev:focus, .slick-prev:hover {
@@ -30,41 +31,43 @@
 opacity: 0.5; }
   
 .slick-next:before, .slick-prev:before {
-    font-family: 'Font Awesome 5 Free';
-    font-size: 20px;
-    line-height: 1;
-    opacity: .75;
-    color: rgb(0, 0, 0);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
+    content : "";
+    border: solid rgb(255, 255, 255);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
 }
 .slick-prev {
-    left: -25px; 
+    left: 10px; 
     &:before{
-        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0a8";
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
     }
 }
   
 [dir=rtl] .slick-prev {
-    right: -25px;
+    right: 10px;
     left: auto; 
     &:before{
-        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0a8";
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
     }
 }
 
 .slick-next {
-    right: -25px; 
+    right: 10px; 
     &:before{
-        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0a9";
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
     }
 }
   
 [dir=rtl] .slick-next {
     right: auto;
-    left: -25px; 
+    left: 10px; 
     &:before{
-        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0a9";
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
     }
 }
   
@@ -99,13 +102,15 @@ opacity: 0.5; }
             color: transparent;
             border: 0;
             outline: 0;
-            background: $border;
+            background: $background-color;
             border-radius : 50%;
             transform : scale(0.8);
             opacity : 0.8;
             transition : $transition;
             &:hover , &:focus{
                 outline: 0;
+                transform : scale(1);
+                opacity: 1;
             }
             &:focus:before , &:hover:before{
                 transform : scale(1);

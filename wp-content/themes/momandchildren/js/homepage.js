@@ -2,12 +2,12 @@
     $(document).ready(function(){
         $('.recommend-post').slick({
             infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            fade: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            dots: false,
+            // fade: true,
             autoplay : true,
-            arrows : false,
+            arrows : true,
         });
 
 

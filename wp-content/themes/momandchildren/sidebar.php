@@ -19,7 +19,7 @@
     <!-- custom latest posts -->
     <div class="recent-posts box">
         <h3>
-            <span>Latest Articles <img src="<?php echo get_template_directory_uri(); ?>/imgs/new.svg" alt="Latest News" /> </span>
+            <span>Latest Articles <img src="<?php echo get_template_directory_uri(); ?>/imgs/new_star.png" alt="Latest News" /> </span>
         </h3>
         <div class="post-container">
             <?php
@@ -63,7 +63,7 @@
 
     <!-- custom hottest post -->
     <div class="hottest-post box">
-        <h3><span>Hottest Article <img src="<?php echo get_template_directory_uri(); ?>/imgs/burn.svg" alt="Hottest Post" /> </span></h3>
+        <h3><span>Hottest Article <img src="<?php echo get_template_directory_uri(); ?>/imgs/hot.png" alt="Hottest Post" /> </span></h3>
         <div class="post-container">
             <?php 
                 $hottest_post_args = array(
@@ -104,7 +104,7 @@
 
     <!-- custom random posts -->
     <div class="rand-posts box">
-        <h3><span>You May Like <img src="<?php echo get_template_directory_uri(); ?>/imgs/like.svg" alt="Hottest Post" /> </span></h3>
+        <h3><span>You May Like <img src="<?php echo get_template_directory_uri(); ?>/imgs/may_like.png" alt="Hottest Post" /> </span></h3>
         <div class="post-container">
             <?php
                 $recent_posts_args = array(
@@ -161,22 +161,24 @@
 
     <!-- custom categories list -->
     <div class="custom-cats box">
-        <h3><span>Categories </span></h3>
-        <?php 
-            // get categories list
-            $list_cats_args = array(
-                'hide_title_if_empty' => true,
-                'hierarchical'        => true,
-                'show_count'          => false,
-                'show_option_none'    => __( 'No categories' ),
-                'title_li'            => null,
-                'use_desc_for_title'  => 1,
-                'parent'              => 0,
-            );
-        ?>
-        <ul class="cats-container">
-            <?php wp_list_categories($list_cats_args); ?>
-        </ul>
+        <div>
+            <h3><span>Categories <img src="<?php echo get_template_directory_uri() . '/imgs/list.png' ?>" alt="Categories"></span></h3>
+            <?php 
+                // get categories list
+                $list_cats_args = array(
+                    'hide_title_if_empty' => true,
+                    'hierarchical'        => true,
+                    'show_count'          => false,
+                    'show_option_none'    => __( 'No categories' ),
+                    'title_li'            => null,
+                    'use_desc_for_title'  => 1,
+                    'parent'              => 0,
+                );
+            ?>
+            <ul class="cats-container">
+                <?php wp_list_categories($list_cats_args); ?>
+            </ul>
+        </div>
     </div>
 
     <?php if(is_category()): ?>

@@ -105,7 +105,7 @@
 // custom sidebar
 .cutom-sidebar{
 
-    margin-top : 80px;
+    margin-top : 20px;
 
     .box{
         // background-color : $box-background;
@@ -145,6 +145,7 @@
                 width : 25px;
                 display : inline-block;
                 margin-left : 5px;
+                margin-bottom: -12px;
             }
         }
     }
@@ -192,8 +193,12 @@
     .hottest-post , .recent-posts , .rand-posts{
         .post-container{
             .post{
+                border-bottom : 5px solid $green_color;
+                border-top : 1px solid #CCC;
+                border-left : 1px solid #CCC;
+                border-right : 1px solid #CCC;
                 margin : 15px 0px;
-                border : 1px solid #CCC;
+                // border : 1px solid #CCC;
                 padding : 0px;
                 position : relative;
                 overflow : hidden;
@@ -240,6 +245,7 @@
                     text-align : center;
                     text-decoration : none;
                     color : $text-color;
+                    padding: 8px;
                     h4{
                         height : 50px;
                         line-height: 24px;
@@ -257,10 +263,13 @@
                         font-weight : bold;
                     }
                     .ex-con{
-                        padding: 10px;
-                        height : 94%;
+                        height : 100%;
                         color :$text-color;
-                        overflow : hidden; 
+                        overflow : hidden;
+                        p{
+                            padding : 0px;
+                            margin : 0px;
+                        } 
                     }
                     .comments{
                         display: inline-block;
@@ -272,14 +281,23 @@
 
 
     .custom-cats{
-        background-color : $cat_color;
         padding : 10px;
-        border-bottom-left-radius: 15px;
+        & > div{
+            padding:10px;
+            border-bottom-left-radius: 15px;
+            background-color : #30478c;
+        }
         h3{
             margin-top : 0px;
             color : $nav-color !important;
             span{
                 color : $nav-color !important;
+            }
+            img{
+                width : 25px;
+                display : inline-block;
+                margin-left : 0px;
+                margin-bottom: 0px;
             }
         }
         .cats-container{
@@ -287,7 +305,7 @@
             color : $border;
             padding : 0px 0px 10px 10px ;
             margin-top : 5px;
-            border-bottom-left-radius: 20px;
+            border-bottom-left-radius: 10px;
             > li{
                 list-style: none;
                 display : block;
@@ -298,6 +316,10 @@
                     display : inline-block;
                     font-size : 17px;
                     font-weight : bold;
+                    transition : $transition;
+                    &:hover{
+                        padding-left : 5px;
+                    }
                 }
 
                 .children{
@@ -352,6 +374,122 @@
             border-radius : 10px;
             padding : 10px;
             margin : 10px;
+        }
+    }
+}
+
+
+// left sidebar
+.left-sidebar{
+    margin-top : 80px;
+    .box{
+        background-color :#30478c;
+        // border : 1px solid $border;
+        color : $border;
+        padding : 10px;
+        margin-bottom : 10px;
+        border-bottom-left-radius: 15px;
+        h3{
+            color : $nav-color;
+            position : relative;
+            font-size : 20px;
+            padding-bottom : 5px;
+            margin : 0px 0px 10px 5px;
+            &:before{
+                content : "";
+                position: absolute;
+                bottom : 0px;
+                left : 0px;
+                background-color : $background-hover;
+                height: 5px;
+                width : 60px;
+            }
+            &:after{
+                content : "";
+                position: absolute;
+                bottom : 0px;
+                left : 0px;
+                background-color : $background-color;
+                height: 1px;
+                width : 130px;
+            }
+            span{
+                display: inline-block;
+                padding : 5px;
+                color : $nav-color;
+            }
+            img{
+                width : 25px;
+                display : inline-block;
+                margin-left : 5px;
+            }
+        }
+    }
+
+    // patreon
+    .patreon{
+        .content{
+            background-color : #FFF;
+            border-bottom-left-radius: 10px;
+            text-align : center;
+            padding: 10px 10px 5px 10px;
+            p{
+                display : block;
+                margin-top : 10px;
+                text-align : center;
+                color : $background-color;
+                letter-spacing:1px;
+                font-size : 1.2em;
+                
+                strong{
+                    color : $background-hover;
+                }
+            }
+            a{
+                display : block;
+                margin : 10px auto 5px;
+            }
+        }
+    }
+
+    // chat
+    .chat{
+        .chat_container{
+            background-color : #FFF;
+            border-bottom-left-radius: 10px;
+            padding: 10px 10px 5px 10px;
+            min-height : 350px;
+        }
+    }
+
+    // facebook
+    .facebook{
+        .facebook_container{
+            background-color : #FFF;
+            border-bottom-left-radius: 10px;
+            padding: 10px 10px 5px 10px;
+            min-height : 350px;
+        }
+    }
+
+    // facebook
+    .instagram{
+        .instagram_container{
+            background-color : #FFF;
+            border-bottom-left-radius: 10px;
+            padding: 10px 10px 5px 10px;
+            min-height : 350px;
+        }
+    }
+
+
+    // facebook
+    .youtube{
+        .youtube_container{
+            background-color : #FFF;
+            border-bottom-left-radius: 10px;
+            padding: 10px 10px 5px 10px;
+            min-height : 350px;
         }
     }
 }

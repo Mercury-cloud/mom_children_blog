@@ -4,8 +4,11 @@
         'orderby'           => 'ID',
         'order'             => 'DESC',
         'tag'               => 'recommended',
-        'posts_per_page'    => 3
+        'posts_per_page'    => 12
     );
+
+    $max_excerpt_words = 15;
+
     $recommended_posts = new WP_Query($recommended_posts_args); ?>
     <!-- the posts container div -->
     <div class="recommended-posts-container" id="homeRecommended">
@@ -39,18 +42,19 @@
                                 </a>
                             </div>
                                 
-                            <!-- category -->
-                            <?php 
-                                $cat = get_the_category();
-                                if(count($cat) > 0){
-                                    $name = $cat[0]->name;
-                                    $id = $cat[0]->term_id;
-                                    $link = get_category_link($id);
-                                ?>
-                                <a class="category" href="<?php echo $link ?>"><?php echo $name ?></a>
-                            <?php } ?>
-                            
+
                             <div class="header_ex">
+                                <!-- category -->
+                                <?php 
+                                    $cat = get_the_category();
+                                    if(count($cat) > 0){
+                                        $name = $cat[0]->name;
+                                        $id = $cat[0]->term_id;
+                                        $link = get_category_link($id);
+                                    ?>
+                                    <a class="category" href="<?php echo $link ?>"><?php echo $name ?></a>
+                                <?php } ?>
+
                                 <!-- post title -->
                                 <h3 class="post-title">
                                     <a href="<?php the_permalink();// link of the post ?>">
@@ -59,8 +63,22 @@
                                 </h3>
                                 
                                 <div class="excerpt">
-                                    <?php the_excerpt(); ?>
+                                    <a href="<?php the_permalink();// link of the post ?>">
+                                        <?php 
+                                            $excerpt = '';
+                                            $words = explode(' ' , get_the_excerpt());
+                                            
+                                            for($x = 0 ; $x <= $max_excerpt_words && $x < count($words); $x++){
+                                                $excerpt .= $words[$x] . ' ';
+                                            }
+                                            echo $excerpt . '...';
+                                        ?>
+
+                                        <span>Read More</span>
+                                    </a>
                                 </div>
+
+
                             </div>
 
                         </div>
