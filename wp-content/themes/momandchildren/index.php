@@ -45,7 +45,7 @@
             </div>
             
             <!-- right sidebar -->
-            <div class="col-md-3">
+            <div class="col-md-3 sidebar_data">
                 <?php get_sidebar(); ?>
             </div>
 

@@ -1,4 +1,40 @@
 <div class="cutom-sidebar cutom">
+    <?php $directory_uri = get_template_directory_uri(); ?>
+
+    <div class="box free_book">
+        <img src="<?php echo $directory_uri ?>/imgs/book/book.png" class="img-responsive" alt="Book">
+        
+        <div class="form">
+            <form action="/" method="post">
+                <div class="data">
+                    <input type="email" name="email" placeholder="Write Your Email">
+                    <button>
+                        <img src="<?php echo $directory_uri ?>/imgs/book/book_heart.svg" alt="Supmit">
+                    </button>
+                </div>
+            </form>
+            <h2 class="text-center">Get It Now For Free</h2>
+        </div>
+
+    </div>
+
+
+    <div class="box patreon">
+        <h2>
+            <span class="white">Support Us</span>
+            <span class="orange">On Patreon</span>
+        </h2>
+
+        <div class="arrow">
+            <img class="img-responsive" src="<?php echo $directory_uri ?>/imgs/patreon/arrow.svg" alt="Arrow">
+        </div>
+
+        <div>
+            <img class="img-responsive" src="<?php echo $directory_uri ?>/imgs/patreon/patreon.svg" alt="Patreon">
+        </div>
+    </div>
+
+
 
     <!-- custom search box -->
     <!-- <div class="search box">

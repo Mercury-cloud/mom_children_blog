@@ -102,17 +102,413 @@
     }
 }
 
+// // custom sidebar
+// .cutom-sidebar{
+
+//     margin-top : 20px;
+
+//     .box{
+//         // background-color : $box-background;
+//         // border : 1px solid $border;
+//         color : $border;
+//         padding : 0px 10px 10px;
+//         margin-bottom : 10px;
+//         h3{
+//             color : $border;
+//             position : relative;
+//             font-size : 20px;
+//             padding-bottom : 5px;
+//             &:before{
+//                 content : "";
+//                 position: absolute;
+//                 bottom : 0px;
+//                 left : 0px;
+//                 background-color : $background-hover;
+//                 height: 5px;
+//                 width : 80px;
+//             }
+//             &:after{
+//                 content : "";
+//                 position: absolute;
+//                 bottom : 0px;
+//                 left : 0px;
+//                 background-color : $background-color;
+//                 height: 1px;
+//                 width : 130px;
+//             }
+//             span{
+//                 display: inline-block;
+//                 padding : 5px;
+//                 color : $border;
+//             }
+//             img{
+//                 width : 25px;
+//                 display : inline-block;
+//                 margin-left : 5px;
+//                 margin-bottom: -12px;
+//             }
+//         }
+//     }
+//     // facebook page
+//     .fb-box{
+//         .fb-page{
+//             display: block;
+//             text-align: center;
+//             span{
+//                 width : 250px !important;
+//             }
+//         }
+//     }
+//     // search option
+//     .search{
+//         form{
+//             margin-top : 10px;
+//             div{
+//                 position : relative;
+//                 input{ 
+//                     background-color : transparent;
+//                     border : 0px solid black;
+//                     border-bottom : 2px solid rgb(0, 195, 255);
+//                     transition : $transition;
+//                     border-radius : 5px;
+//                     &:hover , &:focus{
+//                         border-bottom : 2px solid rgb(0, 238, 255);
+//                         background-color : rgb(214, 250, 255);
+//                         color :#000;
+//                     }
+//                 }
+//                 button{
+//                     position : absolute;
+//                     top : 0px;
+//                     right: 0px;
+//                     border : 0px solid black;
+//                     background-color : transparent;
+//                     font-size : 20px;
+//                 }
+//             }
+//         }
+//     }
+
+//     // posts
+//     .hottest-post , .recent-posts , .rand-posts{
+//         .post-container{
+//             .post{
+//                 border-bottom : 5px solid $green_color;
+//                 border-top : 1px solid #CCC;
+//                 border-left : 1px solid #CCC;
+//                 border-right : 1px solid #CCC;
+//                 margin : 15px 0px;
+//                 // border : 1px solid #CCC;
+//                 padding : 0px;
+//                 position : relative;
+//                 overflow : hidden;
+//                 border-top-right-radius : 20px;
+//                 border-bottom-left-radius : 20px;
+//                 &:hover .post-info{
+//                     transform: rotate3d(1, 1, 0, 0deg);
+//                     opacity: 1;
+//                 }
+//                 .post-head{
+//                     font-size : 16px;
+//                     overflow : hidden;
+//                     line-height : 18px;
+//                     background-color : rgba(48, 71, 140, 0.836);
+//                     margin : 0px;
+//                     padding : 10px;
+//                     position: absolute;
+//                     bottom : 0px;
+//                     left : 0px;
+//                     width : 100%;
+//                     a{
+//                         // margin-left : 7px;
+//                         color : $nav-color;
+//                         text-decoration: none;
+//                     }
+//                 }
+//                 .img-container{
+//                     a img{
+//                         display: inline-block;
+//                         width : 100%;
+//                     }
+//                 }
+//                 .post-info{
+//                     transition: $transition;
+//                     position : absolute;
+//                     top : 0px;
+//                     left : 0px;
+//                     width : 100%;
+//                     height : 100%;
+//                     transform: rotate3d(-1, -1, 0, 80deg);
+//                     opacity: 0;
+//                     overflow : hidden;
+//                     background-color : rgb(255, 255, 255);
+//                     text-align : center;
+//                     text-decoration : none;
+//                     color : $text-color;
+//                     padding: 8px;
+//                     h4{
+//                         height : 50px;
+//                         line-height: 24px;
+//                         margin : 5px 5px 0px;
+//                         overflow : hidden;
+//                         font-size : 16px;
+//                         display : none; 
+//                     }
+//                     .author{
+//                         display: inline-block;
+//                         text-decoration : none;
+//                         color : #333;
+//                         font-size : 18px;
+//                         margin : 5px 5px 0px;
+//                         font-weight : bold;
+//                     }
+//                     .ex-con{
+//                         height : 100%;
+//                         color :$text-color;
+//                         overflow : hidden;
+//                         p{
+//                             padding : 0px;
+//                             margin : 0px;
+//                         } 
+//                     }
+//                     .comments{
+//                         display: inline-block;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+
+//     .custom-cats{
+//         padding : 10px;
+//         & > div{
+//             padding:10px;
+//             border-bottom-left-radius: 15px;
+//             background-color : #30478c;
+//         }
+//         h3{
+//             margin-top : 0px;
+//             color : $nav-color !important;
+//             span{
+//                 color : $nav-color !important;
+//             }
+//             img{
+//                 width : 25px;
+//                 display : inline-block;
+//                 margin-left : 0px;
+//                 margin-bottom: 0px;
+//             }
+//         }
+//         .cats-container{
+//             background-color : #FFF;
+//             color : $border;
+//             padding : 0px 0px 10px 10px ;
+//             margin-top : 5px;
+//             border-bottom-left-radius: 10px;
+//             > li{
+//                 list-style: none;
+//                 display : block;
+//                 padding: 5px 5px 0px 10px;
+//                 > a{
+//                     color :$border;
+//                     text-decoration : none;
+//                     display : inline-block;
+//                     font-size : 17px;
+//                     font-weight : bold;
+//                     transition : $transition;
+//                     &:hover{
+//                         padding-left : 5px;
+//                     }
+//                 }
+
+//                 .children{
+//                     margin : 0px;
+//                     padding : 0px;
+//                     li{
+//                         display : block;
+//                         list-style : none;
+//                         padding : 5px 0px;
+//                         transition : $transition;
+//                         a{
+//                             color : $cat_color;
+//                             text-decoration : none;
+//                         }
+//                     }
+
+//                     .current-cat{
+//                         background-color : green;
+//                         color : #FFF; 
+//                         a{
+//                             color: #FFF;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+
+//     .a-d , .a-d-s{
+//         .ad{
+//             height : 300px;
+//             width : 236px;
+//             text-align : center;
+//             font-size : 25px;
+//             line-height: 300px;
+//             background-color : #DDD;
+//             margin : 0 auto;
+//             transition : $transition;
+//         }
+//     }
+//     .a-d-s{
+//         padding : 10px;
+//     }
+
+//     // current cat info box
+//     .current-cat-info{
+//         font-size : 18px;
+//         // comments count
+//         .comments-count , .posts-count{
+//             background : $background-color;
+//             border-radius : 10px;
+//             padding : 10px;
+//             margin : 10px;
+//         }
+//     }
+// }
+
+
+// // left sidebar
+// .left-sidebar{
+//     margin-top : 80px;
+//     .box{
+//         background-color :#30478c;
+//         // border : 1px solid $border;
+//         color : $border;
+//         padding : 10px;
+//         margin-bottom : 10px;
+//         border-bottom-left-radius: 15px;
+//         h3{
+//             color : $nav-color;
+//             position : relative;
+//             font-size : 20px;
+//             padding-bottom : 5px;
+//             margin : 0px 0px 10px 5px;
+//             &:before{
+//                 content : "";
+//                 position: absolute;
+//                 bottom : 0px;
+//                 left : 0px;
+//                 background-color : $background-hover;
+//                 height: 5px;
+//                 width : 60px;
+//             }
+//             &:after{
+//                 content : "";
+//                 position: absolute;
+//                 bottom : 0px;
+//                 left : 0px;
+//                 background-color : $background-color;
+//                 height: 1px;
+//                 width : 130px;
+//             }
+//             span{
+//                 display: inline-block;
+//                 padding : 5px;
+//                 color : $nav-color;
+//             }
+//             img{
+//                 width : 25px;
+//                 display : inline-block;
+//                 margin-left : 5px;
+//             }
+//         }
+//     }
+
+//     // patreon
+//     .patreon{
+//         .content{
+//             background-color : #FFF;
+//             border-bottom-left-radius: 10px;
+//             text-align : center;
+//             padding: 10px 10px 5px 10px;
+//             p{
+//                 display : block;
+//                 margin-top : 10px;
+//                 text-align : center;
+//                 color : $background-color;
+//                 letter-spacing:1px;
+//                 font-size : 1.2em;
+                
+//                 strong{
+//                     color : $background-hover;
+//                 }
+//             }
+//             a{
+//                 display : block;
+//                 margin : 10px auto 5px;
+//             }
+//         }
+//     }
+
+//     // chat
+//     .chat{
+//         .chat_container{
+//             background-color : #FFF;
+//             border-bottom-left-radius: 10px;
+//             padding: 10px 10px 5px 10px;
+//             min-height : 350px;
+//         }
+//     }
+
+//     // facebook
+//     .facebook{
+//         .facebook_container{
+//             background-color : #FFF;
+//             border-bottom-left-radius: 10px;
+//             padding: 10px 10px 5px 10px;
+//             min-height : 350px;
+//         }
+//     }
+
+//     // facebook
+//     .instagram{
+//         .instagram_container{
+//             background-color : #FFF;
+//             border-bottom-left-radius: 10px;
+//             padding: 10px 10px 5px 10px;
+//             min-height : 350px;
+//         }
+//     }
+
+
+//     // facebook
+//     .youtube{
+//         .youtube_container{
+//             background-color : #FFF;
+//             border-bottom-left-radius: 10px;
+//             padding: 10px 10px 5px 10px;
+//             min-height : 350px;
+//         }
+//     }
+// }
+
+
+
+
+
+.sidebar_data{
+
+}
 // custom sidebar
 .cutom-sidebar{
-
-    margin-top : 20px;
-
+    border : 1px solid #CCC;
+    margin-top : 35px;
     .box{
-        // background-color : $box-background;
-        // border : 1px solid $border;
-        color : $border;
-        padding : 0px 10px 10px;
-        margin-bottom : 10px;
+        color : #391540;
+        border-bottom : 1px solid #CCC;
+        margin-bottom : 20px;
         h3{
             color : $border;
             position : relative;
@@ -149,6 +545,89 @@
             }
         }
     }
+
+    // book
+    .free_book{
+        background-color : #f2f2f2;
+        form{
+            // margin-top : 40px;
+            // margin-bottom : 15px;
+            padding : 20px 10px;
+            .data{
+                position: relative;
+                input{
+                    width : 100%;
+                    padding :10px 30px 10px  10px;
+                    background-color : #cccccc;
+                    outline : 0;
+                    border : none;
+                    border-top-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+                button{
+                    position : absolute;
+                    right : 0px;
+                    top : 0px;
+                    border : none;
+                    outline : 0;
+                    padding : 9px;
+                    background-color : #391540;
+                    border-top-right-radius: 10px;
+                    img{
+                        width : 20px;
+                        transition : $transition;
+                        &:hover{
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        h2{
+            margin : 0px 0px 10px 0px;
+            font-weight : bold;
+            color : #391540;
+            text-transform : uppercase;
+            font-size : 1.3em;
+        }
+    }
+
+    // patreon 
+    .patreon{
+        background-color : #391540;
+        display : flex;
+        padding : 10px;
+        align-items: center;
+        h2{
+            flex : 6;
+            font-size: 1.4em;
+            line-height: 1.5em;
+            margin : 0px;
+            .white{
+                color : #FFF;
+                display : block;
+            }
+
+            .orange{
+                color : #f96854;
+            }
+        }
+        .arrow{
+            flex : 2;
+        }
+
+        div{
+            flex : 3;
+            padding : 10px;
+        }
+    }
+
+
+
+
+
+
     // facebook page
     .fb-box{
         .fb-page{
@@ -374,122 +853,6 @@
             border-radius : 10px;
             padding : 10px;
             margin : 10px;
-        }
-    }
-}
-
-
-// left sidebar
-.left-sidebar{
-    margin-top : 80px;
-    .box{
-        background-color :#30478c;
-        // border : 1px solid $border;
-        color : $border;
-        padding : 10px;
-        margin-bottom : 10px;
-        border-bottom-left-radius: 15px;
-        h3{
-            color : $nav-color;
-            position : relative;
-            font-size : 20px;
-            padding-bottom : 5px;
-            margin : 0px 0px 10px 5px;
-            &:before{
-                content : "";
-                position: absolute;
-                bottom : 0px;
-                left : 0px;
-                background-color : $background-hover;
-                height: 5px;
-                width : 60px;
-            }
-            &:after{
-                content : "";
-                position: absolute;
-                bottom : 0px;
-                left : 0px;
-                background-color : $background-color;
-                height: 1px;
-                width : 130px;
-            }
-            span{
-                display: inline-block;
-                padding : 5px;
-                color : $nav-color;
-            }
-            img{
-                width : 25px;
-                display : inline-block;
-                margin-left : 5px;
-            }
-        }
-    }
-
-    // patreon
-    .patreon{
-        .content{
-            background-color : #FFF;
-            border-bottom-left-radius: 10px;
-            text-align : center;
-            padding: 10px 10px 5px 10px;
-            p{
-                display : block;
-                margin-top : 10px;
-                text-align : center;
-                color : $background-color;
-                letter-spacing:1px;
-                font-size : 1.2em;
-                
-                strong{
-                    color : $background-hover;
-                }
-            }
-            a{
-                display : block;
-                margin : 10px auto 5px;
-            }
-        }
-    }
-
-    // chat
-    .chat{
-        .chat_container{
-            background-color : #FFF;
-            border-bottom-left-radius: 10px;
-            padding: 10px 10px 5px 10px;
-            min-height : 350px;
-        }
-    }
-
-    // facebook
-    .facebook{
-        .facebook_container{
-            background-color : #FFF;
-            border-bottom-left-radius: 10px;
-            padding: 10px 10px 5px 10px;
-            min-height : 350px;
-        }
-    }
-
-    // facebook
-    .instagram{
-        .instagram_container{
-            background-color : #FFF;
-            border-bottom-left-radius: 10px;
-            padding: 10px 10px 5px 10px;
-            min-height : 350px;
-        }
-    }
-
-
-    // facebook
-    .youtube{
-        .youtube_container{
-            background-color : #FFF;
-            border-bottom-left-radius: 10px;
-            padding: 10px 10px 5px 10px;
-            min-height : 350px;
         }
     }
 }
