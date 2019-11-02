@@ -168,7 +168,7 @@
             position: absolute;
             top: 0px;
             right: 0px;
-            background-color: #F2F2F2;
+            background-color: white;
             padding: 10px 12.5px;
             border: none;
             outline: 0;
@@ -563,7 +563,7 @@
 .cotainer_all_data {
   width: 100%;
   z-index: 3;
-  background-color: #F2F2F2;
+  background-color: white;
   position: relative; }
 
 .homepage_slider {
@@ -666,7 +666,7 @@
 .recommended-posts-container {
   margin-bottom: 20px;
   margin-top: 80px;
-  background-color: #F2F2F2; }
+  background-color: white; }
   .recommended-posts-container .slick-next, .recommended-posts-container .slick-prev {
     display: none !important; }
   .recommended-posts-container:hover .slick-next, .recommended-posts-container:hover .slick-prev {
@@ -1817,42 +1817,41 @@
         background-color: red; }
 
 .cutom-sidebar {
-  border: 1px solid #CCC;
+  position: relative;
   margin-top: 35px; }
+  .cutom-sidebar:before {
+    content: '';
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e6e6e6;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    height: 100%; }
   .cutom-sidebar .box {
     color: #391540;
-    border-bottom: 1px solid #CCC;
     margin-bottom: 20px; }
     .cutom-sidebar .box h3 {
       color: #391540;
       position: relative;
       font-size: 20px;
       padding-bottom: 5px; }
-      .cutom-sidebar .box h3:before {
-        content: "";
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        background-color: #D97E85;
-        height: 5px;
-        width: 80px; }
-      .cutom-sidebar .box h3:after {
-        content: "";
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        background-color: #f2b6bb;
-        height: 1px;
-        width: 130px; }
       .cutom-sidebar .box h3 span {
         display: inline-block;
         padding: 5px;
-        color: #391540; }
+        color: #391540;
+        border-bottom: 1px solid #DDD;
+        color: #1a1a1a;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'lato-bold' , 'sans-serif'; }
       .cutom-sidebar .box h3 img {
-        width: 25px;
+        width: 18px;
         display: inline-block;
-        margin-left: 5px;
-        margin-bottom: -12px; }
+        margin-right: 5px;
+        margin-bottom: 0px;
+        vertical-align: middle;
+        margin-left: 5px; }
   .cutom-sidebar .free_book {
     background-color: #f2f2f2; }
     .cutom-sidebar .free_book form {
@@ -1882,59 +1881,70 @@
             .cutom-sidebar .free_book form .data button img:hover {
               transform: rotate(90deg); }
     .cutom-sidebar .free_book h2 {
-      margin: 0px 0px 10px 0px;
+      margin: 0px;
       font-weight: bold;
       color: #391540;
       text-transform: uppercase;
-      font-size: 1.3em; }
-  .cutom-sidebar .patreon {
+      font-size: 1.3em;
+      padding-bottom: 15px; }
+  .cutom-sidebar .patreon a {
     background-color: #391540;
     display: flex;
     padding: 10px;
     align-items: center; }
-    .cutom-sidebar .patreon h2 {
-      flex: 6;
-      font-size: 1.4em;
-      line-height: 1.5em;
-      margin: 0px; }
-      .cutom-sidebar .patreon h2 .white {
-        color: #FFF;
-        display: block; }
-      .cutom-sidebar .patreon h2 .orange {
-        color: #f96854; }
-    .cutom-sidebar .patreon .arrow {
-      flex: 2; }
-    .cutom-sidebar .patreon div {
-      flex: 3;
-      padding: 10px; }
-  .cutom-sidebar .fb-box .fb-page {
-    display: block;
-    text-align: center; }
-    .cutom-sidebar .fb-box .fb-page span {
-      width: 250px !important; }
-  .cutom-sidebar .search form {
-    margin-top: 10px; }
-    .cutom-sidebar .search form div {
-      position: relative; }
-      .cutom-sidebar .search form div input {
-        background-color: transparent;
-        border: 0px solid black;
-        border-bottom: 2px solid #00c3ff;
-        transition: all 0.5s ease-in-out;
-        border-radius: 5px; }
-        .cutom-sidebar .search form div input:hover, .cutom-sidebar .search form div input:focus {
-          border-bottom: 2px solid #00eeff;
-          background-color: #d6faff;
-          color: #000; }
-      .cutom-sidebar .search form div button {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        border: 0px solid black;
-        background-color: transparent;
-        font-size: 20px; }
+  .cutom-sidebar .patreon h2 {
+    flex: 6;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    margin: 0px;
+    text-decoration: none; }
+    .cutom-sidebar .patreon h2 .white {
+      color: #FFF;
+      display: block; }
+    .cutom-sidebar .patreon h2 .orange {
+      color: #f96854; }
+  .cutom-sidebar .patreon .arrow {
+    flex: 2; }
+    .cutom-sidebar .patreon .arrow img {
+      padding: 5px; }
+  .cutom-sidebar .patreon div {
+    flex: 3;
+    padding: 10px; }
+  .cutom-sidebar .recent .col-xs-3 {
+    padding: 0px 0px 0px 15px; }
+  .cutom-sidebar .recent .col-xs-9 {
+    padding: 0px 15px 0px 10px; }
+  .cutom-sidebar .recent .post {
+    padding: 15px 0px;
+    margin: 0px;
+    border-bottom: 1px solid #CCC; }
+    .cutom-sidebar .recent .post .img-container {
+      width: 100%;
+      height: 60px; }
+      .cutom-sidebar .recent .post .img-container a {
+        width: 100%;
+        height: 100%; }
+        .cutom-sidebar .recent .post .img-container a img {
+          border-radius: 10px;
+          width: 100%;
+          height: 100%; }
+    .cutom-sidebar .recent .post .post-head {
+      margin: 5px 0px 5px;
+      font-size: 1.1em; }
+      .cutom-sidebar .recent .post .post-head a {
+        text-decoration: none;
+        color: #333; }
+    .cutom-sidebar .recent .post .post_info {
+      display: flex;
+      color: #666;
+      font-size: 0.8em;
+      text-transform: uppercase; }
+      .cutom-sidebar .recent .post .post_info .date {
+        flex: 3; }
+      .cutom-sidebar .recent .post .post_info .comments {
+        flex: 2; }
   .cutom-sidebar .hottest-post .post-container .post, .cutom-sidebar .recent-posts .post-container .post, .cutom-sidebar .rand-posts .post-container .post {
-    border-bottom: 5px solid #9bbf95;
+    border-bottom: 1px solid #CCC;
     border-top: 1px solid #CCC;
     border-left: 1px solid #CCC;
     border-right: 1px solid #CCC;
@@ -1951,7 +1961,7 @@
       font-size: 16px;
       overflow: hidden;
       line-height: 18px;
-      background-color: rgba(48, 71, 140, 0.836);
+      background-color: #391540cc;
       margin: 0px;
       padding: 10px;
       position: absolute;
@@ -2002,57 +2012,95 @@
           margin: 0px; }
       .cutom-sidebar .hottest-post .post-container .post .post-info .comments, .cutom-sidebar .recent-posts .post-container .post .post-info .comments, .cutom-sidebar .rand-posts .post-container .post .post-info .comments {
         display: inline-block; }
-  .cutom-sidebar .custom-cats {
-    padding: 10px; }
-    .cutom-sidebar .custom-cats > div {
-      padding: 10px;
-      border-bottom-left-radius: 15px;
-      background-color: #30478c; }
-    .cutom-sidebar .custom-cats h3 {
-      margin-top: 0px;
+  .cutom-sidebar .custom-cats > div {
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #391540; }
+  .cutom-sidebar .custom-cats h3 {
+    margin-top: 0px;
+    color: #FFF !important; }
+    .cutom-sidebar .custom-cats h3 span {
       color: #FFF !important; }
-      .cutom-sidebar .custom-cats h3 span {
-        color: #FFF !important; }
-      .cutom-sidebar .custom-cats h3 img {
-        width: 25px;
+    .cutom-sidebar .custom-cats h3 img {
+      width: 25px;
+      display: inline-block;
+      margin-left: 0px;
+      margin-bottom: 0px; }
+  .cutom-sidebar .custom-cats .cats-container {
+    background-color: #FFF;
+    color: #391540;
+    padding: 0px 0px 10px 10px;
+    margin-top: 5px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px; }
+    .cutom-sidebar .custom-cats .cats-container > li {
+      list-style: none;
+      display: block;
+      padding: 5px 5px 0px 10px; }
+      .cutom-sidebar .custom-cats .cats-container > li > a {
+        color: #391540;
+        text-decoration: none;
         display: inline-block;
-        margin-left: 0px;
-        margin-bottom: 0px; }
-    .cutom-sidebar .custom-cats .cats-container {
-      background-color: #FFF;
-      color: #391540;
-      padding: 0px 0px 10px 10px;
-      margin-top: 5px;
-      border-bottom-left-radius: 10px; }
-      .cutom-sidebar .custom-cats .cats-container > li {
-        list-style: none;
-        display: block;
-        padding: 5px 5px 0px 10px; }
-        .cutom-sidebar .custom-cats .cats-container > li > a {
-          color: #391540;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 17px;
-          font-weight: bold;
+        font-size: 17px;
+        font-weight: bold;
+        transition: all 0.5s ease-in-out; }
+        .cutom-sidebar .custom-cats .cats-container > li > a:hover {
+          padding-left: 5px; }
+      .cutom-sidebar .custom-cats .cats-container > li .children {
+        margin: 0px;
+        padding: 0px; }
+        .cutom-sidebar .custom-cats .cats-container > li .children li {
+          display: block;
+          list-style: none;
+          padding: 5px 0px;
           transition: all 0.5s ease-in-out; }
-          .cutom-sidebar .custom-cats .cats-container > li > a:hover {
-            padding-left: 5px; }
-        .cutom-sidebar .custom-cats .cats-container > li .children {
-          margin: 0px;
-          padding: 0px; }
-          .cutom-sidebar .custom-cats .cats-container > li .children li {
-            display: block;
-            list-style: none;
-            padding: 5px 0px;
-            transition: all 0.5s ease-in-out; }
-            .cutom-sidebar .custom-cats .cats-container > li .children li a {
-              color: #30478C;
-              text-decoration: none; }
-          .cutom-sidebar .custom-cats .cats-container > li .children .current-cat {
-            background-color: green;
+          .cutom-sidebar .custom-cats .cats-container > li .children li a {
+            color: #30478C;
+            text-decoration: none; }
+        .cutom-sidebar .custom-cats .cats-container > li .children .current-cat {
+          background-color: green;
+          color: #FFF; }
+          .cutom-sidebar .custom-cats .cats-container > li .children .current-cat a {
             color: #FFF; }
-            .cutom-sidebar .custom-cats .cats-container > li .children .current-cat a {
-              color: #FFF; }
+  .cutom-sidebar .current-cat-info {
+    font-size: 18px; }
+    .cutom-sidebar .current-cat-info .comments-count, .cutom-sidebar .current-cat-info .posts-count {
+      background: #f2b6bb;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px; }
+  .cutom-sidebar .chat .chat_container {
+    background-color: #FFF;
+    border-bottom-left-radius: 10px;
+    padding: 10px 10px 5px 10px;
+    min-height: 350px; }
+  .cutom-sidebar .fb-box .fb-page {
+    display: block;
+    text-align: center; }
+    .cutom-sidebar .fb-box .fb-page span {
+      width: 250px !important; }
+  .cutom-sidebar .search form {
+    margin-top: 10px; }
+    .cutom-sidebar .search form div {
+      position: relative; }
+      .cutom-sidebar .search form div input {
+        background-color: transparent;
+        border: 0px solid black;
+        border-bottom: 2px solid #00c3ff;
+        transition: all 0.5s ease-in-out;
+        border-radius: 5px; }
+        .cutom-sidebar .search form div input:hover, .cutom-sidebar .search form div input:focus {
+          border-bottom: 2px solid #00eeff;
+          background-color: #d6faff;
+          color: #000; }
+      .cutom-sidebar .search form div button {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        border: 0px solid black;
+        background-color: transparent;
+        font-size: 20px; }
   .cutom-sidebar .a-d .ad, .cutom-sidebar .a-d-s .ad {
     height: 300px;
     width: 236px;
@@ -2064,13 +2112,6 @@
     transition: all 0.5s ease-in-out; }
   .cutom-sidebar .a-d-s {
     padding: 10px; }
-  .cutom-sidebar .current-cat-info {
-    font-size: 18px; }
-    .cutom-sidebar .current-cat-info .comments-count, .cutom-sidebar .current-cat-info .posts-count {
-      background: #f2b6bb;
-      border-radius: 10px;
-      padding: 10px;
-      margin: 10px; }
 
 .slick-next, .slick-prev {
   font-size: 0;
@@ -2269,7 +2310,7 @@
 ** main rules
 */
 body {
-  background-color: #F2F2F2;
+  background-color: white;
   color: #222;
   min-height: 200vh; }
 

@@ -55,8 +55,10 @@
                             'orderby'       => 'ID' , 
                             'order'         => 'DESC'
                         );
+
                         $cat_posts = new WP_Query($cat_posts_args);
                         // check if posts exist
+
                         if($cat_posts->have_posts()):
                             // posts counter
                             $x = 0; 
@@ -68,7 +70,6 @@
                                         <div>
                                             <!-- image container -->
                                             <div class="img-container">
-
                                                 <?php if($x != 3): ?>
                                                     <a href="<?php the_permalink(); ?>">
                                                         <?php the_post_thumbnail('' , array(
@@ -78,7 +79,7 @@
                                                     </a>
                                                 <?php else: ?>
                                                     <a href="<?php the_permalink(); ?>" 
-                                                    style="background:url(<?php the_post_thumbnail_url() ?>) no-repeat center center fixed;
+                                                    style="background:url(<?php the_post_thumbnail_url() ?>) no-repeat center center;
                                                         -webkit-background-size: cover;
                                                         -moz-background-size: cover;
                                                         -o-background-size: cover;
@@ -96,10 +97,8 @@
                                                 </a>
                                             </div>
                                             
-                                            
                                             <!-- text content -->
                                             <div class="header_ex">
-
                                                 <?php if($x != 3): ?>
                                                     <!-- post title -->
                                                     <h3 class="post-title">
@@ -173,7 +172,6 @@
 
                                             </div>
                                         </div>
-
                                     </div>
                                 <?php endwhile; 
                             echo "</div>";
