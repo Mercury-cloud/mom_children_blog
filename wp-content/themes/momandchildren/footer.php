@@ -81,6 +81,10 @@
                                 </form>
                             </div>
 
+                            <div class="copy_rights_phone">
+                                © 2019 momandchildreN. All Rights Reserved.
+                            </div>
+
                         </div>
                     </div>
                 </div>

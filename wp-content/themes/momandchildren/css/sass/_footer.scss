@@ -32,7 +32,7 @@
 .footer{
     background: #391540;
     width : 100%;
-    padding : 20px 10px;
+    padding : 20px 10px 50px;
     z-index: 100000;
     border-top : $border_bottom;
     position: relative;
@@ -103,11 +103,15 @@
         }
     }
 
-    .copy_rights{
+    .copy_rights , .copy_rights_phone{
         margin-top : 10px;
         color : #FFF;
         font-size : 1em;
         text-transform: uppercase;
+    }
+
+    .copy_rights_phone{
+        display : none;
     }
 
     .links{
@@ -161,5 +165,40 @@
             }
         }
 
+    }
+}
+
+
+
+
+/*
+** Mobile Design
+*/
+@media (max-width: 991px) { 
+    .footer{
+        padding : 20px 10px 80px;
+        .footer_logo{
+            margin-bottom : 10px;
+        }
+    
+        .copy_rights{
+            display : none;
+        }
+
+        .copy_rights_phone{
+            display : block !important;
+            text-align : center;
+        }
+
+        .contact{
+            form{
+                .clas1{
+                    padding : 0px 15px !important;
+                }
+                .clas2{
+                    padding : 0px 15px !important;
+                }
+            }
+        }
     }
 }

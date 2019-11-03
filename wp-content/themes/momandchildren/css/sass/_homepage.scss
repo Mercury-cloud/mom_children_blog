@@ -931,6 +931,55 @@
     //         }
     //     }
     // }
+
+    // week by week design
+    .week_by_week{
+        h1{
+            font-size : 1.9em !important;
+        }
+        span{
+            font-size : 1.1em;
+        }
+
+        form{
+            margin-top : 0px !important;
+            .col-md-5{
+                padding : 0px;
+            }
+            .date{
+                input{
+                    width : 31% !important;
+                }
+            }
+
+            .email{
+                width : 95%;
+                margin-left: 2.5% !important;
+                margin-top: 10px !important;
+            }
+
+
+            button{
+                right: 7% !important;
+            }
+        }
+        
+        .health{
+            margin-left : 10%;
+            span{
+                color:#391540 !important;
+                font-size : 2em;
+            }
+        }
+
+        .icon{
+            img{
+                margin: 10px auto;
+                width: 50%;
+            }
+        }
+    }
+
     .cat-container{
         .post-container{
             .post-rand-li{

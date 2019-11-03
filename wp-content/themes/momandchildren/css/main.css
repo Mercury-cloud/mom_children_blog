@@ -927,6 +927,31 @@
   .content_center {
     padding: 0px 15px !important; }
 
+  .week_by_week h1 {
+    font-size: 1.9em !important; }
+  .week_by_week span {
+    font-size: 1.1em; }
+  .week_by_week form {
+    margin-top: 0px !important; }
+    .week_by_week form .col-md-5 {
+      padding: 0px; }
+    .week_by_week form .date input {
+      width: 31% !important; }
+    .week_by_week form .email {
+      width: 95%;
+      margin-left: 2.5% !important;
+      margin-top: 10px !important; }
+    .week_by_week form button {
+      right: 7% !important; }
+  .week_by_week .health {
+    margin-left: 10%; }
+    .week_by_week .health span {
+      color: #391540 !important;
+      font-size: 2em; }
+  .week_by_week .icon img {
+    margin: 10px auto;
+    width: 50%; }
+
   .cat-container .post-container .post-rand-li > div .img-container {
     height: auto !important; }
   .cat-container .post-container .post-rand-li > div .header_ex h3 {
@@ -2225,7 +2250,7 @@
 .footer {
   background: #391540;
   width: 100%;
-  padding: 20px 10px;
+  padding: 20px 10px 50px;
   z-index: 100000;
   border-top: #db8289;
   position: relative;
@@ -2274,11 +2299,13 @@
     .footer .week_by_week_footer .img-responsive {
       margin: 0px auto;
       width: 115px !important; }
-  .footer .copy_rights {
+  .footer .copy_rights, .footer .copy_rights_phone {
     margin-top: 10px;
     color: #FFF;
     font-size: 1em;
     text-transform: uppercase; }
+  .footer .copy_rights_phone {
+    display: none; }
   .footer .links {
     text-align: center; }
     .footer .links ul li {
@@ -2313,6 +2340,23 @@
     background-color: #f2b6bb;
     color: #391540; }
 
+/*
+** Mobile Design
+*/
+@media (max-width: 991px) {
+  .footer {
+    padding: 20px 10px 80px; }
+    .footer .footer_logo {
+      margin-bottom: 10px; }
+    .footer .copy_rights {
+      display: none; }
+    .footer .copy_rights_phone {
+      display: block !important;
+      text-align: center; }
+    .footer .contact form .clas1 {
+      padding: 0px 15px !important; }
+    .footer .contact form .clas2 {
+      padding: 0px 15px !important; } }
 .page-notfound h1 {
   color: red;
   display: block;
