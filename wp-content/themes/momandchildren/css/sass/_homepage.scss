@@ -818,118 +818,147 @@
     .content_center{
         padding : 0px 15px !important;
     }
+    // .cat-container{
+    //     .recommend-head{
+    //         font-size: 1.8em !important;
+    //     }
+    //     .recommend-post , .post-container{
+    //         .post-rand-li{
+    //             position: relative;
+    //             &.first_post{
+    //                 max-height : 390px !important;
+    //                 height : 390px !important;
+    //                 margin-bottom : 20px !important;
+    //                 & > div{
+    //                     max-height : 390px !important;
+    //                     height : 390px !important;
+    //                 }
+    //                 img{
+    //                     height : auto;
+    //                 }
+    //                 h3{
+    //                     font-size : 1.7em !important;
+    //                     height : auto;
+    //                     padding : 10px 20px;
+    //                     line-height: 1.2em;
+    //                 }
+    //                 .excerpt{
+    //                     background-color : $box-background;
+    //                     height : 100%;
+    //                     font-size : 1.2em !important;
+    //                     padding : 10px 20px;
+    //                     margin : 0px;
+    //                     font-weight : lighter;
+    //                     line-height: 1.2em;
+    //                 }
+    //             }
+    //             &.seconds_posts:nth-of-type(1){
+    //                 margin-bottom : 20px !important;
+    //             }
+    
+    //             & > div{
+    //                 position: relative;
+    //                 overflow : hidden;
+    //                 height : 100%;
+    //                 max-height : 270px;
+    //                 width : 100%;
+    //                 border-radius : 5px;
+    //             }
+    
+    //             h3{
+    //                 background: $box-background;
+    //                 padding: 10px;
+    //                 margin: 0px;
+    //                 font-size: 1.4em;
+    //                 line-height: 1.4em;
+    //                 height: 102px;
+    //                 font-family : 'lato-bold' , 'sans-serif';
+    //                 font-weight : bold;
+    //                 z-index : 1;
+    //                 a{
+    //                     color : $text-color;
+    //                     text-decoration: none;
+    //                 }
+    //             }
+    //             img{
+    //                 transition: $transition;
+    //                 width : 100%;
+    //                 height: 197px;
+    //                 z-index : 0;
+    //                 &:hover{
+    //                     transform: scale(1.05);
+    //                 }
+    //             }
+    //             // the post info
+    //             .post-author , .post-date , .post-comments{
+    //                 margin: 0px 0px 10px 5px;
+    //                 display : inline-block;
+    //                 z-index : 1;
+    //                 a{
+    //                     color : $head;
+    //                 }
+    //             }
+    //             .excerpt{
+    //                 padding : 10px 30px;
+    //                 color : $box-background;
+    //                 width : 100%;
+    //                 bottom : 0px;
+    //                 font-size : 15px;
+    //                 line-height : 23px;
+    //                 z-index : 1;
+    //             }
+    //         }
+    //     }
+    
+
+
+    //     .got_to_container{
+    //         .got_to_recommended{
+    //             display : inline-block;
+    //             background-color : $background-color;
+    //             margin : 20px auto;
+    //             padding : 10px 20px;
+    //             border-radius : 10px;
+    //             transition : $transition;
+    //             text-decoration : none;
+    //             color : $text-color;
+    //             font-size : 1.3em;
+    //             &:hover{
+    //                 background-color : $background-hover;
+    //                 color : $nav-color;
+    //                 text-decoration: underline;
+    //             }
+    //         }
+    //     }
+    // }
     .cat-container{
-        .recommend-head{
-            font-size: 1.8em !important;
-        }
-        .recommend-post , .post-container{
+        .post-container{
             .post-rand-li{
-                position: relative;
-                &.first_post{
-                    max-height : 390px !important;
-                    height : 390px !important;
-                    margin-bottom : 20px !important;
-                    & > div{
-                        max-height : 390px !important;
-                        height : 390px !important;
-                    }
-                    img{
-                        height : auto;
-                    }
-                    h3{
-                        font-size : 1.7em !important;
-                        height : auto;
-                        padding : 10px 20px;
-                        line-height: 1.2em;
-                    }
-                    .excerpt{
-                        background-color : $box-background;
-                        height : 100%;
-                        font-size : 1.2em !important;
-                        padding : 10px 20px;
-                        margin : 0px;
-                        font-weight : lighter;
-                        line-height: 1.2em;
-                    }
-                }
-                &.seconds_posts:nth-of-type(1){
-                    margin-bottom : 20px !important;
-                }
-    
                 & > div{
-                    position: relative;
-                    overflow : hidden;
-                    height : 100%;
-                    max-height : 270px;
-                    width : 100%;
-                    border-radius : 5px;
-                }
+                    .img-container{
+                        height: auto !important;
+                    }
+        
+                    .header_ex{
+                        h3{
+                            height: auto !important;
+                        }
     
-                h3{
-                    background: $box-background;
-                    padding: 10px;
-                    margin: 0px;
-                    font-size: 1.4em;
-                    line-height: 1.4em;
-                    height: 102px;
-                    font-family : 'lato-bold' , 'sans-serif';
-                    font-weight : bold;
-                    z-index : 1;
-                    a{
-                        color : $text-color;
-                        text-decoration: none;
+                        .excerpt{
+                            height: auto !important;
+                        }
                     }
-                }
-                img{
-                    transition: $transition;
-                    width : 100%;
-                    height: 197px;
-                    z-index : 0;
-                    &:hover{
-                        transform: scale(1.05);
-                    }
-                }
-                // the post info
-                .post-author , .post-date , .post-comments{
-                    margin: 0px 0px 10px 5px;
-                    display : inline-block;
-                    z-index : 1;
-                    a{
-                        color : $head;
-                    }
-                }
-                .excerpt{
-                    padding : 10px 30px;
-                    color : $box-background;
-                    width : 100%;
-                    bottom : 0px;
-                    font-size : 15px;
-                    line-height : 23px;
-                    z-index : 1;
                 }
             }
-        }
     
-
-
-        .got_to_container{
-            .got_to_recommended{
-                display : inline-block;
-                background-color : $background-color;
-                margin : 20px auto;
-                padding : 10px 20px;
-                border-radius : 10px;
-                transition : $transition;
-                text-decoration : none;
-                color : $text-color;
-                font-size : 1.3em;
-                &:hover{
-                    background-color : $background-hover;
-                    color : $nav-color;
-                    text-decoration: underline;
+            .one_post{
+                // height: 400px;
+                & > div{
+                    .img-container{
+                        height: 200px !important;
+                    }
                 }
             }
         }
     }
-
 }
