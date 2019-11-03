@@ -19,8 +19,8 @@
         <div class="container">
           <!-- logo and social links -->
           <div class="logo_social">
-                <a class="logo" href="<?php bloginfo('url'); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt="Logo"></a>
-                <a class="logo_phone" href="<?php bloginfo('url'); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/phone_logo.png" alt="Logo"></a>
+                <a class="logo" href="<?php bloginfo('url'); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/logo/logo_2.svg" alt="Logo"></a>
+                <a class="logo_phone" href="<?php bloginfo('url'); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/logo/logo_3.svg" alt="Logo"></a>
                
                 <div class="seach_social">
                     <!-- search show form for phone -->
@@ -71,10 +71,30 @@
             </div>
             <span class="title_toggle_navs d-none d-sm-block">Menu</span>
             <!-- social links -->
-            <div class="social_links_phone">
-                <a class="facebook" href="#" target="_blank"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/facebook.png" alt="Facebook"></a>
-                <a class="instagram" href="#" target="_blank"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/instagram.svg" alt="Instagram"></a>
-                <a class="youtube" href="#" target="_blank"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/youtube.png" alt="Youtube"></a>
+            <div class="social_links_pc">
+                <a class="facebook" href="#" target="_blank">
+                    <img class="img-responsive facebook_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/facebook_1.svg" alt="Facebook">
+                    <img class="img-responsive facebook_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/facebook.svg" alt="Facebook">
+                </a>
+                
+                <a class="instagram" href="#" target="_blank">
+                    <img class="img-responsive instagram_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/instagram_1.svg" alt="Instagram">
+                    <img class="img-responsive instagram_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/instagram.svg" alt="Instagram">
+                </a>
+
+                <a class="youtube" href="#" target="_blank">
+                    <img class="img-responsive youtube_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/youtube_1.svg" alt="Youtube">
+                    <img class="img-responsive youtube_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/youtube.svg" alt="Youtube">
+                </a>
+
+                <a class="patreon" href="#" target="_blank">
+                    <img class="img-responsive patreon_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/patreon_1.svg" alt="Patreon">
+                    <img class="img-responsive patreon_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/patreon.svg" alt="Patreon">
+                </a>
+                <a class="whats_app" href="#" target="_blank">
+                    <img class="img-responsive whats_app_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app_1.svg" alt="Whats App">
+                    <img class="img-responsive whats_app_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app.svg" alt="Whats App">
+                </a>
             </div>
       </div>
       
@@ -84,11 +104,29 @@
             <?php me_navbar_menu() ?>
             <!-- social links -->
             <div class="social_links_pc">
-                <a class="facebook" href="#" target="_blank"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/social/facebook.svg" alt="Facebook"></a>
-                <a class="instagram" href="#" target="_blank"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/social/instagram.svg" alt="Instagram"></a>
-                <a class="youtube" href="#" target="_blank"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/social/youtube.svg" alt="Youtube"></a>
-                <a class="patreon" href="#" target="_blank"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/social/patreon.svg" alt="Patreon"></a>
-                <a class="whats_app" href="#" target="_blank"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app.svg" alt="Whats App"></a>
+                <a class="facebook" href="#" target="_blank">
+                    <img class="img-responsive facebook_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/facebook_1.svg" alt="Facebook">
+                    <img class="img-responsive facebook_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/facebook.svg" alt="Facebook">
+                </a>
+                
+                <a class="instagram" href="#" target="_blank">
+                    <img class="img-responsive instagram_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/instagram_1.svg" alt="Instagram">
+                    <img class="img-responsive instagram_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/instagram.svg" alt="Instagram">
+                </a>
+
+                <a class="youtube" href="#" target="_blank">
+                    <img class="img-responsive youtube_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/youtube_1.svg" alt="Youtube">
+                    <img class="img-responsive youtube_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/youtube.svg" alt="Youtube">
+                </a>
+
+                <a class="patreon" href="#" target="_blank">
+                    <img class="img-responsive patreon_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/patreon_1.svg" alt="Patreon">
+                    <img class="img-responsive patreon_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/patreon.svg" alt="Patreon">
+                </a>
+                <a class="whats_app" href="#" target="_blank">
+                    <img class="img-responsive whats_app_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app_1.svg" alt="Whats App">
+                    <img class="img-responsive whats_app_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app.svg" alt="Whats App">
+                </a>
             </div>
           </div>
       </div>

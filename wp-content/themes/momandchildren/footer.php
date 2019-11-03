@@ -1,5 +1,3 @@
-        
-        
         <!-- chat box -->
         <div id="chat">
             <div class="chat_box"></div>
@@ -23,7 +21,7 @@
                     <div class="footer_logo">
                         <h3>The Healthy Family</h3>
                         <div class="logo">
-                            <img class="img-responsive" src="<?php echo get_template_directory_uri().'/imgs/logo.png' ?>" alt="Mom And Children">
+                            <img class="img-responsive" src="<?php echo get_template_directory_uri().'/imgs/logo/logo_2.svg' ?>" alt="Mom And Children">
                         </div>
 
                         <div class="social">

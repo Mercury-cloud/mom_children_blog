@@ -173,8 +173,19 @@
         float : right;
         display : inline-block;
         padding: 12px 0px 0px 0px;
+        .facebook_1 , .youtube_1 , .instagram_1 , .patreon_1 , .whats_app_1{
+            display : none;
+        }
         a{
             margin-left : 10px;
+            &:hover .facebook_1 , &:hover .youtube_1 , &:hover .instagram_1 , 
+            &:hover .patreon_1 , &:hover .whats_app_1{
+                display : block !important;
+            }
+            &:hover .facebook_0 , &:hover .youtube_0 , &:hover .instagram_0 , 
+            &:hover .patreon_0 , &:hover .whats_app_0{
+                display : none !important;
+            }
             img{
                 width : 25px;
             }

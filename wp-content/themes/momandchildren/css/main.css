@@ -208,8 +208,14 @@
     float: right;
     display: inline-block;
     padding: 12px 0px 0px 0px; }
+    #navbar .social_links_pc .facebook_1, #navbar .social_links_pc .youtube_1, #navbar .social_links_pc .instagram_1, #navbar .social_links_pc .patreon_1, #navbar .social_links_pc .whats_app_1, #navbar .social_links_phone .facebook_1, #navbar .social_links_phone .youtube_1, #navbar .social_links_phone .instagram_1, #navbar .social_links_phone .patreon_1, #navbar .social_links_phone .whats_app_1 {
+      display: none; }
     #navbar .social_links_pc a, #navbar .social_links_phone a {
       margin-left: 10px; }
+      #navbar .social_links_pc a:hover .facebook_1, #navbar .social_links_pc a:hover .youtube_1, #navbar .social_links_pc a:hover .instagram_1, #navbar .social_links_pc a:hover .patreon_1, #navbar .social_links_pc a:hover .whats_app_1, #navbar .social_links_phone a:hover .facebook_1, #navbar .social_links_phone a:hover .youtube_1, #navbar .social_links_phone a:hover .instagram_1, #navbar .social_links_phone a:hover .patreon_1, #navbar .social_links_phone a:hover .whats_app_1 {
+        display: block !important; }
+      #navbar .social_links_pc a:hover .facebook_0, #navbar .social_links_pc a:hover .youtube_0, #navbar .social_links_pc a:hover .instagram_0, #navbar .social_links_pc a:hover .patreon_0, #navbar .social_links_pc a:hover .whats_app_0, #navbar .social_links_phone a:hover .facebook_0, #navbar .social_links_phone a:hover .youtube_0, #navbar .social_links_phone a:hover .instagram_0, #navbar .social_links_phone a:hover .patreon_0, #navbar .social_links_phone a:hover .whats_app_0 {
+        display: none !important; }
       #navbar .social_links_pc a img, #navbar .social_links_phone a img {
         width: 25px; }
   #navbar .navbar_cats {
