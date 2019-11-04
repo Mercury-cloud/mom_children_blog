@@ -2,17 +2,78 @@
 ** @Author : Bishoy Romany
 ** @Page : single.php
 ** @version: 1.0.0
-** This style only for author page
+** This style only for signle post page
 */
+
+// single post header
+.single-post-header{
+    margin-top : 52px;
+    & > div{
+        height : 400px;
+        width : 100%;
+        position : relative;
+        display : flex;
+        flex-direction: row;
+        align-items : center;
+        text-align : center;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        .all_container{
+            flex : 1;
+            z-index : 1;
+        }
+        h2{
+            color : #FFF;
+            font-weight : bold;
+            font-family : lato-bold , 'sans-serif';
+            margin : 0px;
+            padding : 0px;
+        }
+        .breadcrumb-container-header{
+            .breadcrumb{
+                margin : 0px;
+                background-color : transparent;
+                li{
+                    color : rgb(255, 255, 255);
+                    a{
+                        color : rgb(255, 255, 255);
+                    }
+                } 
+                svg{
+                    width: 20px;
+                    vertical-align: middle;
+                    margin: 0px 5px;
+                    path{
+                        fill : #FFF !important;
+                    }
+                }
+            }
+        }
+        .overly{
+            width : 100%;
+            height : 100%;
+            position : absolute;
+            background-color : rgba(0, 0, 0, 0.548);
+            z-index : 0;
+            top : 0px;
+            left : 0px;
+        }
+    }
+}
 
 // single post page stlye 
 .single-post{
     width : auto ;
     overflow : visible;
     position : relative;
-    margin-top : 0px;
+    margin-top : 30px;
     background-color : $box-background;
-    padding : 10px;
+    border : 1px solid #CCC;
+    // post container
+    .data{
+        padding : 10px 20px 20px 30px;
+    }
+    
     // edit post
     .post-edit-link{
         position : absolute;
@@ -37,10 +98,12 @@
     // post title
     .post-title{
         font-size : 40px;
-        margin : 0px 15px 15px;
+        margin : 0px 0px 15px;
+        font-weight : bold;
+        font-family: lato-bold , 'sans-serif';
         a{
             text-decoration: none;
-            color : $color;
+            color : #391540;
         }
     }
 
@@ -50,6 +113,9 @@
         a{
             color : #333;
         }
+    }
+    .post-author{
+        margin-left : 0px !important;
     }
     .post-date , .post-comments{
         margin-left : 7.5px;
@@ -99,12 +165,10 @@
     // first image
     .img-container{
         max-height : 450px;
-        width : 90%;
         overflow : hidden;
         text-align : center;
-        @media only screen and (max-width : 600px){ width : 100%; }
         height : auto;
-        margin : 20px auto;
+        // margin : 20px auto;
         img{
             width : 100%;
             max-height : 450px;
@@ -167,60 +231,81 @@
         }
         // all p elements
         p{
-            font-size : 20px;
-            color : #333;
-            padding : 10px;
+            font-size : 18px;
+            color : #000;
+            padding : 0px;
+            margin-bottom: 15px;
+            font-family: lato-regular,arial,sans-serif;
         }
         // all links
         a{
-            font-weight : block;
+            font-weight : bold;
+            font-family: lato-bold;
+            text-decoration : none;
         }
         // all h3 elements
         h3 , h2 , h4 , h5 , h6{
-            margin: 20px 0px;
-            border-left: 2px solid #00000078;
-            padding: 10px 0px 10px 20px;
-            border-radius: 10px;
-            &:before{
-                content : "\f005";
-                margin-right : 5px;
-                font-family : 'Font Awesome 5 Free';
-            }
+            letter-spacing: .06em;
+            margin: 30px 0 20px!important;
+            margin-bottom: 20px!important;
+            margin-top: 30px!important;
+            text-transform: captitalize;
+
+            // margin: 10px 0px;
+            font-family : lato-bold , 'sans-serif';
+            // border-left: 2px solid #00000078;
+            // padding: 10px 0px 10px 0px;
+            // border-radius: 10px;
+            // &:before{
+            //     content : "\f005";
+            //     margin-right : 5px;
+            //     font-family : 'Font Awesome 5 Free';
+            // }
         }
         // all ul and ol elements
         ul , ol{
-            margin: 10px 20px;
-            display: inline-block;
+            margin-left : 20px;
+            margin-bottom : 15px;
+            display: block;
             min-width: 90%;
             padding: 0px;
             li{
                 padding: 10px 20px 10px 10px;
-                border-left: 1px solid black;
-                border-bottom: 1px solid black;
-                border-top: 1px solid black;
+                font-size : 18px;
+                color : #000;
+                padding : 0px;
+                // margin-bottom: 15px;
+                font-family: lato-regular,arial,sans-serif;
+                // border-left: 1px solid black;
+                // border-bottom: 1px solid black;
+                // border-top: 1px solid black;
             }
         }
         // all images style
-        >figure{
-            max-width : 96%;
+        figure{
+            max-width : 100%;
+            width: 100%;
             border-radius : 10px;
             overflow : hidden;
             display : block;
-            margin : 5px auto;
+            margin : 5px 0px auto;
             text-align : center;
+            a{
+                width : 100%;
+            }
             img{
                 transition : $transition;
                 z-index : -1;
                 width : 100%;
                 &:hover{
-                    transform : rotateY(25deg) rotateX(10deg) translateY(5px);
+                    transform : rotateY(-10deg) rotateX(10deg);
                 }
             }
             figcaption{
                 background-color : rgba(0, 0, 0, 0.548);
                 color : #FFF;
                 padding : 10px;
-                font-size : 17px;
+                font-size : 18px;
                 margin : 0px;
                 z-index : 2;
             }
@@ -278,7 +363,8 @@
         // have tags
         a{
             @extend %nice_buttons;
-            background-color : skyblue;
+            color : #FFF !important;
+            background-color : #391540;
         }
         // don't have tags
         .post-no-tags{

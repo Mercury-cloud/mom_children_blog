@@ -4,87 +4,102 @@
     */
     // loop the data of posts
     if(have_posts()): // cheack if there was posts
-        while(have_posts()):
-            the_post(); ?>
+        while(have_posts()): the_post(); ?>
             <div class="main-post single-post">
                 <!-- edit post -->
                 <?php edit_post_link('Edit <i class="fa fa-edit fa-fw"></i>'); ?>
-                <!-- post title -->
-                <h1 class="post-title">
-                    <a href="<?php the_permalink();// link of the post ?>">
-                        <?php the_title(); // title of the post?>
-                    </a>
-                </h1>
-                <!-- post author -->
-                <span class="post-author">
-                    <i class="fa fa-user fa-fw"></i> 
-                    <?php the_author_posts_link(); ?>
-                </span>
-                <!-- post date -->
-                <span class="post-date">
-                    <i class="fa fa-calendar fa-fw"></i> 
-                    <?php the_date(); // get the author ?>
-                </span>
-                <!-- comments number -->
-                <span class="post-comments">
-                    <i class="fa fa-comments fa-fw"></i> 
-                    <?php comments_popup_link('No Comments' , 'One Comment' , '( % ) Comments' , 'comment-url' , 'Comments Disabled'); ?>
-                </span>
-                <!-- all shares contaienr -->
-                <span class="share-container">
-                    <!-- Your share button code facebook -->
-                    <div class="fb-share-button" 
-                        data-href="<?php the_permalink(); ?>" 
-                        data-layout="button_count" 
-                        data-size="large">
-                    </div>
-                    <!-- twitter share -->
-                    <a class="twitter-share-button" 
-                    onclick="window.open('https:/\/\\twitter.com/share?url=<?php the_permalink(); ?>','Share News','height=400,width=700'); return false;" 
-                    href="<?php the_permalink(); ?>">
-                    <i class="fab fa-twitter fa-fw"></i> Tweet</a>
-                </span>
                 <!-- image container -->
                 <div class="img-container">
                     <?php the_post_thumbnail('' , array(
-                        'class' => 'img-responsive img-thumbnail' , 
+                        'class' => 'img-responsive' , 
                         'title' => 'Post Image'
                     )); ?>
                 </div>
-                <!-- post content -->
-                <div class="the-post">
-                    <?php the_content(); ?>
-                </div>
-                <!-- all shares contaienr -->
-                <div class="bottom-shares">
-                    <!-- Your share button code facebook -->
-                    <div class="fb-share-button" 
-                        data-href="<?php the_permalink(); ?>" 
-                        data-layout="button_count" 
-                        data-size="large">
+
+                <div class="data">
+                    <!-- post title -->
+                    <h1 class="post-title">
+                        <a href="<?php the_permalink();// link of the post ?>">
+                            <?php the_title(); // title of the post?>
+                        </a>
+                    </h1>
+                    <!-- post author -->
+                    <span class="post-author">
+                        <i class="fa fa-user fa-fw"></i> 
+                        <?php the_author_posts_link(); ?>
+                    </span>
+                    <!-- post date -->
+                    <span class="post-date">
+                        <i class="fa fa-calendar fa-fw"></i> 
+                        <?php the_date(); // get the author ?>
+                    </span>
+                    <!-- comments number -->
+                    <span class="post-comments">
+                        <i class="fa fa-comments fa-fw"></i> 
+                        <?php comments_popup_link('No Comments' , 'One Comment' , '( % ) Comments' , 'comment-url' , 'Comments Disabled'); ?>
+                    </span>
+                    <!-- all shares contaienr -->
+                    <span class="share-container">
+                        <!-- Your share button code facebook -->
+                        <div class="fb-share-button" 
+                            data-href="<?php the_permalink(); ?>" 
+                            data-layout="button_count" 
+                            data-size="large">
+                        </div>
+                        <!-- twitter share -->
+                        <a class="twitter-share-button" 
+                        onclick="window.open('https:/\/\\twitter.com/share?url=<?php the_permalink(); ?>','Share News','height=400,width=700'); return false;" 
+                        href="<?php the_permalink(); ?>">
+                        <i class="fab fa-twitter fa-fw"></i> Tweet</a>
+                    </span>
+
+                    <!-- post content -->
+                    <div class="the-post">
+                        <?php the_content(); ?>
                     </div>
-                    <!-- twitter share -->
-                    <a class="twitter-share-button" 
-                    onclick="window.open('https:/\/\\twitter.com/share?url=<?php the_permalink(); ?>','Share News','height=400,width=700'); return false;" 
-                    href="<?php the_permalink(); ?>">
-                    <i class="fab fa-twitter fa-fw"></i> Tweet</a>
-                </div>
-                <hr>
-                <!-- categories -->
-                <p class="post-coategories"> <i class="fa fa-tags fa-fw fa-lg"></i> 
-                    <?php the_category(' '); ?>
-                </p>
-                <hr>
-                <!-- tags -->
-                <p class="post-tags">
+
+                    <!-- all shares contaienr -->
+                    <div class="bottom-shares">
+                        <!-- Your share button code facebook -->
+                        <div class="fb-share-button" 
+                            data-href="<?php the_permalink(); ?>" 
+                            data-layout="button_count" 
+                            data-size="large">
+                        </div>
+                        <!-- twitter share -->
+                        <a class="twitter-share-button" 
+                        onclick="window.open('https:/\/\\twitter.com/share?url=<?php the_permalink(); ?>','Share News','height=400,width=700'); return false;" 
+                        href="<?php the_permalink(); ?>">
+                        <i class="fab fa-twitter fa-fw"></i> Tweet</a>
+                    </div>
+
+
+                    <!-- categories -->
                     <?php 
-                        if(has_tag()):
-                            the_tags('' , ' ' , '');
-                        else:
-                            echo '<div class="text-center"><span class="post-no-tags">No Tags Was Found.</span></div>';
-                        endif;    
+                        /*
+                            <hr>
+
+                            <p class="post-coategories">
+                                <?php the_category(' '); ?>
+                            </p> 
+                        */ 
                     ?>
-                </p>
+
+                    <hr>
+
+                    <!-- tags -->
+                    <p class="post-tags">
+                        <?php 
+                            if(has_tag()):
+                                the_tags('' , ' ' , '');
+                            else:
+                                echo '<div class="text-center"><span class="post-no-tags">No Tags Was Found.</span></div>';
+                            endif;    
+                        ?>
+                    </p>
+                    
+                </div>
+
             </div>
             <?php
         endwhile;

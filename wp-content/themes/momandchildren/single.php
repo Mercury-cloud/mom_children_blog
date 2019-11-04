@@ -4,14 +4,21 @@
     */
     get_header(); 
 ?>
-
+<div class="single-post-header">
+    <?php 
+        /**
+         * require the header
+         */
+        require_once get_template_directory() . '/parts/single/header.php';
+    ?>
+</div>
 <!-- all posts container -->
 <div class="container">
     <?php 
         /*
          ** require the broadcamp 
         */
-        require_once (get_template_directory() . '/parts/breadcrumb.php');    
+        //require_once (get_template_directory() . '/parts/breadcrumb.php');    
     ?>
     <div class="fix"></div>
     <div class="col-md-9">
@@ -62,6 +69,7 @@
             <?php comments_template(); ?>
         </div>
     </div>
+
     <div class="col-md-3"><?php get_sidebar(); ?></div>
 </div>
 <!-- start comments section -->

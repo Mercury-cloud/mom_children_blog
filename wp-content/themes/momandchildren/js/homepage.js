@@ -1,9 +1,15 @@
 (function($){
     $(document).ready(function(){
+
+        // width
+        let width = window.innerWidth;
+
+        let num = width > 991 ? 4 : 1;
+
         $('.recommend-post').slick({
             infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: num,
+            slidesToScroll: num,
             dots: false,
             // fade: true,
             autoplay : true,

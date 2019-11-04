@@ -93,7 +93,7 @@
         margin : 5px;
         padding : 0px;
         color : #391540;
-        font-family :'lato-bold' , 'sans-serif';
+        font-family :lato-bold , 'sans-serif';
         font-weight : bold; 
         transition: $transition;
         &:hover{
@@ -268,7 +268,7 @@
                     padding: 8px 16px 16px;
                     font-size: 1.3em;
                     line-height: 1.4em;
-                    font-family : 'lato-bold' , 'sans-serif';
+                    font-family : lato-bold , 'sans-serif';
                     font-weight : bold;
                     z-index : 1;
                     a{
@@ -443,7 +443,7 @@
                         margin : 0px;
                         font-size: 1.4em;
                         line-height : 1.2em;
-                        font-family : 'lato-bold' , 'sans-serif';
+                        font-family : lato-bold , 'sans-serif';
                         font-weight : bold;
                         color : #1a1a1a;
                         a{
@@ -663,7 +663,7 @@
 //                         font-size : 1.2em;
 //                         font-size: 1.3em;
 //                         line-height : 1.2em;
-//                         font-family : 'lato-bold' , 'sans-serif';
+//                         font-family : lato-bold , 'sans-serif';
 //                         font-weight : bold;
 
 //                         // color : $nav-color;
@@ -775,7 +775,7 @@
 //                         font-size : 1.2em;
 //                         font-size: 1.3em;
 //                         line-height : 1.2em;
-//                         font-family : 'lato-bold' , 'sans-serif';
+//                         font-family : lato-bold , 'sans-serif';
 //                         font-weight : bold;
 //                         color : $cat_color;
 //                         a{
@@ -812,9 +812,9 @@
 ** Mobile Design
 */
 @media (max-width: 991px) { 
-    .header_ex{
-        position : static !important;
-    }
+    // .header_ex{
+    //     position : static !important;
+    // }
     .content_center{
         padding : 0px 15px !important;
     }
@@ -872,7 +872,7 @@
     //                 font-size: 1.4em;
     //                 line-height: 1.4em;
     //                 height: 102px;
-    //                 font-family : 'lato-bold' , 'sans-serif';
+    //                 font-family : lato-bold , 'sans-serif';
     //                 font-weight : bold;
     //                 z-index : 1;
     //                 a{

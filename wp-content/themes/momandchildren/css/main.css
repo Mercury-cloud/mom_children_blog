@@ -1,7 +1,7 @@
 .author-page .author-posts .main-post .post-coategories a, .author-page .author-posts .main-post .post-tags a, .cat-design-post-box .post-coategories a, .cat-design-post-box .post-tags a, .cat-design-post-line .post-coategories a, .cat-design-post-line .post-tags a, .single-post .post-coategories a, .single-post .post-tags a, .next-prev-posts-single .posts-pagination .next-link, .next-prev-posts-single .posts-pagination .prev-link, .next-prev-posts-single .posts-pagination span, .breadcrumb-container .breadcrumb li {
   color: #333;
   display: inline-block;
-  padding: 7.5px;
+  padding: 7.5px 20px;
   margin: 0px 5px;
   text-decoration: none;
   border-radius: 10px;
@@ -603,7 +603,7 @@
     margin: 5px;
     padding: 0px;
     color: #391540;
-    font-family: 'lato-bold' , 'sans-serif';
+    font-family: lato-bold , 'sans-serif';
     font-weight: bold;
     transition: all 0.5s ease-in-out; }
     .week_by_week h1:hover {
@@ -728,7 +728,7 @@
         padding: 8px 16px 16px;
         font-size: 1.3em;
         line-height: 1.4em;
-        font-family: 'lato-bold' , 'sans-serif';
+        font-family: lato-bold , 'sans-serif';
         font-weight: bold;
         z-index: 1; }
         .recommended-posts-container .recommend-post .post-rand-li .header_ex h3 a {
@@ -841,7 +841,7 @@
           margin: 0px;
           font-size: 1.4em;
           line-height: 1.2em;
-          font-family: 'lato-bold' , 'sans-serif';
+          font-family: lato-bold , 'sans-serif';
           font-weight: bold;
           color: #1a1a1a; }
           .cat-container .post-container .post-rand-li > div .header_ex h3 a {
@@ -921,9 +921,6 @@
 ** Mobile Design
 */
 @media (max-width: 991px) {
-  .header_ex {
-    position: static !important; }
-
   .content_center {
     padding: 0px 15px !important; }
 
@@ -1201,15 +1198,60 @@
 ** @Author : Bishoy Romany
 ** @Page : single.php
 ** @version: 1.0.0
-** This style only for author page
+** This style only for signle post page
 */
+.single-post-header {
+  margin-top: 52px; }
+  .single-post-header > div {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; }
+    .single-post-header > div .all_container {
+      flex: 1;
+      z-index: 1; }
+    .single-post-header > div h2 {
+      color: #FFF;
+      font-weight: bold;
+      font-family: lato-bold , 'sans-serif';
+      margin: 0px;
+      padding: 0px; }
+    .single-post-header > div .breadcrumb-container-header .breadcrumb {
+      margin: 0px;
+      background-color: transparent; }
+      .single-post-header > div .breadcrumb-container-header .breadcrumb li {
+        color: white; }
+        .single-post-header > div .breadcrumb-container-header .breadcrumb li a {
+          color: white; }
+      .single-post-header > div .breadcrumb-container-header .breadcrumb svg {
+        width: 20px;
+        vertical-align: middle;
+        margin: 0px 5px; }
+        .single-post-header > div .breadcrumb-container-header .breadcrumb svg path {
+          fill: #FFF !important; }
+    .single-post-header > div .overly {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.548);
+      z-index: 0;
+      top: 0px;
+      left: 0px; }
+
 .single-post {
   width: auto;
   overflow: visible;
   position: relative;
-  margin-top: 0px;
+  margin-top: 30px;
   background-color: #FFF;
-  padding: 10px; }
+  border: 1px solid #CCC; }
+  .single-post .data {
+    padding: 10px 20px 20px 30px; }
   .single-post .post-edit-link {
     position: absolute;
     top: -33px;
@@ -1228,14 +1270,18 @@
       color: #FFF; }
   .single-post .post-title {
     font-size: 40px;
-    margin: 0px 15px 15px; }
+    margin: 0px 0px 15px;
+    font-weight: bold;
+    font-family: lato-bold , 'sans-serif'; }
     .single-post .post-title a {
       text-decoration: none;
-      color: #222; }
+      color: #391540; }
   .single-post .post-author, .single-post .post-date, .single-post .post-comments {
     margin-left: 15px; }
     .single-post .post-author a, .single-post .post-date a, .single-post .post-comments a {
       color: #333; }
+  .single-post .post-author {
+    margin-left: 0px !important; }
   .single-post .post-date, .single-post .post-comments {
     margin-left: 7.5px; }
   .single-post .share-container {
@@ -1271,14 +1317,9 @@
         background-color: skyblue; }
   .single-post .img-container {
     max-height: 450px;
-    width: 90%;
     overflow: hidden;
     text-align: center;
-    height: auto;
-    margin: 20px auto; }
-    @media only screen and (max-width: 600px) {
-      .single-post .img-container {
-        width: 100%; } }
+    height: auto; }
     .single-post .img-container img {
       width: 100%;
       max-height: 450px;
@@ -1317,48 +1358,55 @@
     padding: 2px;
     margin: 20px 0px; }
   .single-post .the-post p {
-    font-size: 20px;
-    color: #333;
-    padding: 10px; }
+    font-size: 18px;
+    color: #000;
+    padding: 0px;
+    margin-bottom: 15px;
+    font-family: lato-regular,arial,sans-serif; }
   .single-post .the-post a {
-    font-weight: block; }
+    font-weight: bold;
+    font-family: lato-bold;
+    text-decoration: none; }
   .single-post .the-post h3, .single-post .the-post h2, .single-post .the-post h4, .single-post .the-post h5, .single-post .the-post h6 {
-    margin: 20px 0px;
-    border-left: 2px solid #00000078;
-    padding: 10px 0px 10px 20px;
-    border-radius: 10px; }
-    .single-post .the-post h3:before, .single-post .the-post h2:before, .single-post .the-post h4:before, .single-post .the-post h5:before, .single-post .the-post h6:before {
-      content: "\f005";
-      margin-right: 5px;
-      font-family: 'Font Awesome 5 Free'; }
+    letter-spacing: .06em;
+    margin: 30px 0 20px !important;
+    margin-bottom: 20px !important;
+    margin-top: 30px !important;
+    text-transform: captitalize;
+    font-family: lato-bold , 'sans-serif'; }
   .single-post .the-post ul, .single-post .the-post ol {
-    margin: 10px 20px;
-    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    display: block;
     min-width: 90%;
     padding: 0px; }
     .single-post .the-post ul li, .single-post .the-post ol li {
       padding: 10px 20px 10px 10px;
-      border-left: 1px solid black;
-      border-bottom: 1px solid black;
-      border-top: 1px solid black; }
-  .single-post .the-post > figure {
-    max-width: 96%;
+      font-size: 18px;
+      color: #000;
+      padding: 0px;
+      font-family: lato-regular,arial,sans-serif; }
+  .single-post .the-post figure {
+    max-width: 100%;
+    width: 100%;
     border-radius: 10px;
     overflow: hidden;
     display: block;
-    margin: 5px auto;
+    margin: 5px 0px auto;
     text-align: center; }
-    .single-post .the-post > figure img {
+    .single-post .the-post figure a {
+      width: 100%; }
+    .single-post .the-post figure img {
       transition: all 0.5s ease-in-out;
       z-index: -1;
       width: 100%; }
-      .single-post .the-post > figure img:hover {
-        transform: rotateY(25deg) rotateX(10deg) translateY(5px); }
-    .single-post .the-post > figure figcaption {
+      .single-post .the-post figure img:hover {
+        transform: rotateY(-10deg) rotateX(10deg); }
+    .single-post .the-post figure figcaption {
       background-color: rgba(0, 0, 0, 0.548);
       color: #FFF;
       padding: 10px;
-      font-size: 17px;
+      font-size: 18px;
       margin: 0px;
       z-index: 2; }
   .single-post .the-post .wp-block-gallery {
@@ -1390,7 +1438,8 @@
   .single-post .post-coategories a {
     background: #f2b6bb; }
   .single-post .post-tags a {
-    background-color: skyblue; }
+    color: #FFF !important;
+    background-color: #391540; }
   .single-post .post-tags .post-no-tags {
     color: red;
     font-weight: 700;
@@ -2393,11 +2442,6 @@ body {
   color: #222;
   min-height: 200vh;
   overflow-x: hidden; }
-
-h1, h2, h3, h4, h5 {
-  font-family: 'pretty-head' , sans-serif; }
-  h1 a, h1 span, h2 a, h2 span, h3 a, h3 span, h4 a, h4 span, h5 a, h5 span {
-    font-family: 'pretty-head' , sans-serif; }
 
 .dotted {
   border-top: 6px dashed #391540; }
