@@ -15,7 +15,7 @@
             /**
              * search autoclose
              */
-            console.log(target);
+            // console.log(target);
             if(!$(target).hasClass('searchValue') && !$(target).hasClass('search_form') && !$(target).hasClass('search_icon') && !$(target).parent().hasClass('search_icon') && $(".search_form").hasClass('active_search_nav_bar')){
                 $(".search_form").fadeOut();
                 $(".search_form").removeClass('active_search_nav_bar');

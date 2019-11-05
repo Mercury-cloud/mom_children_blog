@@ -631,10 +631,10 @@
 
     // recent
     .recent{
-        .col-xs-3{
+        .col-xs-4{
             padding : 0px 0px 0px 15px;
         }
-        .col-xs-9{
+        .col-xs-8{
             padding : 0px 15px 0px 10px;
         }
 
@@ -670,9 +670,11 @@
                 text-transform : uppercase;
                 .date{
                     flex : 3;
+                    font-size: 0.8em;
                 }
                 .comments{
                     flex : 2;
+                    font-size: 0.8em;
                 }
             }
         }

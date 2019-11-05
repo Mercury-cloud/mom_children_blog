@@ -60,7 +60,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="container navbar_container_fixed_zero">
     
       <!-- toggle button -->
       <div class="d-none d-sm-block toggle_nav_links">

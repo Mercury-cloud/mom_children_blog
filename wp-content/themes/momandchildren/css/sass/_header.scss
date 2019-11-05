@@ -147,7 +147,7 @@
     }
 
     .nav_links{
-        position: fixed;
+        position: static;
         top: 136px;
         left: 0px;
         width: 100%;
@@ -159,10 +159,13 @@
         -o-transition:all 0.5s ease-in-out;
         z-index : 9;
         &.show_it{
+            position : fixed;
             top : 0px;
         }
         &.hide_it{
-            top : -100px;
+            position : fixed;
+            top : 0px;
+            // top : -100px;
         }
         .menu-navbar-menu-container{
             display : inline-block;
@@ -450,5 +453,13 @@
             }
         }
 
+    }
+}
+
+@media (min-width: 992px) { 
+    .navbar_container_fixed_zero{
+        width : 100%;
+        padding : 0px;
+        margin : 0px;
     }
 }

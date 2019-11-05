@@ -2,7 +2,7 @@
 $post_id = get_queried_object_id(); // post id
 // category id       
 $cat_id = wp_get_post_categories($post_id);
-
+$max_excerpt_words = 15;
 // getting posts randomly
 $random_args = array(
     'posts_per_page' => 10 , // posts limit
@@ -13,57 +13,81 @@ $random_args = array(
     'post__not_in'   => array($post_id)  // don't get current post 
 
 );
-$random_posts = new WP_Query($random_args);
+$random_posts = new WP_Query($random_args); ?>
 
-if($random_posts->have_posts()): ?>
-    <h2 class="rand-head text-center">Some Random Posts</h2>
-    <ul class="list-unstyled random-post">
-    <?php while($random_posts->have_posts()):
-        $random_posts->the_post(); 
-    ?>
-        <li class="post-rand-li">
-            <!-- post title -->
-            <h3 class="post-title">
-                <a href="<?php the_permalink();// link of the post ?>">
-                    <?php the_title(); // title of the post?>
-                </a>
-            </h3>
-            <!-- post author -->
-            <span class="post-author">
-                <i class="fa fa-user fa-fw"></i> 
-                <?php the_author_posts_link(); ?>
-            </span>
-            <!-- post date -->
-            <span class="post-date">
-                <i class="fa fa-calendar fa-fw"></i> 
-                <?php echo get_the_date(); // get the author ?>
-            </span>
+<!-- the posts container div -->
+<div class="recommended-posts-container" id="homeRecommended">
+    
+    <h2 class="rand-head text-left">
+        You May Like 
+    </h2>
 
-            <!-- comments number -->
-            <span class="post-comments">
-                <i class="fa fa-comments fa-fw"></i> 
-                <?php comments_popup_link('No Comments' , 'One Comment' , '( % ) Comments' , 'comment-url' , 'Comments Disabled'); ?>
-            </span>
+    <div class="recommend-post-single">
+        <?php if($random_posts->have_posts()): // check if there are posts 
+            // posts counter
+            $x = 0; 
+            // echo the posts
+            while($random_posts->have_posts()): $random_posts->the_post(); $x += 1; 
+                ?>
 
-            <!-- image container -->
-            <div class="img-container">
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('' , array(
-                        'class' => 'img-responsive' , 
-                        'title' => 'Post Image'
-                    )); ?>
-                </a>
-            </div>
+                <div class="post-rand-li">
+                    <div>
+                        <!-- image container -->
+                        <div class="img-container">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail('' , array(
+                                    'class' => 'img-responsive' , 
+                                    'title' => 'Post Image'
+                                )); ?>
+                            </a>
+                        </div>
+                            
 
-            <!-- the post excerpt -->
-            <div class="excerpt">
-                <?php the_excerpt(); ?>
-            </div>
-            
-        </li>
+                        <div class="header_ex">
+                            <!-- category -->
+                            <?php 
+                                $cat = get_the_category();
+                                if(count($cat) > 0){
+                                    $name = $cat[0]->name;
+                                    $id = $cat[0]->term_id;
+                                    $link = get_category_link($id);
+                                ?>
+                                <a class="category" href="<?php echo $link ?>"><?php echo $name ?></a>
+                            <?php } ?>
 
-    <?php endwhile; ?>
-    </ul>
-<?php 
-    wp_reset_postdata(); // rest all values 
-endif;  ?>
+                            <!-- post title -->
+                            <h3 class="post-title">
+                                <a href="<?php the_permalink();// link of the post ?>">
+                                    <?php the_title(); // title of the post?>
+                                </a>
+                            </h3>
+                            
+                            <div class="excerpt">
+                                <a href="<?php the_permalink();// link of the post ?>">
+                                    <?php 
+                                        $excerpt = '';
+                                        $words = explode(' ' , get_the_excerpt());
+                                        
+                                        for($x = 0 ; $x <= $max_excerpt_words && $x < count($words); $x++){
+                                            $excerpt .= $words[$x] . ' ';
+                                        }
+                                        echo $excerpt . '...';
+                                    ?>
+
+                                    <span>Read More</span>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            <?php endwhile; 
+            wp_reset_postdata(); // rest all values 
+        endif; ?>
+
+    </div>
+    
+</div>

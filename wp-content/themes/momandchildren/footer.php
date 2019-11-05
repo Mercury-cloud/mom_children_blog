@@ -25,15 +25,31 @@
                         </div>
 
                         <div class="social">
-                            <a href="#" class="facebook" target="_blank">
-                                <img class="img-responsive" src="<?php echo get_template_directory_uri().'/imgs/facebook.png' ?>" alt="Facebook">
+
+                            <a class="facebook" href="#" target="_blank">
+                                <img class="img-responsive facebook_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/facebook_2.svg" alt="Facebook">
+                                <img class="img-responsive facebook_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/facebook_1.svg" alt="Facebook">
                             </a>
-                            <a href="#" class="instagram" target="_blank">
-                                <img class="img-responsive" src="<?php echo get_template_directory_uri().'/imgs/instagram.svg' ?>" alt="Instagram">
+                            
+                            <a class="instagram" href="#" target="_blank">
+                                <img class="img-responsive instagram_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/instagram_2.svg" alt="Instagram">
+                                <img class="img-responsive instagram_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/instagram_1.svg" alt="Instagram">
                             </a>
-                            <a href="#" class="youtube" target="_blank">
-                                <img class="img-responsive" src="<?php echo get_template_directory_uri().'/imgs/youtube.png' ?>" alt="Youtube">
+
+                            <a class="youtube" href="#" target="_blank">
+                                <img class="img-responsive youtube_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/youtube_2.svg" alt="Youtube">
+                                <img class="img-responsive youtube_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/youtube_1.svg" alt="Youtube">
                             </a>
+
+                            <a class="patreon" href="#" target="_blank">
+                                <img class="img-responsive patreon_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/patreon_2.svg" alt="Patreon">
+                                <img class="img-responsive patreon_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/patreon_1.svg" alt="Patreon">
+                            </a>
+                            <a class="whats_app" href="#" target="_blank">
+                                <img class="img-responsive whats_app_1" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app_2.svg" alt="Whats App">
+                                <img class="img-responsive whats_app_0" src="<?php echo get_template_directory_uri(); ?>/imgs/social/whats_app_1.svg" alt="Whats App">
+                            </a>
+
                         </div>
 
                         <div class="email">

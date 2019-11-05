@@ -66,7 +66,7 @@
                     <div class="post">
                         <div class="row">
 
-                            <div class="col-xs-3">
+                            <div class="col-xs-4">
                                 <div class="img-container">
                                     <?php 
                                         // check if image exist or know
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-9">
+                            <div class="col-xs-8">
 
                                 <h4 class="post-head">
                                     <a href="<?php echo get_permalink(); ?>" target="_blank">
@@ -136,7 +136,7 @@
                     <div class="post">
                         <div class="row">
 
-                            <div class="col-xs-3">
+                            <div class="col-xs-4">
                                 <div class="img-container">
                                     <?php 
                                         // check if image exist or know
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-9">
+                            <div class="col-xs-8">
 
                                 <h4 class="post-head">
                                     <a href="<?php echo get_permalink(); ?>" target="_blank">
