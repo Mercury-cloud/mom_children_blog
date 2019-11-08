@@ -1086,6 +1086,10 @@
 .category_section_of_posts {
   margin-top: 35px !important; }
 
+@media only screen and (max-width: 991px) {
+  .category-header-page > div {
+    height: 300px;
+    padding: 10px; } }
 /*
 ** @Author : Bishoy Romany
 ** @Page : single.php
@@ -1177,21 +1181,23 @@
   #singlePost .single-post .post-date, #singlePost .single-post .post-comments {
     margin-left: 7.5px; }
   #singlePost .single-post .share-container {
-    position: relative; }
+    position: relative;
+    margin-left: 10px; }
     #singlePost .single-post .share-container .fb-share-button {
-      position: absolute;
-      top: -4px;
-      left: 7px; }
+      vertical-align: middle; }
     #singlePost .single-post .share-container .twitter-share-button {
       background-color: #39a0c9;
       display: inline-block;
       color: #FFF;
-      padding: 5px 10px;
+      padding: 4px 10px;
       border-radius: 5px;
-      margin-left: 100px;
       text-decoration: none; }
       #singlePost .single-post .share-container .twitter-share-button:hover {
         background-color: skyblue; }
+      #singlePost .single-post .share-container .twitter-share-button img {
+        display: inline-block;
+        height: 15px;
+        vertical-align: top; }
   #singlePost .single-post .bottom-shares {
     text-align: center;
     position: relative; }
@@ -1350,25 +1356,11 @@
     color: red;
     font-weight: 700;
     font-size: 20px; }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
   #singlePost .single-post {
     padding: 5px; }
     #singlePost .single-post .post-title {
       font-size: 25px; }
-    #singlePost .single-post .share-container {
-      position: relative;
-      margin-top: 10px;
-      display: block; }
-      #singlePost .single-post .share-container .fb-share-button {
-        position: absolute;
-        top: 0px;
-        left: 12px; }
-      #singlePost .single-post .share-container .twitter-share-button {
-        padding: 2.5px 10px;
-        margin-left: 90px; }
-    #singlePost .single-post .bottom-shares .twitter-share-button {
-      left: 50%;
-      padding: 2.5px 10px; }
     #singlePost .single-post .the-post .wp-block-table thead tr th {
       padding: 5px;
       font-size: 16px; }
@@ -1434,6 +1426,38 @@
     #singlePost .author-meta .desc-name .description {
       font-size: 20px; }
 
+@media screen and (max-width: 991px) {
+  .single-post-header > div {
+    padding: 0px 10px; }
+
+  #singlePost {
+    padding: 0px; }
+    #singlePost .single-post {
+      padding: 0px; }
+      #singlePost .single-post .data {
+        padding: 10px 10px 20px 10px; }
+    #singlePost .share-container {
+      margin-left: 0px !important;
+      margin-top: 0px;
+      margin-bottom: 10px; }
+      #singlePost .share-container .fb-share-button {
+        vertical-align: middle; }
+      #singlePost .share-container .twitter-share-button {
+        font-size: 10px;
+        vertical-align: top;
+        margin-left: -8px; }
+        #singlePost .share-container .twitter-share-button:hover {
+          background-color: skyblue; }
+        #singlePost .share-container .twitter-share-button img {
+          height: 10px;
+          vertical-align: middle; }
+    #singlePost .bottom-shares .twitter-share-button {
+      font-size: 10px !important;
+      margin-left: -8px;
+      vertical-align: top !important; }
+    #singlePost .bottom-shares img {
+      height: 10px !important;
+      vertical-align: top !important; } }
 /*
 ** @Author : Bishoy Romany
 ** @Page : author.php
@@ -1612,6 +1636,88 @@
         margin-right: 10px;
         margin-top: 3px; }
 
+@media screen and (max-width: 991px) {
+  .comments-section .comment-container-main {
+    padding: 0px; }
+    .comments-section .comment-container-main .comment .comment-body .comment-author {
+      top: 0px; }
+      .comments-section .comment-container-main .comment .comment-body .comment-author img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px; }
+      .comments-section .comment-container-main .comment .comment-body .comment-author .fn {
+        word-break: break-all;
+        font-size: 12px;
+        height: 40px;
+        overflow: hidden; }
+    .comments-section .comment-container-main .comment .comment-body p {
+      width: 85%;
+      margin-left: 19%; }
+    .comments-section .comment-container-main .comment .comment-body .comment-meta {
+      left: 0px;
+      padding: 10px 10px; }
+    .comments-section .comment-container-main .comment .comment-body .reply {
+      right: 0px; }
+      .comments-section .comment-container-main .comment .comment-body .reply a:hover {
+        padding: 10px; }
+  .comments-section .comment-container-main > .comment {
+    list-style: none;
+    color: #000;
+    margin-top: 10px;
+    background-color: #FFF;
+    padding: 10px; }
+  .comments-section .comment-container-main .children > .comment > .comment-body {
+    background-color: white;
+    margin-top: 0px; }
+  .comments-section .comment-container-main .children > .comment > .children > .comment > .comment-body {
+    background-color: white;
+    margin-top: 0px; }
+  .comments-section .comment-container-main .children > .comment > .children > .comment > .children > .comment > .comment-body {
+    background-color: white;
+    margin-top: 0px; }
+  .comments-section .comment-respond {
+    margin-bottom: 20px;
+    background-color: #FFF; }
+    .comments-section .comment-respond .comment-reply-title {
+      padding: 20px 0px;
+      color: #391540;
+      font-weight: bold;
+      font-family: lato-bold , 'sans-serif';
+      text-align: left; }
+      .comments-section .comment-respond .comment-reply-title a {
+        text-decoration: none;
+        color: #391540;
+        font-weight: bold;
+        font-family: lato-bold , 'sans-serif'; }
+    .comments-section .comment-respond .comment-form {
+      padding: 10px; }
+    .comments-section .comment-respond .comment-form-comment textarea {
+      width: 100%;
+      border: 1px solid #CCC;
+      resize: none;
+      padding: 10px;
+      background-color: white;
+      border-radius: 10px; }
+    .comments-section .comment-respond .form-submit #submit {
+      background-color: #391540;
+      color: #FFF;
+      outline: 0; }
+    .comments-section .comment-respond .comment-form-author, .comments-section .comment-respond .comment-form-email {
+      margin-bottom: 30px; }
+      .comments-section .comment-respond .comment-form-author label, .comments-section .comment-respond .comment-form-email label {
+        position: absolute;
+        top: 6px;
+        left: 25px;
+        opacity: 0.7;
+        transition: all 0.5s ease-in-out; }
+        .comments-section .comment-respond .comment-form-author label.hide_label, .comments-section .comment-respond .comment-form-email label.hide_label {
+          top: -25px; }
+    .comments-section .comment-respond .comment-form-cookies-consent {
+      clear: both; }
+      .comments-section .comment-respond .comment-form-cookies-consent input {
+        vertical-align: top;
+        margin-right: 10px;
+        margin-top: 3px; } }
 .side-bar {
   padding: 0px; }
   .side-bar .cat-widget-content {
@@ -1989,6 +2095,9 @@
   .cutom-sidebar .a-d-s {
     padding: 10px; }
 
+@media screen and (max-width: 991px) {
+  .side-bar {
+    padding: 0px 15px; } }
 .slick-next, .slick-prev {
   font-size: 0;
   line-height: 0;

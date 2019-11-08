@@ -250,3 +250,171 @@
     }
 
 }
+
+
+@media screen and(max-width : 991px){
+   // start comments section
+    .comments-section{
+
+        // main comments style
+        .comment-container-main {
+            padding : 0px;
+            .comment{
+                .comment-body{
+                    //  comments author
+                    .comment-author{
+                        top: 0px;
+                        img{
+                            border-radius : 50%;
+                            width : 40px;
+                            height : 40px;
+                        }
+                        .fn{
+                            word-break: break-all;
+                            font-size : 12px;
+                            height: 40px;
+                            overflow: hidden;
+                        } 
+                    }
+
+                    // the comment words
+                    p{
+                        width: 85%;
+                        margin-left: 19%;
+                    }
+
+                    // comment time
+                    .comment-meta{
+                        left : 0px;
+                        padding : 10px 10px;
+                    }
+                    // reply button
+                    .reply{
+                        right : 0px;
+                        a{
+                            &:hover{
+                                padding : 10px;
+                            }
+                        }
+                    } 
+        
+                    
+                }
+            }
+            // for the comment author
+            // .bypostauthor{
+            //     border : 2px solid green;
+            //     .comment-author{
+            //         .fn{
+            //             &:after{
+            //                 font-family: "Font Awesome 5 Free"; 
+            //                 font-weight: 900;
+            //                 content : " \f00c";
+            //                 color : green;
+            //                 font-size : 20px;
+            //                 transition : $transition;
+            //             }
+            //             &:hover:after{
+            //                 content : "Author";
+            //                 font-family: Tahoma;
+            //             }
+            //         }
+            //     }
+            // }
+        }
+
+        // level 1 comments tyle
+        .comment-container-main > .comment{
+            list-style: none;
+            color : #000;
+            margin-top : 10px;
+            background-color : #FFF;
+            padding : 10px;
+        }
+
+        // level 2 comments style
+        .comment-container-main .children > .comment > .comment-body{
+            background-color : rgb(255, 255, 255);
+            margin-top : 0px;
+            // border : 1px solid #BBB;
+        }
+
+        // level 3 comments style
+        .comment-container-main .children > .comment > .children > .comment > .comment-body{
+            background-color : rgb(255, 255, 255);
+            margin-top : 0px;
+            // border : 1px solid #BBB;
+        }
+
+        // level 4 comments style
+        .comment-container-main .children > .comment > .children > .comment > .children > .comment > .comment-body{
+            background-color : rgb(255, 255, 255);
+            margin-top : 0px;
+            // border : 1px solid #BBB;
+        }
+
+        // reply and answer comments
+        .comment-respond{
+            margin-bottom : 20px;
+            background-color : #FFF;
+            .comment-reply-title{
+                padding : 20px 0px;
+                color : #391540;
+                font-weight : bold;
+                font-family : lato-bold , 'sans-serif';
+                text-align : left;
+                a{
+                    text-decoration: none;
+                    color : #391540;
+                    font-weight : bold;
+                    font-family : lato-bold , 'sans-serif';
+                }
+            }
+            .comment-form{
+                padding : 10px;
+            }
+            .comment-form-comment{
+                textarea{
+                    width : 100%;
+                    border : 1px solid #CCC;
+                    resize: none;
+                    padding : 10px;
+                    background-color : rgb(255, 255, 255);
+                    border-radius : 10px;
+                }
+            }
+
+            .form-submit{
+                #submit{
+                    background-color : #391540;
+                    color : #FFF;
+                    outline : 0;
+                }
+            }
+
+            .comment-form-author , .comment-form-email{
+                margin-bottom : 30px;
+                label{
+                    position: absolute;
+                    top: 6px;
+                    left: 25px;
+                    opacity: 0.7;
+                    transition : $transition;
+                    &.hide_label{
+                        top : -25px;
+                    }
+                }
+            }
+
+            .comment-form-cookies-consent{
+                clear : both;
+                input{
+                    vertical-align: top;
+                    margin-right: 10px;
+                    margin-top: 3px;
+                }
+            }
+        }
+
+    } 
+}

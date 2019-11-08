@@ -53,10 +53,12 @@
                             data-size="large">
                         </div>
                         <!-- twitter share -->
-                        <!-- <a class="twitter-share-button" 
+                        <a class="twitter-share-button" 
                         onclick="window.open('https:/\/\\twitter.com/share?url=<?php the_permalink(); ?>','Share News','height=400,width=700'); return false;" 
                         href="<?php the_permalink(); ?>">
-                        <i class="fab fa-twitter fa-fw"></i> Tweet</a> -->
+                            <img src="<?php echo get_template_directory_uri(); ?>/imgs/social/twitter.svg" alt="Twitter">
+                            Tweet
+                        </a>
                     </span>
 
                     <!-- post content -->

@@ -124,3 +124,14 @@
 .category_section_of_posts{
     margin-top: 35px !important;
 }
+
+
+@media only screen and (max-width : 991px){
+    .category-header-page{
+        & > div{
+            height : 300px;
+            padding : 10px;
+
+        }
+    }
+}
