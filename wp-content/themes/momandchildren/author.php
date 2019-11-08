@@ -17,7 +17,7 @@
         ?>
         <div class="col-md-9">
             <?php 
-                require_once (get_template_directory()."/parts/breadcrumb.php");
+                //require_once (get_template_directory()."/parts/breadcrumb.php");
                 /*
                 ** require the author posts
                 */
@@ -27,13 +27,13 @@
 
     </div>
 
-    <hr class="dotted">
+    <!-- <hr class="dotted"> -->
 
     <?php 
         /*
         ** require the author comments
         */
-        require_once (get_template_directory()."/parts/author/comments.php");
+       // require_once (get_template_directory()."/parts/author/comments.php");
     ?>
 
 </div>

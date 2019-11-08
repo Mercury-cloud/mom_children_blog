@@ -5,11 +5,6 @@
 
 (function($){
 
-
-
-
-
-
     var checkReady = setInterval(function(){
         if (document.readyState === 'complete') {
             $(".loader").slideUp(300);
@@ -27,7 +22,7 @@
         /**
          * fix the author page
          */
-        if(screenWidth < 1250 && $(".author-page").hasClass("container")){
+        if(screenWidth < 991 && $(".author-page").hasClass("container")){
             $(".author-info").css({"position" : "static" , 'margin' : '20px'});
         }
         /**
@@ -55,7 +50,7 @@
             }
 
             // author page
-            if($(".author-page").hasClass("container") && screenWidth > 1250){
+            if($(".author-page").hasClass("container") && screenWidth > 991){
                 var scrollH  = $(".author-page").innerHeight() - 700; 
                 if(scrolled >= 50){
                     $(".author-info").css("top" , "70px");
@@ -76,13 +71,13 @@
                 // sidebar height
                 var sidebarHeight = $(".cutom-sidebar").innerHeight() + 324;
                 // show 2 ads when scroll down
-                if(sidebarHeight <= scrolled && screenWidth > 1250){
+                if(sidebarHeight <= scrolled && screenWidth > 991){
                     $(".a-d").css({'position' : 'fixed' , 'top' : '40px' });
                     $(".a-d-s").css({'position' : 'fixed' , 'top' : '430px'});
                     $(".a-d-s").removeClass('hidden');
                 }else{
                     $(".a-d").css({'position' : 'static'});
-                    if(screenWidth > 1250){
+                    if(screenWidth > 991){
                         $(".a-d-s").addClass('hidden');
                     }
                 }
@@ -98,7 +93,7 @@
          * Slick For Random posts in single and homepage sections
          */
 
-        if(screenWidth > 1000){
+        if(screenWidth > 991){
             // single page
             $('.random-posts-single .random-post').slick({
                 dots: true,
@@ -156,6 +151,7 @@
                 autoplaySpeed: 1500,
             }); 
         }
+
         $("#homeRandom .random-post button").remove();
         $(".wp-block-gallery button").remove();
 
@@ -187,4 +183,5 @@
             }
         });
     });
+
 })(jQuery);
