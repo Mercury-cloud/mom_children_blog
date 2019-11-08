@@ -69,10 +69,12 @@
          * @param {it true then the label must be hidden} force 
          */
         function prettyInputs(element , force){
-            if($(element).val().length > 0 || force){
-                $(element).prev().addClass('hide_label');
-            }else{
-                $(element).prev().removeClass('hide_label');
+            if($(element).legnth > 0){
+                if($(element).val().length > 0 || force){
+                    $(element).prev().addClass('hide_label');
+                }else{
+                    $(element).prev().removeClass('hide_label');
+                }
             }
         }
         prettyInputs($("#author") , false);
@@ -88,6 +90,13 @@
             prettyInputs(this , true);
         });
 
+        /**
+         * chat options
+         */
+        $(".chat_picker").click(function(){
+            $(".chat_box").toggleClass("show_chat_box");
+            $(this).toggleClass("shown_chat_box");
+        });
 
     });
 })(jQuery);

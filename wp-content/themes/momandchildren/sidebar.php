@@ -5,9 +5,10 @@
     <div class="box free_book">
         <img src="<?php echo $directory_uri ?>/imgs/book/book.png" class="img-responsive" alt="Book">
         <div class="form">
-            <form action="/" method="post">
+            <form  action="/subscribe-news-letters-pergenancy" method="post">
                 <div class="data">
                     <input type="email" name="email" placeholder="Write Your Email">
+                    <input type="hidden" name="get_free_book" value="yes">
                     <button>
                         <img src="<?php echo $directory_uri ?>/imgs/book/book_heart.svg" alt="Supmit">
                     </button>

@@ -47,7 +47,7 @@
                     padding: 5px;
                     margin: 0px;
                     position: absolute;
-                    top: 50px;
+                    top: 0px;
                     left: 0px;
                     border-radius: 10px;
                     display: inline-block;
@@ -71,20 +71,7 @@
                         display : none;
                     }
                 }
-                // comment time
-                .comment-meta{
-                    left : 40px;
-                    bottom: 5px;
-                    position : absolute;
-                    display : inline-block;
-                    background-color : #391540;
-                    border-radius : 10px;
-                    padding : 10px 20px;
-                    a{
-                        color : rgb(255, 255, 255);
-                        text-decoration : none;
-                    }
-                }
+
                 // the comment words
                 p{
                     padding: 20px 10px;
@@ -112,6 +99,43 @@
                     //     left: -30px;
                     // }
                 }
+
+
+                // comment time
+                .comment-meta{
+                    left : 40px;
+                    bottom: 5px;
+                    position : absolute;
+                    display : inline-block;
+                    // background-color : #391540;
+                    font-size : 0.9em;
+                    color : #391540;
+                    border-radius : 10px;
+                    padding : 10px 20px;
+                    a{
+                        color : #391540;
+                        // color : rgb(255, 255, 255);
+                        text-decoration : none;
+                    }
+
+                    .comment-edit-link{
+                        display : inline-block;
+                        background-color : #391540;
+                        color : rgb(255, 255, 255);
+                        padding : 10px 20px;
+                        border-radius : 10px;
+                        transition : all 0.5s ease-in-out;
+                        clear: both;
+                        text-decoration : none;
+                        font-size : 1em;
+                        &:hover{
+                            background-color : $background-color;
+                            color : #391540;
+                        }
+                    }
+                }
+
+                // reply button
                 .reply{
                     right : 40px;
                     bottom: 5px;
@@ -120,13 +144,15 @@
                         display : inline-block;
                         background-color : #391540;
                         color : rgb(255, 255, 255);
-                        padding : 10px;
+                        padding : 10px 20px;
                         border-radius : 10px;
                         transition : all 0.5s ease-in-out;
                         clear: both;
                         text-decoration : none;
                         &:hover{
                             padding : 10px 30px;
+                            background-color : $background-color;
+                            color : #391540;
                         }
                     }
                 } 
@@ -287,6 +313,14 @@
                     .comment-meta{
                         left : 0px;
                         padding : 10px 10px;
+                        .comment-edit-link{
+                            background-color : transparent;
+                            color : #391540;
+                            padding : 0px;
+                            &:hover{
+                                background-color : transparent;
+                            }
+                        }
                     }
                     // reply button
                     .reply{

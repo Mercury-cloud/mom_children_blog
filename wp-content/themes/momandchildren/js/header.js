@@ -74,8 +74,27 @@
             lastScroll = scrolled;
         }headerScroller();
 
+        /**
+         * back to top
+         */
+        var lastScrolledOfBackToTop = 0;
+        function backToTop(){
+            let scrolled = $(window).scrollTop();
+            let screenWidth = $(document).innerWidth();
+            if(scrolled >= 300 && lastScrolledOfBackToTop < scrolled){
+                $("#backToTop").addClass("show_back_to_top");
+            }else{
+                $("#backToTop").removeClass("show_back_to_top");
+            }
+            lastScrolledOfBackToTop = scrolled;
+        }
+        $("#backToTop").click(function(){
+            $('html,body').animate({ scrollTop: 0 }, 'slow');  
+        });
+
         $(document).scroll(function(){
             headerScroller();
+            backToTop();
         });
 
         /**

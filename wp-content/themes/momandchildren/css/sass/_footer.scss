@@ -1,4 +1,20 @@
 #chat{
+    bottom : 0px;
+    right : 15px;
+    position: fixed;
+    z-index : 100000;
+    .chat_box{
+        transition: $transition;
+        background-color : $background-color;
+        width : 0px;
+        height : 0px;
+        max-width : calc(100vw - 15px);
+        &.show_chat_box{
+            height : 400px;
+            width : 400px;
+        }
+    }
+
     .chat_picker{
         padding : 15px 20px;
         border-top-right-radius: 30px;
@@ -6,11 +22,9 @@
         background-color : #391540;
         display : flex;
         width : 250px;
-        position : fixed;
-        z-index : 100000;
-        bottom : 0px;
-        right : 15px;
         align-items: center;
+        transition : $transition;
+        max-width : calc(100vw - 15px);
         cursor: pointer;
         .chat_icon{
             flex : 2;
@@ -23,8 +37,38 @@
         }
         .chat_arrow{
             flex : 1;
+            transition:  $transition;
         }
+        &.shown_chat_box{
+            width: 400px;
+            .text{
+                flex : 15;
+            }
+            .chat_arrow{
+                transform : rotate(180deg);
+            }
+        }
+    }
+}
 
+// back to up 
+#backToTop{
+    width : 50px;
+    height : 50px;
+    padding : 10px;
+    border-radius : 50%;
+    background-color : $background-color;
+    position : fixed;
+    bottom : -80px;
+    z-index : 1000;
+    left : 10px;
+    cursor: pointer;
+    transition :$transition;
+    &.show_back_to_top{
+        bottom : 40px !important;
+    }
+    img{
+        width : 100%;
     }
 }
 

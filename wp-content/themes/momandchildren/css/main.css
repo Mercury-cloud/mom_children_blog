@@ -1147,19 +1147,19 @@
   #singlePost .single-post .data {
     padding: 10px 20px 20px 30px; }
   #singlePost .single-post .post-edit-link {
-    position: absolute;
+    float: right;
     top: -33px;
     right: 10px;
     color: #FFF;
     font-size: 17px;
     padding: 5px 20px;
-    border-radius: 10px;
-    background-color: green;
+    border-bottom-left-radius: 10px;
+    background-color: #f2b6bb;
     text-decoration: none;
     transition: all 0.5s ease-in-out; }
     #singlePost .single-post .post-edit-link:hover {
       text-decoration: none;
-      background-color: #4ccd32; }
+      background-color: #391540; }
     #singlePost .single-post .post-edit-link svg {
       color: #FFF; }
   #singlePost .single-post .post-title {
@@ -1522,7 +1522,7 @@
           padding: 5px;
           margin: 0px;
           position: absolute;
-          top: 50px;
+          top: 0px;
           left: 0px;
           border-radius: 10px;
           display: inline-block;
@@ -1540,17 +1540,6 @@
                 text-decoration: none; }
           .comments-section .comment-container-main .comment .comment-body .comment-author .says {
             display: none; }
-        .comments-section .comment-container-main .comment .comment-body .comment-meta {
-          left: 40px;
-          bottom: 5px;
-          position: absolute;
-          display: inline-block;
-          background-color: #391540;
-          border-radius: 10px;
-          padding: 10px 20px; }
-          .comments-section .comment-container-main .comment .comment-body .comment-meta a {
-            color: white;
-            text-decoration: none; }
         .comments-section .comment-container-main .comment .comment-body p {
           padding: 20px 10px;
           color: #333;
@@ -1564,6 +1553,31 @@
           margin-bottom: 50px;
           border-top-right-radius: 10px;
           border-bottom-left-radius: 10px; }
+        .comments-section .comment-container-main .comment .comment-body .comment-meta {
+          left: 40px;
+          bottom: 5px;
+          position: absolute;
+          display: inline-block;
+          font-size: 0.9em;
+          color: #391540;
+          border-radius: 10px;
+          padding: 10px 20px; }
+          .comments-section .comment-container-main .comment .comment-body .comment-meta a {
+            color: #391540;
+            text-decoration: none; }
+          .comments-section .comment-container-main .comment .comment-body .comment-meta .comment-edit-link {
+            display: inline-block;
+            background-color: #391540;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.5s ease-in-out;
+            clear: both;
+            text-decoration: none;
+            font-size: 1em; }
+            .comments-section .comment-container-main .comment .comment-body .comment-meta .comment-edit-link:hover {
+              background-color: #f2b6bb;
+              color: #391540; }
         .comments-section .comment-container-main .comment .comment-body .reply {
           right: 40px;
           bottom: 5px;
@@ -1572,13 +1586,15 @@
             display: inline-block;
             background-color: #391540;
             color: white;
-            padding: 10px;
+            padding: 10px 20px;
             border-radius: 10px;
             transition: all 0.5s ease-in-out;
             clear: both;
             text-decoration: none; }
             .comments-section .comment-container-main .comment .comment-body .reply a:hover {
-              padding: 10px 30px; }
+              padding: 10px 30px;
+              background-color: #f2b6bb;
+              color: #391540; }
   .comments-section .comment-container-main > .comment {
     list-style: none;
     color: #000;
@@ -1658,6 +1674,12 @@
     .comments-section .comment-container-main .comment .comment-body .comment-meta {
       left: 0px;
       padding: 10px 10px; }
+      .comments-section .comment-container-main .comment .comment-body .comment-meta .comment-edit-link {
+        background-color: transparent;
+        color: #391540;
+        padding: 0px; }
+        .comments-section .comment-container-main .comment .comment-body .comment-meta .comment-edit-link:hover {
+          background-color: transparent; }
     .comments-section .comment-container-main .comment .comment-body .reply {
       right: 0px; }
       .comments-section .comment-container-main .comment .comment-body .reply a:hover {
@@ -2255,28 +2277,64 @@
         margin-left: 25px;
         margin-top: 5px; }
 
-#chat .chat_picker {
-  padding: 15px 20px;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-  background-color: #391540;
-  display: flex;
-  width: 250px;
-  position: fixed;
-  z-index: 100000;
+#chat {
   bottom: 0px;
   right: 15px;
-  align-items: center;
-  cursor: pointer; }
-  #chat .chat_picker .chat_icon {
-    flex: 2; }
-  #chat .chat_picker .text {
-    margin-left: 10px;
-    flex: 8;
-    color: #FFF;
-    font-size: 1.3em; }
-  #chat .chat_picker .chat_arrow {
-    flex: 1; }
+  position: fixed;
+  z-index: 100000; }
+  #chat .chat_box {
+    transition: all 0.5s ease-in-out;
+    background-color: #f2b6bb;
+    width: 0px;
+    height: 0px;
+    max-width: calc(100vw - 15px); }
+    #chat .chat_box.show_chat_box {
+      height: 400px;
+      width: 400px; }
+  #chat .chat_picker {
+    padding: 15px 20px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background-color: #391540;
+    display: flex;
+    width: 250px;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    max-width: calc(100vw - 15px);
+    cursor: pointer; }
+    #chat .chat_picker .chat_icon {
+      flex: 2; }
+    #chat .chat_picker .text {
+      margin-left: 10px;
+      flex: 8;
+      color: #FFF;
+      font-size: 1.3em; }
+    #chat .chat_picker .chat_arrow {
+      flex: 1;
+      transition: all 0.5s ease-in-out; }
+    #chat .chat_picker.shown_chat_box {
+      width: 400px; }
+      #chat .chat_picker.shown_chat_box .text {
+        flex: 15; }
+      #chat .chat_picker.shown_chat_box .chat_arrow {
+        transform: rotate(180deg); }
+
+#backToTop {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #f2b6bb;
+  position: fixed;
+  bottom: -80px;
+  z-index: 1000;
+  left: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out; }
+  #backToTop.show_back_to_top {
+    bottom: 40px !important; }
+  #backToTop img {
+    width: 100%; }
 
 .footer {
   background: #391540;

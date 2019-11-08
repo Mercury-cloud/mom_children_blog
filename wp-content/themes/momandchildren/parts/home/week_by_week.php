@@ -55,6 +55,33 @@
 
     </div>
 
+    <?php 
+        // errors 
+        if(isset($isError) && count($isError) > 0){
+            foreach($isError as $error){
+                ?>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <?php echo $error; ?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php 
+            }
+        }
 
+        // sucess 
+        if(isset($successMessage)){
+            ?>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <?php echo $successMessage; ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php   
+        }
+    
+    ?>
 
 </div>

@@ -1,6 +1,5 @@
         <!-- chat box -->
         <div id="chat">
-            <div class="chat_box"></div>
             <div class="chat_picker">
                 <span class="chat_icon">
                     <img class="img-responsive" src="<?php echo get_template_directory_uri().'/imgs/chat/chat_pink.svg' ?>" alt="Chat">
@@ -12,6 +11,11 @@
                     <img class="img-responsive" src="<?php echo get_template_directory_uri().'/imgs/chat/chat_arrow.svg' ?>" alt="Chat Arrow">
                 </span>
             </div>
+            <div class="chat_box"></div>
+        </div>
+        <!-- back to top -->
+        <div id="backToTop">
+            <img src="<?php echo get_template_directory_uri() ?>/imgs/footer/arrow-up.svg" alt="Arrow Up">
         </div>
         
         <footer class="footer">
@@ -82,15 +86,15 @@
 
 
                             <div class="contact">
-                                <form action="/send-contact-message">
+                                <form action="/subscribe-news-letters-pergenancy" method="post">
                                     <div class="row">
                                         <div class="col-md-6 clas1">
-                                            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                                            <textarea name="message_user" id="message" placeholder="Your Message" required></textarea>
                                         </div>
                                         <div class="col-md-6 clas2">
-                                            <input type="text" name="name" placeholder="Your Name" class="name" required>
-                                            <input type="email" name="email" placeholder="Your Email" class="email" required>
-                                            <input type="submit" value="Send Message" class="submit" name="send_message">
+                                            <input type="text" name="name_user" placeholder="Your Name" class="name" required>
+                                            <input type="email" name="email_user" placeholder="Your Email" class="email" required>
+                                            <input type="submit" value="Send Message" class="submit" name="send_contact_message">
                                         </div>
                                     </div>
 
