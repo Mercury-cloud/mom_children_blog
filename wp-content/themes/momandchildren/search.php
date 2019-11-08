@@ -65,7 +65,7 @@
                                         </div>
                                         
                                         <!-- text content -->
-                                        <div class="header_ex">
+                                        <div class="header_ex" style="padding : 0px;">
                                             <!-- post title -->
                                             <h3 class="post-title">
                                                 <a href="<?php the_permalink();// link of the post ?>">
