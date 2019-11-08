@@ -8,20 +8,17 @@
 .search-container{
     .search{
         padding : 0px;  
-        margin : 0px 0px 15px 0px;
+        margin : 20px 0px 50px 0px;
         form{
             div{
                 div{
                     text-align : center;
                     input{
-                        border : none;
-                        background : $background-color;
-                        padding : 10px 10px 10px 40px;
+                        background : #FFF;
+                        padding : 15px 135px 15px 20px;
                         font-size : 18px;
-                        border-radius : 10px;
-                        &:hover, &:focus{
-                            background : $background-hover;
-                        }
+                        border-top-left-radius: 30px;
+                        border-bottom-left-radius: 30px;
                     }
                 }
                 .button-search{
@@ -29,7 +26,11 @@
                     color : #000;
                     border : none;
                     padding : 8px;
-                    border-radius : 10px;
+                    position : absolute;
+                    right : 0px;
+                    border-top-right-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    outline : 0;
                     &:hover{
                         background : $background-color;
                     }
